@@ -1,0 +1,2 @@
+"mithril equipment" {"mithril_great_sword"}
+"elven clothes" {"elven_cloak"}
