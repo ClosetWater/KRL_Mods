@@ -1,0 +1,24 @@
+"ELVEN_WORKBENCH" {
+  furniture = "ELVEN_WORKBENCH"
+  name = "elven workbench"
+  attr = "ELVEN_CRAFT"
+  attrScaling = 2
+}
+"ELVEN_ANVIL" {
+  furniture = "ELVEN_ANVIL"
+  name = "elven anvil"
+  attr = "ELVEN_FORGE"
+  attrScaling = 2
+}
+"ALCHEMY_STAND" {
+  furniture = "ALCHEMY_STAND"
+  name = "alchemy stand"
+  attr = "ELVEN_ALCHEMY"
+  attrScaling = 2
+}
+"ENCHANT_TABLE" {
+  furniture = "ENCHANT_TABLE"
+  name = "enchanting table"
+  attr = "ELVEN_ENCHANT"
+  attrScaling = 2
+}

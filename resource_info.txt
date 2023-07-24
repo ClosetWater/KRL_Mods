@@ -1,0 +1,2 @@
+"MITHRIL"            { "mithril"        { "mithril_ore_pile" } }
+"MAGIC_GEM"          { "magic gem"      { "magic_gem_bag" } }

@@ -1,0 +1,55 @@
+"vegetationLow" modify append
+{
+  {
+    "CANIF_TREE" 2
+    "BUSH" 1
+  }
+}
+"flowers" modify append
+{
+  {
+    "FLOWER1" 1
+    "FLOWER2" 1
+    "FLOWER3" 1
+  }
+}
+"vegetationHigh" modify append
+{
+  {
+    "DECID_TREE" 2
+    "BUSH" 1
+  }
+}
+"vegetationSnow" modify append
+{
+  {
+    "TREE_SNOW" 1
+  }
+}
+"vegetationDesert" modify append
+{
+  {
+    "CACTUS1" 2
+  }
+}
+"vegetationOutback" modify append
+{
+  {
+    "GUM_TREE" 4
+    "CACTUS1" 2
+    "BUSH" 1
+  }
+}
+"randomOutback" modify append
+{
+  {
+    "TERMITE_MOUND" 2
+  }
+}
+"trees" modify append
+{
+  {
+    "CANIF_TREE" 1
+    "DECID_TREE" 1
+  }
+}

@@ -1,0 +1,15 @@
+"squire"                        { "Begin your journey." }
+"knight"                        { "Train your martial skills."                                                          {"squire"}}
+"king"                          { "Become a great leader of your people."                                               {"knight"}}
+"god"                           { "Unlock the secrets of Immortality."                                                  {"king"}}
+"elemental magic"               { "Unlock powerful magic of four basic elements: Fire, Air, Water, Earth."              {"advanced sorcery"}}
+"advanced elemental magic"      { "Unlock powerful magic of four advanced elements: Lightning, Ice, light, and dark"    {"elemental magic"}}
+"spirit magic"                  { "Unlock powerful magic to summon Angels and Demons."                                  {"sorcery"}}
+"divine power"                  { "Unlock powerful divine power to heal and buff allies."                               {"worship"}}
+"mithril armor"                 { "Learn the secrects of smithing legendary weapons and armor."                         {"iron working"}}
+"mithril weapons"               { "Learn the secrects of smithing legendary weapons and armor."                         {"iron working"}}
+"unique weapons"                { "Learn the secrects of smithing legendary weapons and armor."                         {"iron working"}}
+"legend smithing"               { "Learn the secrects of smithing legendary weapons and armor."                         {"iron working"}}
+"crystal etching"               { "Learn the secrets of crafting jewlellery with powerful enchantments."                {"jewellery"}}
+"grand enchanting"              { "Learn the secrets of crafting jewlellery with powerful enchantments."                {"crystal etching"}}
+"master alchemy"                { "Learn the secrets to brew powerful potions."                                         {"alchemy"}}

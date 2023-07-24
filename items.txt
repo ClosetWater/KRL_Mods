@@ -1,0 +1,1334 @@
+"DefenseCrystal"
+  {
+    viewId = { "defensecrystal" }
+    name = "defense crystal"
+    itemClass = OTHER
+    weight = 1
+    price = 20
+    ingredientType = "defense_crystal"
+    storageIds = {"jewellery" "equipment"}
+  }
+"DamageCrystal"
+  {
+    viewId = { "damagecrystal" }
+    name = "damage crystal"
+    itemClass = OTHER
+    weight = 1
+    price = 30
+    ingredientType = "damage_crystal"
+    storageIds = {"jewellery" "equipment"}
+  }
+"MagicCrystal"
+  {
+    viewId = { "magiccrystal" }
+    name = "magic crystal"
+    itemClass = OTHER
+    weight = 1
+    price = 40
+    ingredientType = "magic_crystal"
+    storageIds = {"jewellery" "equipment"}
+  }
+"ImmortalCrystal"
+  {
+    viewId = { "immortalcrystal" }
+    name = "immortal crystal"
+    itemClass = OTHER
+    weight = 1
+    price = 50
+    ingredientType = "immortal_crystal"
+    storageIds = {"jewellery" "equipment"}
+  }
+"SmithCrystal"
+  {
+    viewId = { "smithcrystal" }
+    name = "smithing crystal"
+    itemClass = OTHER
+    weight = 1
+    price = 40
+    ingredientType = "smith_crystal"
+    storageIds = {"jewellery" "equipment"}
+  }
+"ChiseledGem"
+  {
+    viewId = { "chiseledgem" }
+    name = "chiseled gem"
+    itemClass = OTHER
+    weight = 1
+    price = 40
+    ingredientType = "chiseled_gem"
+    storageIds = {"jewellery" "equipment"}
+  }
+
+"ElvenTea"
+  {
+    viewId = { "elventea" }
+    name = "bottle of elven tea"
+    shortName = "tea"
+    plural = "bottles of elven tea"
+    blindName = "bottle"
+    applyVerb = "drink" "drinks"
+    fragile = true
+    weight = 0.3
+    effect = { Lasting 150 HIGH_MORALE }
+    price = 10
+    burnTime = 1
+    uses = 1
+    description = "Tea masterfully created by elves."
+    producedStat = POTION_PRODUCED
+    storageIds = {"potions" "equipment"} 
+  }
+"PotionOfImmortality"
+  {
+    viewId = { "immortalpotion" }
+    name = "immortality Potion"
+    shortName = "potion of immortality"
+    plural = "potions"
+    blindName = "phial"
+    applyVerb = "drink" "drinks"
+    fragile = true
+    weight = 0.3
+    description = "Harness powerful magic to grow wings and fly."
+    effect = Chain {
+      FirstSuccessful {
+        Permanent FLYING
+        Permanent REGENERATION
+        Permanent FIRE_RESISTANT
+        Permanent COLD_RESISTANT
+        Permanent ACID_RESISTANT
+        Permanent MELEE_RESISTANCE
+        Permanent MAGIC_RESISTANCE
+        Permanent RANGED_RESISTANCE
+        }
+      IncreaseAttr DEFENSE 5
+      IncreaseAttr PARRY 5
+      IncreaseAttr DAMAGE 5
+      IncreaseAttr MULTI_WEAPON 5
+      IncreaseAttr SPELL_DAMAGE 5
+      IncreaseAttr SPELL_SPEED 5
+      IncreaseAttr RANGED_DAMAGE 5
+    }
+    burnTime = 1
+    uses = 1
+    producedStat = POTION_PRODUCED
+    storageIds = {"potions" "equipment"}
+  }
+"PotionOfProtection"
+  {
+    viewId = { "defensepotion" }
+    name = "Defense Potion"
+    shortName = "Potion of Defense "
+    plural = "potions"
+    blindName = "phial"
+    applyVerb = "drink" "drinks"
+    fragile = true
+    weight = 0.3
+    description = "Harness powerful magic to increase your defense."
+    effect = Chain {
+      IncreaseAttr DEFENSE 3
+      IncreaseAttr PARRY 3
+      FirstSuccessful {
+        Permanent MELEE_RESISTANCE
+        Permanent RANGED_RESISTANCE
+        }
+    }
+    burnTime = 1
+    uses = 1
+    producedStat = POTION_PRODUCED
+    storageIds = {"potions" "equipment"}
+  }
+"PotionOfValor"
+  {
+    viewId = { "damagepotion" }
+    name = "valor potion"
+    shortName = "potion of valor"
+    plural = "potions"
+    blindName = "phial"
+    applyVerb = "drink" "drinks"
+    fragile = true
+    weight = 0.3
+    description = "Harness powerful magic to amplify your physical destructiveness."
+    effect = Chain {
+      IncreaseAttr DAMAGE 5
+      IncreaseAttr RANGED_DAMAGE 5
+    }
+    burnTime = 1
+    uses = 1
+    producedStat = POTION_PRODUCED
+    storageIds = {"potions" "equipment"}
+  }
+"PotionOfSorcery"
+  {
+    viewId = { "magicpotion" }
+    name = "sorcery potion"
+    shortName = "potion of sorcery"
+    plural = "potions"
+    blindName = "phial"
+    applyVerb = "drink" "drinks"
+    fragile = true
+    weight = 0.3
+    description = "Harness powerful magic to enhance your mystic abilities."
+    effect = Chain {
+      IncreaseAttr SPELL_DAMAGE 3
+      IncreaseAttr SPELL_SPEED 3
+      FirstSuccessful {
+        Permanent MAGIC_RESISTANCE
+        Permanent SPELL_DAMAGE
+        }
+    }
+    burnTime = 1
+    uses = 1
+    producedStat = POTION_PRODUCED
+    storageIds = {"potions" "equipment"}
+  }
+"PotionOfSmithing"
+  {
+    viewId = { "smithpotion" }
+    name = "smithing potion"
+    shortName = "potion of smithing"
+    plural = "potions"
+    blindName = "phial"
+    applyVerb = "drink" "drinks"
+    fragile = true
+    weight = 0.3
+    description = "Harness powerful magic to increase ability to craft."
+    effect = Chain {
+      IncreaseAttr FORGE 3
+      IncreaseAttr WORKSHOP 3
+      FirstSuccessful {
+        Permanent FAST_CRAFTING
+        }
+    }
+    burnTime = 1
+    uses = 1
+    producedStat = POTION_PRODUCED
+    storageIds = {"potions" "equipment"}
+  }
+
+"MithrilDagger"
+  {
+    viewId = { "mithril_dagger" }
+    equipedViewId = { "mithril_dagger_v" }
+    name = "mithril dagger"
+    plural = "mithril daggers"
+    itemClass = WEAPON
+    equipmentSlot = WEAPON
+    weight = 0.3
+    modifiers = {
+      DAMAGE 3
+    }
+    price = 5
+    craftingCost = "MITHRIL" 5
+    equipedEffect = {AMBUSH_SKILL}
+    specialAttr = {
+      DAMAGE 30 Name "against tribe leaders when hidden" And { CreatureStatus LEADER Attacker Hidden }
+    }
+    weaponInfo = {
+      attackType = STAB
+      attackMsg = THRUST
+    }
+    storageIds = {"weapons" "equipment"}
+    equipmentGroup = "mithril equipment"
+  }
+"MithrilShortSword"
+  {
+    viewId = { "mithril_short_sword" }
+    equipedViewId = { "mithril_short_sword_v" }
+    name = "mithril short sword"
+    itemClass = WEAPON
+    equipmentSlot = WEAPON
+    weight = 1
+    modifiers = {
+      DAMAGE 6
+    }
+    price = 10
+    craftingCost = "MITHRIL" 10
+    maxUpgrades = 2
+    weaponInfo = {
+      attackType = CUT
+    }
+    specialAttr = {
+      DAMAGE 5 HatedBy HATE_GREENSKINS
+    }
+    storageIds = {"weapons" "equipment"}
+    equipmentGroup = "mithril equipment"
+  }
+"MithrilLongSword"
+  {
+    viewId = { "mithril_long_sword" }
+    equipedViewId = { "mithril_long_sword_v" }
+    name = "mithril long sword"
+    itemClass = WEAPON
+    equipmentSlot = WEAPON
+    weight = 1.5
+    modifiers = {
+      DAMAGE 12
+    }
+    price = 20
+    craftingCost = "MITHRIL" 15
+    maxUpgrades = 3
+    weaponInfo = {
+      attackType = CUT
+    }
+    genPrefixes = {
+      1 SpecialAttr DAMAGE 10 HatedBy HATE_UNDEAD
+    }
+    specialAttr = {
+      DAMAGE 10 HatedBy HATE_GREENSKINS
+    }
+    storageIds = {"weapons" "equipment"}
+    equipmentGroup = "elven equipment"
+  }
+"MithrilHammer"
+  {
+    viewId = { "mithril_hammer" }
+	  equipedViewId = { "mithril_hammer_v" }
+    shortName = "hammer"
+    name = "mithril hammer"
+    itemClass = WEAPON
+    equipmentSlot = WEAPON
+    weight = 6
+    modifiers = {
+      DAMAGE 11
+    }
+    price = 20
+    craftingCost = "MITHRIL" 15
+    weaponInfo = {
+      attackType = CRUSH
+    }
+    maxUpgrades = 1
+	  storageIds = {"weapons" "equipment"}
+  }
+"MithrilAxe"
+  {
+    viewId = { "mithril_axe" }
+	  equipedViewId = { "mithril_axe_v" }
+    shortName = "mithril"
+    name = "mithril axe"
+    itemClass = WEAPON
+    equipmentSlot = WEAPON
+    weight = 4
+    modifiers = {
+      DAMAGE 14
+    }
+    price = 20
+    craftingCost = "MITHRIL" 15
+    weaponInfo = {
+      attackType = CUT
+    }
+    maxUpgrades = 2
+	  storageIds = {"weapons" "equipment"}
+    equipmentGroup = "elven equipment"
+  }
+
+"MithrilGreatSword"
+  {
+    viewId = { "mithril_great_sword" }
+    equipedViewId = { "mithril_great_sword_v" }
+    name = "mithril great sword"
+    itemClass = WEAPON
+    equipmentSlot = WEAPON
+    weight = 1.5
+    modifiers = {
+      DAMAGE 12
+    }
+    price = 20
+    craftingCost = "MITHRIL" 15
+    maxUpgrades = 3
+    weaponInfo = {
+      attackType = CUT
+      twoHanded = true
+    }
+    specialAttr = {
+      DAMAGE 10 HatedBy HATE_GREENSKINS
+    }
+    storageIds = {"weapons" "equipment"}
+    equipmentGroup = "elven equipment"
+  }
+"MithrilWarHammer"
+  {
+    viewId = { "mithril_warhammer" }
+	  equipedViewId = { "mithril_warhammer_v" }
+    shortName = "hammer"
+    name = "mithril war hammer"
+    itemClass = WEAPON
+    equipmentSlot = WEAPON
+    weight = 6
+    modifiers = {
+      DAMAGE 11
+    }
+    price = 20
+    craftingCost = "MITHRIL" 15
+    weaponInfo = {
+      attackType = CRUSH
+      twoHanded = true
+    }
+    genPrefixes = {
+      3 VictimEffect 0.4 Lasting COLLAPSED
+      3 LastingEffect RAGE
+      1 JoinPrefixes {
+			ItemAttrBonus DAMAGE 4
+			LastingEffect INVISIBLE
+			LastingEffect BLIND
+      }
+    }
+    maxUpgrades = 1
+	  storageIds = {"weapons" "equipment"}
+  } 
+"MithrilBattleAxe"
+  {
+    viewId = { "mithril_battle_axe" }
+	  equipedViewId = { "mithril_battle_axe_v" }
+    shortName = "mithril"
+    name = "mithril battle axe"
+    itemClass = WEAPON
+    equipmentSlot = WEAPON
+    weight = 4
+    modifiers = {
+      DAMAGE 14
+    }
+    price = 20
+    craftingCost = "MITHRIL" 15
+    weaponInfo = {
+      attackType = CUT
+      twoHanded = true
+    }
+    genPrefixes = {
+      3 VictimEffect 0.6 Lasting 50 BLEEDING
+      1 SpellId "leg strike"
+      1 SpellId "arm strike"
+    }
+    maxUpgrades = 2
+	  storageIds = {"weapons" "equipment"}
+    equipmentGroup = "elven equipment"
+    }
+"MithrilSpear"
+  {
+    viewId = { "mithril_spear" }
+    name = "mithril spear"
+    itemClass = WEAPON
+    equipmentSlot = WEAPON
+    equipedAbility = {"kings charge"}
+    weight = 2
+    modifiers = {
+      DAMAGE 24
+      PARRY 12
+    }
+    price = 40
+    craftingCost = "MITHRIL" 20
+    maxUpgrades = 4
+    weaponInfo = {
+      attackType = STAB
+      attackMsg = THRUST
+    }
+    specialAttr = {
+      DAMAGE 15 HatedBy HATE_GREENSKINS
+    }
+    genPrefixes = {
+      1 SpecialAttr DAMAGE 15 HatedBy HATE_UNDEAD
+    }
+    storageIds = {"weapons" "equipment"}
+    equipmentGroup = "mithril equipment"
+  }
+
+"MithrilWhip"
+  {
+    viewId = { "mithril_whip" }
+    equipedViewId = { "mithril_whip_v" }
+    name = "mithril whip"
+    plural = "mithril whips"
+    itemClass = WEAPON
+    equipmentSlot = RANGED_WEAPON
+    weight = 1
+    modifiers = {
+      DAMAGE 9
+    }
+    price = 5
+    craftingCost = "MITHRIL" 7
+    equipedAbility = {"mystic whip"}
+    weaponInfo = {
+      attackType = HIT
+      attackMsg = SWING
+    }
+    storageIds = {"weapons" "equipment"}
+    equipmentGroup = "mithril equipment"
+  }
+"MithrilMace"
+  {
+    viewId = { "mithril_mace" }
+	  equipedViewId = { "mithril_mace_v" }
+    name = "mithril mace"
+    itemClass = WEAPON
+    equipmentSlot = WEAPON
+    weight = 4
+    modifiers = {
+      DAMAGE 12
+      DEFENSE 2
+    }
+    price = 20
+    craftingCost = "MITHRIL" 15
+    weaponInfo = {
+      attackType = CRUSH
+    }
+    genPrefixes = {
+      1 VictimEffect 0.5 Lasting COLLAPSED
+      1 VictimEffect 0.5 Lasting 50 BLEEDING
+    }
+    maxUpgrades = 2
+	  storageIds = {"weapons" "equipment"}
+    equipmentGroup = "elven equipment"
+    }  
+"MithrilSwordStaff"
+  {
+    viewId = { "mithril_sword_staff" }
+    name = "mithril sword staff"
+    itemClass = WEAPON
+    equipmentSlot = WEAPON
+    equipedAbility = {"kings charge"}
+    weight = 2
+    modifiers = {
+      DAMAGE 24
+      PARRY 12
+    }
+    price = 40
+    craftingCost = "MITHRIL" 20
+    maxUpgrades = 4
+    weaponInfo = {
+      attackType = STAB
+      attackMsg = THRUST
+      twoHanded = true
+    }
+    specialAttr = {
+      DAMAGE 15 HatedBy HATE_GREENSKINS
+    }
+    genPrefixes = {
+      1 SpecialAttr DAMAGE 15 HatedBy HATE_UNDEAD
+    }
+    storageIds = {"weapons" "equipment"}
+    equipmentGroup = "mithril equipment"
+  }
+"MithrilTrident"
+  {
+    viewId = { "mithril_trident" }
+    name = "mithril trident"
+    itemClass = WEAPON
+    equipmentSlot = WEAPON
+    equipedAbility = {"kings charge"}
+    weight = 2
+    modifiers = {
+      DAMAGE 24
+      PARRY 12
+    }
+    price = 40
+    craftingCost = "MITHRIL" 20
+    maxUpgrades = 4
+    weaponInfo = {
+      attackType = STAB
+      attackMsg = THRUST
+      twoHanded = true
+    }
+    specialAttr = {
+      DAMAGE 15 HatedBy HATE_GREENSKINS
+    }
+    genPrefixes = {
+      1 SpecialAttr DAMAGE 15 HatedBy HATE_UNDEAD
+    }
+    storageIds = {"weapons" "equipment"}
+    equipmentGroup = "mithril equipment"
+  }
+
+"MithrilShortBow"
+  {
+    viewId = { "mithril_shortbow" }
+    name = "mithril shortbow"
+    itemClass = RANGED_WEAPON
+    equipmentSlot = RANGED_WEAPON
+    equipedAbility = {"shoot arrow"}
+    weaponInfo = {
+      twoHanded = true
+    }
+    weight = 1
+    price = 40
+    craftingCost = "MITHRIL" 10
+    modifiers = {
+      RANGED_DAMAGE 15
+    }
+    specialAttr = {
+      DAMAGE 10 HatedBy HATE_GREENSKINS
+    }
+    storageIds = {"bows" "weapons" "equipment"}
+    equipmentGroup = "mithril equipment"
+  }
+"MithrilLongBow"
+  {
+    viewId = { "mithril_longbow" }
+    name = "mithril longbow"
+    itemClass = RANGED_WEAPON
+    equipmentSlot = RANGED_WEAPON
+    equipedAbility = {"shoot arrow"}
+    weaponInfo = {
+      twoHanded = true
+    }
+    weight = 1
+    price = 40
+    craftingCost = "MITHRIL" 20
+    modifiers = {
+      RANGED_DAMAGE 22
+    }
+    maxUpgrades = 1
+    specialAttr = {
+      DAMAGE 10 HatedBy HATE_GREENSKINS
+    }
+    storageIds = {"bows" "weapons" "equipment"}
+    equipmentGroup = "mithril equipment"
+  }
+"MithrilCrossBow"
+  {
+    viewId = { "mithril_crossbow" }
+    name = "mithril crossbow"
+    itemClass = RANGED_WEAPON
+    equipmentSlot = RANGED_WEAPON
+    equipedAbility = {"shoot bolt"}
+    weaponInfo = {
+      twoHanded = true
+    }
+    weight = 1
+    price = 40
+    craftingCost = "MITHRIL" 30
+    modifiers = {
+      RANGED_DAMAGE 31
+    }
+    maxUpgrades = 2
+    specialAttr = {
+      DAMAGE 10 HatedBy HATE_GREENSKINS
+    }
+    storageIds = {"bows" "weapons" "equipment"}
+    equipmentGroup = "ranged equipment"
+  }
+
+"ElvenWand"
+  {
+    viewId = { "elven_wand" }
+		equipedViewId = { "elven_wand_v" }
+    effectDescription = false
+    name = "elven wand"
+    plural = "elven wands"
+    description = "A magic weapon."
+    weight =  1.5 
+    price =  30 
+    itemClass =  WEAPON 
+    equipmentSlot =  WEAPON 
+    modifiers =  { SPELL_DAMAGE 4 } 
+    weaponInfo =  { 
+      attackType = SPELL 
+      attackMsg = WAVE 
+      meleeAttackAttr = SPELL_DAMAGE 
+    } 
+    maxUpgrades =  1
+		storageIds = {"weapons" "equipment"}
+  }
+"MithrilWand" inherit "ElvenWand"
+  {
+    viewId = { "mithril_wand" }
+		equipedViewId = { "mithril_wand_v" }
+    effectDescription = false
+    name = "mithril wand"
+    plural = "mithril wands"
+    description = "A magic weapon that can shoot ice freezing enemies."
+    price = 30
+    modifiers =  { SPELL_DAMAGE 4 } 
+    weaponInfo =  { 
+      attackType = SPELL 
+      attackMsg = WAVE 
+      meleeAttackAttr = SPELL_DAMAGE 
+    } 
+    maxUpgrades =  1 
+  }
+"MithrilGrandWand" inherit "ElvenWand"
+  {
+    viewId = { "mithril_grand_wand" }
+		equipedViewId = { "mithril_grand_wand_v" }
+    effectDescription = false
+    name = "mithril grand wand"
+    plural = "mithril grand wands"
+    description = "A magic weapon that can shoot enemies."
+    price = 60 
+    modifiers =  { SPELL_DAMAGE 4 } 
+    weaponInfo =  { 
+      attackType = SPELL 
+      attackMsg = WAVE 
+      meleeAttackAttr = SPELL_DAMAGE 
+    } 
+    maxUpgrades = 1 
+  }
+"ElvenStave"
+  {
+    viewId = { "elven_stave" }
+    equipedViewId = { "elven_stave_v" }
+    name = "elven stave"
+    itemClass = WEAPON
+    equipmentSlot = WEAPON
+    weight = 1.5
+    modifiers = {
+      SPELL_DAMAGE 8
+    }
+    price = 60
+    weaponInfo = {
+      attackType = SPELL
+      attackMsg = WAVE
+      meleeAttackAttr = SPELL_DAMAGE
+    }
+    craftingCost = "WOOD" 40
+    genPrefixes = {
+      1 VictimEffect 1.0 Escape{}
+      1 VictimEffect 0.4 DestroyEquipment
+      1 JoinPrefixes {
+        ItemAttrBonus SPELL_DAMAGE 20
+        AttackerEffect Suicide DIE
+      }
+    }
+    maxUpgrades = 2
+    storageIds = {"weapons" "equipment"}
+    equipmentGroup = "magic equipment"
+  }
+"MithrilStaff" inherit "ElvenStave"
+  {
+    viewId = { "mithril_staff" }
+    equipedViewId = { "mithril_staff_v" }
+    name = "mithril staff"
+    modifiers = {
+      SPELL_DAMAGE 13
+      SPELL_SPEED 10
+    }
+    price = 1800
+    craftingCost = "MITHRIL" 20
+    genPrefixes = {
+      1 VictimEffect 0.2 Lasting INSANITY
+      1 VictimEffect 0.2 DestroyEquipment
+      1 VictimEffect 0.5 Fire{20}
+    }
+    maxUpgrades = 5
+    equipmentGroup = "magic equipment"
+  }
+"MithrilGrandStaff" inherit "ElvenStave"
+  {
+    viewId = { "mithril_grand_staff" }
+    equipedViewId = { "mithril_grand_staff_v" }
+    name = "mithril grand staff"
+    modifiers = {
+      SPELL_DAMAGE 13
+      SPELL_SPEED 10
+    }
+    price = 1800
+    craftingCost = "MITHRIL" 20
+    genPrefixes = {
+      1 VictimEffect 0.2 Lasting INSANITY
+      1 VictimEffect 0.2 DestroyEquipment
+      1 VictimEffect 0.5 Fire{20}
+    }
+    maxUpgrades = 5
+    equipmentGroup = "magic equipment"
+  }
+
+"ElvenShoes"
+  {
+    viewId = { "elven_shoes" }
+    shortName = "shoes"
+    name = "pair of elven shoes"
+    plural = "pairs of elven shoes"
+    itemClass = ARMOR
+    equipmentSlot = BOOTS
+    weight = 2
+    price = 20
+    craftingCost = "GOLD" 20
+    modifiers = {
+      DEFENSE 2
+      SPELL_SPEED 5
+    }
+    genPrefixes = {
+      1 LastingEffect FLYING
+      1 LastingEffect SPEED
+      2 ItemAttrBonus DEFENSE 3
+    }
+    maxUpgrades = 2
+    storageIds = {"armor" "equipment"}
+    equipmentGroup = "elven clothes"
+  }
+"ElvenBoots"
+  {
+    viewId = { "elven_boots" }
+    shortName = "boots"
+    name = "pair of elven boots"
+    plural = "pairs of elven boots"
+    itemClass = ARMOR
+    equipmentSlot = BOOTS
+    weight = 2
+    price = 20
+    craftingCost = "GOLD" 20
+    modifiers = {
+      DEFENSE 2
+      SPELL_SPEED 5
+    }
+    genPrefixes = {
+      1 LastingEffect FLYING
+      1 LastingEffect SPEED
+      2 ItemAttrBonus DEFENSE 3
+    }
+    maxUpgrades = 2
+    storageIds = {"armor" "equipment"}
+    equipmentGroup = "elven clothes"
+  }
+"ElvenCloak"
+  {
+    viewId = { "elven_cloak" }
+    shortName = "cloak"
+    name = "elven cloak"
+    itemClass = ARMOR
+    equipmentSlot = BODY_ARMOR
+    weight = 1.5
+    price = 20
+    craftingCost = "GOLD" 20
+    maxUpgrades = 1
+    modifiers = {
+      DEFENSE 3
+    }
+    genPrefixes = {
+      1 LastingEffect MAGIC_RESISTANCE
+    }
+    storageIds = {"armor" "equipment"}
+    equipmentGroup = "elven clothes"
+  }
+"ElvenTunic"
+  {
+    viewId = { "elven_tunic" }
+    shortName = "tunic"
+    name = "elven tunic"
+    itemClass = ARMOR
+    equipmentSlot = BODY_ARMOR
+    weight = 1.5
+    price = 20
+    craftingCost = "GOLD" 20
+    modifiers = {
+      DEFENSE 3
+    }
+    storageIds = {"armor" "equipment"}
+    equipmentGroup = "elven clothes"
+  }
+"ElvenRobe"
+  {
+    viewId = { "elven_robe" }
+    shortName = "cloak"
+    name = "elven cloak"
+    itemClass = ARMOR
+    equipmentSlot = BODY_ARMOR
+    weight = 1.5
+    price = 20
+    craftingCost = "GOLD" 20
+    maxUpgrades = 1
+    modifiers = {
+      DEFENSE 3
+    }
+    genPrefixes = {
+      1 LastingEffect MAGIC_RESISTANCE
+    }
+    storageIds = {"armor" "equipment"}
+    equipmentGroup = "elven clothes"
+  }
+"ElvenPriestRobe"
+  {
+    viewId = { "elven_priest_robe" }
+    shortName = "priest"
+    name = "elven priest robe"
+    itemClass = ARMOR
+    equipmentSlot = BODY_ARMOR
+    weight = 1.5
+    price = 20
+    craftingCost = "GOLD" 20
+    maxUpgrades = 2
+    modifiers = {
+      DEFENSE 3
+    }
+    genPrefixes = {
+      1 LastingEffect MAGIC_RESISTANCE
+    }
+    storageIds = {"armor" "equipment"}
+    equipmentGroup = "elven clothes"
+  }
+"ElvenHood"
+  {
+    viewId = { "elven_hood" }
+    shortName = "hood"
+    name = "elven hood"
+    itemClass = ARMOR
+    equipmentSlot = HELMET
+    weight = 1
+    price = 20
+    craftingCost = "GOLD" 20
+    modifiers = {
+      SPELL_DAMAGE 6
+    }
+    storageIds = {"armor" "equipment"}
+    equipmentGroup = "elven clothes"
+  }
+"ElvenHat"
+  {
+    viewId = { "elven_hat" }
+    shortName = "hat"
+    name = "elven hat"
+    itemClass = ARMOR
+    equipmentSlot = HELMET
+    weight = 1
+    price = 20
+    craftingCost = "GOLD" 20
+    modifiers = {
+      SPELL_DAMAGE 6
+      DAMAGE -6
+      SPELL_SPEED 15
+    }
+    equipedEffect = {TELEPATHY}
+    autoEquipPredicate = AttributeAtLeast "SPELL_DAMAGE" 1
+    equipWarning = "Elven hats are only useful for spellcasters. Continue?"
+    genPrefixes = {
+      1 LastingEffect TELEPATHY
+      1 LastingEffect SLEEP_RESISTANT
+      2 ItemAttrBonus DEFENSE 3
+    }
+    maxUpgrades = 3
+    storageIds = {"armor" "equipment"}
+    equipmentGroup = "elven clothes"
+  }
+
+"MithrilBoots"
+  {
+    viewId = { "mithril_boots" }
+    shortName = "boots"
+    name = "pair of mithril boots"
+    plural = "pairs of mithril boots"
+    itemClass = ARMOR
+    equipmentSlot = BOOTS
+    weight = 3
+    price = 50
+    craftingCost = "MITHRIL" 24
+    modifiers = {
+      DEFENSE 4
+      SPELL_SPEED 10
+    }
+    genPrefixes = {
+      1 LastingEffect SPEED
+    }
+    maxUpgrades = 2
+    storageIds = {"armor" "equipment"}
+    equipmentGroup = "mithril equipment"
+  }
+"MithrilGloves"
+  {
+    viewId = { "mithril_gloves" }
+    shortName = "gloves"
+    name = "pair of mithril gloves"
+    plural = "pairs of mithril gloves"
+    itemClass = ARMOR
+    equipmentSlot = GLOVES
+    weight = 0.7
+    price = 25
+    craftingCost = "MITHRIL" 2
+    modifiers = {
+      DEFENSE 3
+      SPELL_SPEED 10
+    }
+    genPrefixes = {
+      1 ItemAttrBonus DAMAGE 3
+      1 ItemAttrBonus SPELL_DAMAGE 3
+    }
+    maxUpgrades = 2
+    storageIds = {"armor" "equipment"}
+    equipmentGroup = "mithril equipment"
+  }
+"MithrilHelm"
+  {
+    viewId = { "mithril_helm" }
+    shortName = "helm"
+    name = "mithril helm"
+    itemClass = ARMOR
+    equipmentSlot = HELMET
+    weight = 3
+    price = 40
+    craftingCost = "MITHRIL" 16
+    modifiers = {
+      DEFENSE 4
+      SPELL_SPEED 15 
+    }
+    maxUpgrades = 2
+    genPrefixes = {
+      1 LastingEffect TELEPATHY
+      1 LastingEffect REGENERATION
+    }
+    storageIds = {"armor" "equipment"}
+    equipmentGroup = "mithril equipment"
+  }
+"MithrilArmor"
+  {
+    viewId = { "mithril_armor" }
+    shortName = "armor"
+    name = "mithril armor"
+    itemClass = ARMOR
+    equipmentSlot = BODY_ARMOR
+    weight = 13
+    price = 160
+    craftingCost = "MITHRIL" 40
+    modifiers = { DEFENSE 8 }
+    maxUpgrades = 4
+    storageIds = {"armor" "equipment"}
+    equipmentGroup = "mithril equipment"
+  }
+
+"SmithAmulet"
+  {
+    viewId = { "smith_amulet" }
+    name = "amulet of blacksmithing"
+    shortName = "smithing"
+    weight = 0.05
+    equipedEffect = {FAST_CRAFTING}
+    modifiers = {
+      FORGE 20
+      WORKSHOP 20
+    }
+    equipmentSlot = AMULET
+    price = 1
+    storageIds = {"jewellery" "equipment"}
+    equipmentGroup = "jewellery"
+  }
+"HolyAmulet"
+  {
+    viewId = { "holy_amulet" }
+    name = "holy imbued amulet"
+    shortName = "holy"
+    weight = 0.05
+    equipedEffect = {FAST_CRAFTING}
+    modifiers = {
+      LABORATORY 20
+      SPELL_SPEED 20
+    }
+    equipmentSlot = AMULET
+    price = 1
+    storageIds = {"jewellery" "equipment"}
+    equipmentGroup = "jewellery"
+  }
+"MagicAmulet"
+  {
+    viewId = { "magic_amulet" }
+    name = "magically imbued amulet"
+    shortName = "magic"
+    weight = 0.05
+    equipedEffect = {FAST_CRAFTING}
+    modifiers = {
+      JEWELER 20
+      SPELL_DAMAGE 20
+    }
+    equipmentSlot = AMULET
+    price = 1
+    storageIds = {"jewellery" "equipment"}
+    equipmentGroup = "jewellery"
+  }
+"ArcherAmulet"
+  {
+    viewId = { "archer_amulet" }
+    name = "amulet of the archer"
+    shortName = "amulet"
+    weight = 0.05
+    equipedEffect = {
+      NIGHT_VISION
+      }
+    modifiers = {
+      RANGED_DAMAGE 20
+    }
+    equipmentSlot = AMULET
+    price = 1
+    storageIds = {"jewellery" "equipment"}
+    equipmentGroup = "jewellery"
+  }
+"WarriorAmulet"
+  {
+    viewId = { "warrior_amulet" }
+    name = "amulet of the warrior"
+    shortName = "amulet"
+    weight = 0.05
+    equipedEffect = {
+      WARNING
+      }
+      modifiers = {
+      DEFENSE 10
+    }
+    equipmentSlot = AMULET
+    price = 1
+    storageIds = {"jewellery" "equipment"}
+    equipmentGroup = "jewellery"
+  }
+
+"MithrilOre"
+  {
+    viewId = { "mithril_ore_pile" }
+    name = "mithril ore"
+    itemClass = OTHER
+    price = 100
+    resourceId = "MITHRIL"
+    weight = 1
+	  storageIds = {"resources"}
+  }
+"MagicGem"
+  {
+    viewId = { "magic_gem_bag" }
+	  ownedEffect = LIGHT_SOURCE
+    name = "magic gem"
+    itemClass = OTHER
+    price = 500
+    resourceId = "MAGIC_GEM"
+    weight = 0.5
+	  storageIds = {"resources"}
+  }
+
+
+Def SHARP_WEAPON_PREFIXES()
+    genPrefixes =
+	{
+      1 VictimEffect 0.3 Fire { 25 }
+      1 VictimEffect 0.2 Acid{30}
+      1 VictimEffect 0.2 Ice{30}
+      1 VictimEffect 0.1 Lasting 20 POISON
+      1 VictimEffect 0.1 Lasting 20 BLEEDING
+      1 VictimEffect 0.1 Lasting 100 FIRE_VULNERABILITY
+      1 VictimEffect 0.1 Lasting 100 COLD_VULNERABILITY
+      1 VictimEffect 0.1 Lasting 100 ACID_VULNERABILITY
+      1 VictimEffect 0.1 Lasting 100 MELEE_VULNERABILITY
+      1 VictimEffect 0.1 Lasting 100 MAGIC_VULNERABILITY
+      1 VictimEffect 0.1 Lasting 100 RANGED_VULNERABILITY
+      1 LastingEffect RAGE
+	  1 LastingEffect LIGHT_SOURCE	  
+      1 LastingEffect SLOW_CRAFTING
+      1 LastingEffect SLOW_TRAINING
+      1 LastingEffect HATE_DWARVES
+      1 LastingEffect HATE_HUMANS
+      1 LastingEffect HATE_GREENSKINS
+      1 LastingEffect HATE_ELVES
+      1 LastingEffect HATE_UNDEAD
+      1 LastingEffect HATE_DRAGONS
+      1 SpecialAttr DAMAGE 10 HatedBy HATE_UNDEAD
+      1 JoinPrefixes { ItemAttrBonus DAMAGE 3 LastingEffect HALLU }
+    }
+End
+
+Def BLUNT_WEAPON_PREFIXES()
+    genPrefixes =
+	{
+      1 VictimEffect 0.3 Fire { 25 }
+      1 VictimEffect 0.2 Acid{30}
+      1 VictimEffect 0.2 Ice{30}
+      1 VictimEffect 0.3 Lasting 20 COLLAPSED
+      1 VictimEffect 0.7 Lasting 20 SLOWED
+      1 LastingEffect RAGE
+	  1 LastingEffect LIGHT_SOURCE
+      1 LastingEffect MELEE_VULNERABILITY
+      1 LastingEffect RANGED_VULNERABILITY
+      1 SpecialAttr DAMAGE 10 HatedBy HATE_UNDEAD
+      1 ItemAttrBonus DIGGING 20
+      1 JoinPrefixes { ItemAttrBonus DAMAGE 3 LastingEffect HALLU }
+    }
+End
+
+Def MAGIC_WEAPON_PREFIXES()
+    genPrefixes =
+	{
+      1 VictimEffect 1.0 Escape{}
+      1 VictimEffect 0.4 DestroyEquipment
+      1 VictimEffect 0.2 Lasting INSANITY
+      1 VictimEffect 0.2 DestroyEquipment
+      1 VictimEffect 0.5 Fire{20}
+      1 VictimEffect 0.3 Lasting 20 PEACEFULNESS
+      1 VictimEffect 0.3 Lasting 20 SLEEP
+      1 VictimEffect 0.3 Lasting 20 PANIC
+      1 VictimEffect 0.3 Lasting 20 HALLU
+      1 LastingEffect FIRE_VULNERABILITY
+      1 LastingEffect COLD_VULNERABILITY
+      1 LastingEffect ACID_VULNERABILITY
+      1 LastingEffect MAGIC_VULNERABILITY
+      1 LastingEffect PANIC
+      1 JoinPrefixes { ItemAttrBonus SPELL_DAMAGE 20 AttackerEffect Suicide DIE }
+	}
+End
+
+Def BOOTS_PREFIXES()
+    genPrefixes =
+	{
+      1 ItemAttrBonus DEFENSE 3
+      1 LastingEffect SPEED
+      1 LastingEffect FLYING
+      1 LastingEffect SWARMER
+      1 LastingEffect STEED
+      1 LastingEffect REGENERATION
+      1 LastingEffect SLOWED
+      1 LastingEffect COLLAPSED
+      1 LastingEffect EXPLORE_SKILL
+      1 LastingEffect EXPLORE_NOCTURNAL_SKILL
+      1 LastingEffect EXPLORE_CAVES_SKILL
+      1 LastingEffect CAN_DANCE
+    }
+End
+
+Def GLOVES_PREFIXES()
+    genPrefixes =
+	{
+      1 ItemAttrBonus PARRY 3
+      1 ItemAttrBonus DAMAGE 5
+      1 ItemAttrBonus SPELL_DAMAGE 5
+      1 ItemAttrBonus RANGED_DAMAGE 5
+      1 LastingEffect POISON
+      1 LastingEffect BLEEDING
+      1 LastingEffect SWIMMING_SKILL
+      1 LastingEffect DISARM_TRAPS_SKILL
+      1 LastingEffect BRIDGE_BUILDING_SKILL
+      1 LastingEffect DISTILLATION_SKILL
+    }
+End
+
+Def HELM_PREFIXES()
+    genPrefixes =
+	{
+      1 LastingEffect WARNING
+      1 LastingEffect SLEEP_RESISTANT
+      1 ItemAttrBonus DEFENSE 5
+      1 LastingEffect TELEPATHY
+      1 LastingEffect NO_FRIENDLY_FIRE
+      1 LastingEffect PSYCHIATRY
+      1 LastingEffect BAD_BREATH
+      1 LastingEffect SUNLIGHT_VULNERABLE
+      1 LastingEffect MAGIC_CANCELLATION
+      1 LastingEffect INSANITY
+      1 LastingEffect PEACEFULNESS
+      1 LastingEffect LIGHT_SOURCE
+      1 LastingEffect SLEEP
+      1 LastingEffect PANIC
+      1 LastingEffect RAGE
+      1 LastingEffect HALLU
+      1 LastingEffect BLIND
+      1 LastingEffect ARCHER_VISION
+      1 LastingEffect ELF_VISION
+      1 LastingEffect NIGHT_VISION
+      1 LastingEffect WARNING
+      1 LastingEffect RESTED
+      1 LastingEffect FAST_CRAFTING
+      1 LastingEffect FAST_TRAINING
+      1 LastingEffect ENTERTAINER
+      1 LastingEffect RIDER
+      1 LastingEffect SLOW_CRAFTING
+      1 LastingEffect SLOW_TRAINING
+      1 LastingEffect HATE_DWARVES
+      1 LastingEffect HATE_HUMANS
+      1 LastingEffect HATE_GREENSKINS
+      1 LastingEffect HATE_ELVES
+      1 LastingEffect HATE_UNDEAD
+      1 LastingEffect HATE_DRAGONS
+    }
+End
+
+Def ARMOUR_PREFIXES()
+    genPrefixes =
+	{
+      1 ItemAttrBonus DEFENSE 5
+      1 LastingEffect PLAGUE
+      1 LastingEffect CAPTURE_RESISTANCE
+      1 LastingEffect POISON_RESISTANT
+      1 LastingEffect FIRE_RESISTANT
+      1 LastingEffect COLD_RESISTANT
+      1 LastingEffect MAGIC_RESISTANCE
+      1 LastingEffect ACID_RESISTANT
+      1 LastingEffect MELEE_RESISTANCE
+      1 LastingEffect RANGED_RESISTANCE
+      1 LastingEffect FIRE_VULNERABILITY
+      1 LastingEffect COLD_VULNERABILITY
+      1 LastingEffect ACID_VULNERABILITY
+      1 LastingEffect MELEE_VULNERABILITY
+      1 LastingEffect MAGIC_VULNERABILITY
+      1 LastingEffect RANGED_VULNERABILITY
+      1 LastingEffect FIRE_IMMUNITY
+      1 LastingEffect COLD_IMMUNITY
+      1 LastingEffect ACID_IMMUNITY
+      1 LastingEffect MELEE_IMMUNITY
+      1 LastingEffect MAGIC_IMMUNITY
+      1 LastingEffect RANGED_IMMUNITY
+      1 LastingEffect PLAGUE_RESISTANT
+      1 LastingEffect INVISIBLE
+      1 LastingEffect ENTANGLED
+      1 LastingEffect TIED_UP
+      1 LastingEffect IMMOBILE
+      1 LastingEffect PREGNANT
+      1 LastingEffect SATIATED
+      1 LastingEffect SPYING
+      1 LastingEffect AMBUSH_SKILL
+      1 LastingEffect COPULATION_SKILL	  
+    }
+End
+
+"Knife" modify append { SHARP_WEAPON_PREFIXES()  }
+"AssassinsKnife" modify append { SHARP_WEAPON_PREFIXES()  }
+"UnicornHorn" modify append { SHARP_WEAPON_PREFIXES()  }
+"Spear" modify append { SHARP_WEAPON_PREFIXES()  }
+"Sword" modify append { SHARP_WEAPON_PREFIXES()  }
+"AdaSword" modify append { SHARP_WEAPON_PREFIXES()  }
+"InferniteSword" modify append { SHARP_WEAPON_PREFIXES()  }
+"ElvenSword" modify append { SHARP_WEAPON_PREFIXES()  }
+"BattleAxe" modify append { SHARP_WEAPON_PREFIXES()  }
+"AdaBattleAxe" modify append { SHARP_WEAPON_PREFIXES()  }
+"InferniteBattleAxe" modify append { SHARP_WEAPON_PREFIXES()  }
+"InferniteTrident" modify append { SHARP_WEAPON_PREFIXES()  }
+
+"WarHammer" modify append { BLUNT_WEAPON_PREFIXES() }
+"AdaWarHammer" modify append { BLUNT_WEAPON_PREFIXES() }
+"InferniteWarHammer" modify append { BLUNT_WEAPON_PREFIXES() }
+"Club" modify append { BLUNT_WEAPON_PREFIXES() }
+"HeavyClub" modify append { BLUNT_WEAPON_PREFIXES() }
+"BalrogsWhip" modify append { BLUNT_WEAPON_PREFIXES() }
+
+"WoodenStaff" modify append { MAGIC_WEAPON_PREFIXES() }
+"IronStaff" modify append { MAGIC_WEAPON_PREFIXES() }
+"AdoxiumStaff"  modify append { MAGIC_WEAPON_PREFIXES() }
+"ElvenStaff" modify append { MAGIC_WEAPON_PREFIXES() }
+"Sceptre" modify append { MAGIC_WEAPON_PREFIXES() }
+
+"LeatherBoots" modify append { BOOTS_PREFIXES() }
+"IronBoots" modify append { BOOTS_PREFIXES() }
+"AdaBoots" modify append { BOOTS_PREFIXES() }
+"AdoxiumBoots" modify append { BOOTS_PREFIXES() }
+"DevilBoots" modify append { BOOTS_PREFIXES() }
+
+"Bow" modify append { HELM_PREFIXES() }
+"ElvenBow" modify append { HELM_PREFIXES() }
+"ArchwoodBow" modify append { HELM_PREFIXES() }
+"Crossbow" modify append { HELM_PREFIXES() }
+
+"LeatherGloves" modify append { GLOVES_PREFIXES() }
+"IronGloves" modify append { GLOVES_PREFIXES() }
+"AdaGloves" modify append { GLOVES_PREFIXES() }
+"AdoxiumGloves" modify append { GLOVES_PREFIXES() }
+
+"LeatherHelm" modify append { HELM_PREFIXES() }
+"IronHelm" modify append { HELM_PREFIXES() }
+"CyclopsHelm" modify append { HELM_PREFIXES() }
+"AdaHelm" modify append { HELM_PREFIXES() }
+"AdoxiumHelm" modify append { HELM_PREFIXES() }
+"Cornuthaum1" modify append { HELM_PREFIXES() }
+"Cornuthaum2" modify append { HELM_PREFIXES() }
+"Cornuthaum3" modify append { HELM_PREFIXES() }
+
+"WoodenShield" modify append { ARMOUR_PREFIXES() }
+"IronShield" modify append { ARMOUR_PREFIXES() }
+"AdaShield" modify append { ARMOUR_PREFIXES() }
+"LeatherArmor" modify append { ARMOUR_PREFIXES() }
+"ChainArmor" modify append { ARMOUR_PREFIXES() }
+"RedDragonArmor" modify append { ARMOUR_PREFIXES() }
+"BlackDragonArmor" modify append { ARMOUR_PREFIXES() }
+"WhiteDragonArmor" modify append { ARMOUR_PREFIXES() }
+"YellowDragonScales" modify append { ARMOUR_PREFIXES() }
+"YellowDragonArmor" modify append { ARMOUR_PREFIXES() }
+"GreenDragonArmor" modify append { ARMOUR_PREFIXES() }
+"AdaArmor" modify append { ARMOUR_PREFIXES() }
+"AdoxiumArmor" modify append { ARMOUR_PREFIXES() }
+"Robe" modify append { ARMOUR_PREFIXES() }
+"HalloweenCostume" modify append { ARMOUR_PREFIXES() }
