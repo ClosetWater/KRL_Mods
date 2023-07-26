@@ -10,8 +10,8 @@
         "worship" "distillation" "traps"
         "squire" "knight" "king" "god"
         "elemental magic" "advanced elemental magic" "spirit magic" "divine power"
-        "mithril weapons" "mithril armor" "unique weapons" "legend smithing"  
-        "crystal etching" "grand enchanting" "master alchemy"
+        "mithril forging" "unique weapons" "legend smithing"  
+        "grand enchanting" "master alchemy"
     }
     zLevelGroups = { "basic" "lawful" }
     initialTech = { "iron working" "archery" "alchemy" "squire" "jewellery" }
@@ -23,9 +23,9 @@
     }
     workshopGroups = { "elven" }
     description = "Play as a not-so-evil elven race. Recruit warriors, archers, and magical creatures!"
-    credit = { "GOLD" 500 "WOOD" 1000 "STONE" 1000 "ADA" 1000 "MITHRIL" 1000  }
+    credit = { "GOLD" 500 "WOOD" 1000 "STONE" 1000 "MITHRIL" 500  }
     minionTraits = { LEADER WORKER NO_LIMIT }
     maxPopulation = 10
-    populationString = "elven"
+    populationString = "high elves"
     noLeader = false
 }

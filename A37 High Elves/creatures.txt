@@ -39,7 +39,7 @@
       MELEE 12
     }
     aiType = RANGED
-    spellSchools = {"fighter" "elven king" }
+    spellSchools = {"martial arts" "elven king" }
     spells = { "advanced healing" "haste" "defense bonus" "damage bonus" "directed blast" }
     hatedByEffect = HATE_ELVES
   }
@@ -279,6 +279,7 @@
     body = {
         type = Humanoid MEDIUM
         }
+    spellSchools = { "martial arts" }
     maxLevelIncrease = {
       MELEE 4
     }
@@ -287,8 +288,6 @@
       EXPLORE_SKILL 1
       RIDER 1
     }
-    promotionGroup = "melee"
-    promotionCost = 0.25
   }
 
 "ELVEN_KNIGHT"
@@ -315,6 +314,7 @@
     }
     promotionGroup = "melee"
     promotionCost = 0.25
+    spellSchools = { "martial arts" }
     spells = { "advanced healing" "haste" "defense bonus" }
     maxLevelIncrease = {
       MELEE 7
@@ -346,6 +346,7 @@
     }
     promotionGroup = "melee"
     promotionCost = 0.25
+    spellSchools = { "martial arts" }
     spells = { "advanced healing" "haste" "defense bonus" "damage bonus" "directed blast" }
     maxLevelIncrease = {
       MELEE 12
@@ -1032,8 +1033,6 @@
       NO_FRIENDLY_FIRE 1
       RIDER 1
     }
-    promotionGroup = "ranged"
-    promotionCost = 0.25
     maxLevelIncrease = {
       MELEE 3
       ARCHERY 4

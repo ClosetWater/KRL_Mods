@@ -105,7 +105,7 @@
   viewId = { "elven_minion_vase" }
   blockMovement = true
   canHideHere = true
-  luxury = 0.3
+  luxury = 0.7
   strength = 50
   populationIncrease = { 2 none }
   destroyFX = { DESTROY_FURNITURE Rgb 120 120 120 255 }
