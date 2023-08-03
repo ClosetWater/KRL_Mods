@@ -24,19 +24,19 @@
       ELVEN_ALCHEMY 25
       ELVEN_FORGE 25
       ELVEN_CRAFT 25
+      INSCRIBING 25
     }
     permanentEffects = {
       MAGIC_RESISTANCE 1
       MELEE_RESISTANCE 1
-      FIRE_IMMUNITY 1
       ELF_VISION 1
       ARCHER_VISION 1
       RIDER 1
-      FAST_CRAFTING 1
     }
     maxLevelIncrease = {
       SPELL 12
       MELEE 12
+      ARCHERY 12
     }
     aiType = RANGED
     spellSchools = {"martial arts" "elven king" }
@@ -81,6 +81,34 @@
     hatedByEffect = HATE_ELVES
   }
 
+#craft
+
+"ELVEN_ARTISAN"
+  {
+    viewId = { "elven_artisan" }
+    name = { 
+        name = "elven artisan"
+        firstNameGen = "ELVEN"
+        pluralName = " elven artisans"
+        stackName = "craft"
+    }
+    attr = { 
+      ELVEN_CRAFT 20
+    }
+    body = {
+        type = Humanoid MEDIUM
+        }
+    chatReactionFriendly = "talks about crafting"
+    chatReactionHostile = "\"Die!\""
+    aiType = RANGED
+    permanentEffects = {
+        ELF_VISION 1
+        }
+    promotionGroup = "craft"
+    promotionCost = 0.25
+    hatedByEffect = HATE_ELVES
+  }
+
 "ELVEN_SMITH"
   {
     viewId = { "elven_smith" }
@@ -88,14 +116,14 @@
         name = "elven blacksmith"
         firstNameGen = "ELVEN"
         pluralName = " elven blacksmiths"
-        stackName = "elven blacksmith"
+        stackName = "craft"
     }
     attr = {
 	    DAMAGE 10
       DEFENSE 10 
-      FURNACE 25
-      ELVEN_CRAFT 25
-      ELVEN_FORGE 25
+      FURNACE 20
+      ELVEN_CRAFT 20
+      ELVEN_FORGE 20
     }
     body = {
         type = Humanoid LARGE
@@ -118,7 +146,7 @@
         name = "elven legendary blacksmith"
         firstNameGen = "ELVEN"
         pluralName = " elven legendary blacksmiths"
-        stackName = "elven blacksmith"
+        stackName = "craft"
     }
     attr = {
 	    DAMAGE 10
@@ -137,8 +165,6 @@
         ELF_VISION 1
         FAST_CRAFTING 1
         }
-    promotionGroup = "craft"
-    promotionCost = 0.25
     hatedByEffect = HATE_ELVES
   }
 
@@ -149,12 +175,12 @@
         name = "elven enchanter"
         firstNameGen = "ELVEN"
         pluralName = " elven enchanters"
-        stackName = "elven enchanter"
+        stackName = "craft"
     }
     attr = {
 	    DAMAGE 10
       DEFENSE 10
-      ELVEN_ENCHANT 25 
+      ELVEN_ENCHANT 20
 
     }
     body = {
@@ -179,7 +205,7 @@
         name = "elven grand enchanter"
         firstNameGen = "ELVEN"
         pluralName = " elven grand enchanters"
-        stackName = "elven enchanter"
+        stackName = "craft"
     }
     attr = {
 	    DAMAGE 10
@@ -196,8 +222,6 @@
         ELF_VISION 1
         FAST_CRAFTING 1
         }
-    promotionGroup = "craft"
-    promotionCost = 0.25
     hatedByEffect = HATE_ELVES
   }
 
@@ -208,12 +232,12 @@
         name = "elven alchemist"
         firstNameGen = "ELVEN"
         pluralName = " elven alchemists"
-        stackName = "elven alchemist"
+        stackName = "craft"
     }
     attr = {
 	    DAMAGE 10
       DEFENSE 10 
-      ELVEN_ALCHEMY 25
+      ELVEN_ALCHEMY 20
     }
     body = {
         type = Humanoid LARGE
@@ -237,7 +261,7 @@
         name = "elven master alchemist"
         firstNameGen = "ELVEN"
         pluralName = " elven master alchemists"
-        stackName = "elven alchemist"
+        stackName = "craft"
     }
     attr = {
 	    DAMAGE 10
@@ -254,11 +278,10 @@
         ELF_VISION 1
         FAST_CRAFTING 1
         }
-    promotionGroup = "craft"
-    promotionCost = 0.25
     hatedByEffect = HATE_ELVES
   }
 
+#melee
 "ELVEN_GUARD" 
   {
     viewId = { "elven_guard" }
@@ -266,7 +289,7 @@
         name = "elven guard"
         firstNameGen = "ELVEN"
         pluralName = " elven guards"
-        stackName = "elven warrior"
+        stackName = "melee"
     }
     attr = {
       DAMAGE 22
@@ -285,7 +308,6 @@
     }
     permanentEffects = {
       ELF_VISION 1
-      EXPLORE_SKILL 1
       RIDER 1
     }
   }
@@ -300,7 +322,7 @@
     }
     afterKilledSomeone = {
       CreatureMessage { "are more experienced" "is more experienced"}
-      Filter Kills 25 {Polymorph "ELVEN_LORD" none}
+      Filter Kills 50 {Polymorph "ELVEN_LORD" none}
     }
     body = {
         type = Humanoid LARGE
@@ -308,6 +330,9 @@
     chatReactionFriendly = "curses all dungeons"
     chatReactionHostile = "\"Die!\""
     permanentEffects = {
+      EXPLORE_SKILL 1
+      EXPLORE_NOCTURNAL_SKILL 1
+      EXPLORE_CAVES_SKILL 1
       MELEE_RESISTANCE 1
       ELF_VISION 1
       RIDER 1
@@ -322,7 +347,7 @@
     name = {
       name = "elven knight"
       firstNameGen = "ELVEN"
-      stackName = "elven warrior"
+      stackName = "melee"
     }
   }
 
@@ -333,6 +358,7 @@
       DAMAGE 50
       DEFENSE 50
       MULTI_WEAPON 50
+      RANGED_DAMAGE 50
     }
     body = {
         type = Humanoid LARGE
@@ -342,6 +368,8 @@
     permanentEffects = {
       MELEE_RESISTANCE 1
       ELF_VISION 1
+      ARCHER_VISION 1
+      NO_FRIENDLY_FIRE 1
       RIDER 1
     }
     promotionGroup = "melee"
@@ -350,12 +378,162 @@
     spells = { "advanced healing" "haste" "defense bonus" "damage bonus" "directed blast" }
     maxLevelIncrease = {
       MELEE 12
+      ARCHERY 12
     }
     name = {
       name = "elven lord"
       firstNameGen = "ELVEN"
-      stackName = "elven warrior"
+      stackName = "noble"
     }
+  }
+
+#ranged
+"ELVEN_HUNTER"
+  {
+    viewId = { "elven_hunter" }
+    attr = {
+      DAMAGE 10
+      DEFENSE 12
+      RANGED_DAMAGE 10 
+    }
+    afterKilledSomeone = {
+      CreatureMessage { "are more experienced" "is more experienced"}
+      Filter Kills 10 {Polymorph "ELVEN_RANGER" none}
+    }
+    body = {
+        type = Humanoid MEDIUM
+        }
+    chatReactionFriendly = "curses all dungeons"
+    chatReactionHostile = "\"Die!\""
+    aiType = RANGED
+    permanentEffects = {
+      ELF_VISION 1
+      ARCHER_VISION 1
+      NO_FRIENDLY_FIRE 1
+      RIDER 1
+    }
+    maxLevelIncrease = {
+      ARCHERY 4
+    }
+    name = {
+      name = "elven hunter"
+      firstNameGen = "ELVEN"
+      pluralName = "elven hunters"
+      stackName = "ranged"
+    }
+    hatedByEffect = HATE_ELVES
+  }
+
+"ELVEN_RANGER"
+  {
+    viewId = { "elven_ranger" }
+    attr = {
+      DAMAGE 18
+      DEFENSE 12
+      RANGED_DAMAGE 20 
+    }
+    afterKilledSomeone = {
+      CreatureMessage { "are more experienced" "is more experienced"}
+      Filter Kills 25 {Polymorph "ELVEN_MARKSMAN" none}
+    }
+    body = {
+        type = Humanoid LARGE
+        }
+    chatReactionFriendly = "curses all dungeons"
+    chatReactionHostile = "\"Die!\""
+    aiType = RANGED
+    permanentEffects = {
+      ELF_VISION 1
+      ARCHER_VISION 1
+      NO_FRIENDLY_FIRE 1
+      RIDER 1
+    }
+    promotionGroup = "ranged"
+    promotionCost = 0.25
+    spells = { "healing" }
+    maxLevelIncrease = {
+      MELEE 3
+      ARCHERY 7
+    }
+    name = {
+      name = "elven ranger"
+      firstNameGen = "ELVEN"
+      pluralName = "elven rangers"
+      stackName = "ranged"
+    }
+    hatedByEffect = HATE_ELVES
+  }
+
+"ELVEN_MARKSMAN"
+  {
+    viewId = { "elven_marksman" }
+    attr = {
+      DAMAGE 18
+      DEFENSE 12
+      RANGED_DAMAGE 36 
+    }
+    afterKilledSomeone = {
+      CreatureMessage { "are more experienced" "is more experienced"}
+      Filter Kills 50 {Polymorph "ELVEN_LORD" none}
+    }
+    body = {
+        type = Humanoid LARGE
+        }
+    chatReactionFriendly = "curses all dungeons"
+    chatReactionHostile = "\"Die!\""
+    aiType = RANGED
+    permanentEffects = {
+      MAGIC_RESISTANCE 1
+      ELF_VISION 1
+      ARCHER_VISION 1
+      NO_FRIENDLY_FIRE 1
+      RIDER 1
+    }
+    promotionGroup = "ranged"
+    promotionCost = 0.25
+    spells = { "healing" }
+    maxLevelIncrease = {
+      MELEE 3
+      ARCHERY 12
+    }
+    name = {
+      name = "elven marksman"
+      firstNameGen = "ELVEN"
+      pluralName = "elven marksman"
+      stackName = "ranged"
+    }
+    hatedByEffect = HATE_ELVES
+  }
+
+#magic
+"ELVEN_MAGE"
+  {
+    viewId = { "elven_mage" }
+    name = { 
+        name = "elven mage"
+        firstNameGen = "ELVEN"
+        stackName = "magic"
+    }
+    attr = {
+      DAMAGE 5
+      DEFENSE 10
+      SPELL_DAMAGE 15
+      INSCRIBING 8
+    }
+    body = {
+        type = Humanoid LARGE
+        }
+    spells = { "healing" "haste" "defense bonus" "damage bonus" "directed blast" }
+    aiType = RANGED
+    maxLevelIncrease = {
+      SPELL 4
+    }
+    permanentEffects = {
+      ELF_VISION 1
+      NO_FRIENDLY_FIRE 1
+    }
+    promotionGroup = "magic"
+    promotionCost = 0.25
   }
 
 "ELVEN_FIRE_MAGE"
@@ -364,12 +542,13 @@
     name = { 
         name = "elven fire mage"
         firstNameGen = "ELVEN"
-        stackName = "elven mage"
+        stackName = "magic"
     }
     attr = {
       DAMAGE 15
       DEFENSE 20
       SPELL_DAMAGE 25
+      INSCRIBING 12
     }
     afterKilledSomeone = {
       CreatureMessage { "are more experienced" "is more experienced"}
@@ -398,12 +577,13 @@
     name = { 
         name = "elven fire archmage"
         firstNameGen = "ELVEN"
-        stackName = "elven archmage"
+        stackName = "magic"
     }
     attr = {
       DAMAGE 15
       DEFENSE 25
       SPELL_DAMAGE 50
+      INSCRIBING 20
     }
     body = {
         type = Humanoid LARGE
@@ -429,12 +609,13 @@
     name = { 
         name = "elven air mage"
         firstNameGen = "ELVEN"
-        stackName = "elven mage"
+        stackName = "magic"
     }
     attr = {
       DAMAGE 15
       DEFENSE 20
-      SPELL_DAMAGE 25 
+      SPELL_DAMAGE 25
+      INSCRIBING 12
     }
     afterKilledSomeone = {
       CreatureMessage { "are more experienced" "is more experienced"}
@@ -463,12 +644,13 @@
     name = { 
         name = "elven air archmage"
         firstNameGen = "ELVEN"
-        stackName = "elven archmage"
+        stackName = "magic"
     }
     attr = {
       DAMAGE 15
       DEFENSE 25
       SPELL_DAMAGE 50 
+      INSCRIBING 20
     }
     body = {
         type = Humanoid LARGE
@@ -494,12 +676,13 @@
     name = { 
         name = "elven water mage"
         firstNameGen = "ELVEN"
-        stackName = "elven mage"
+        stackName = "magic"
     }
     attr = {
       DAMAGE 15
       DEFENSE 20
       SPELL_DAMAGE 25
+      INSCRIBING 12
     }
     afterKilledSomeone = {
       CreatureMessage { "are more experienced" "is more experienced"}
@@ -528,12 +711,13 @@
     name = { 
         name = "elven water archmage"
         firstNameGen = "ELVEN"
-        stackName = "elven archmage"
+        stackName = "magic"
     }
     attr = {
       DAMAGE 15
       DEFENSE 25
       SPELL_DAMAGE 50
+      INSCRIBING 20
     }
     body = {
         type = Humanoid LARGE
@@ -559,12 +743,13 @@
     name = { 
         name = "elven earth mage"
         firstNameGen = "ELVEN"
-        stackName = "elven mage"
+        stackName = "magic"
     }
     attr = {
       DAMAGE 15
       DEFENSE 20
       SPELL_DAMAGE 25 
+      INSCRIBING 12
     }
     afterKilledSomeone = {
       CreatureMessage { "are more experienced" "is more experienced"}
@@ -593,12 +778,13 @@
     name = { 
         name = "elven earth archmage"
         firstNameGen = "ELVEN"
-        stackName = "elven archmage"
+        stackName = "magic"
     }
     attr = {
       DAMAGE 15
       DEFENSE 25
       SPELL_DAMAGE 50
+      INSCRIBING 20
     }
     body = {
         type = Humanoid LARGE
@@ -624,12 +810,13 @@
     name = { 
         name = "elven ice mage"
         firstNameGen = "ELVEN"
-        stackName = "elven mage"
+        stackName = "magic"
     }
     attr = {
       DAMAGE 15
       DEFENSE 20
       SPELL_DAMAGE 25 
+      INSCRIBING 12
     }
     afterKilledSomeone = {
       CreatureMessage { "are more experienced" "is more experienced"}
@@ -658,12 +845,13 @@
     name = { 
         name = "elven ice archmage"
         firstNameGen = "ELVEN"
-        stackName = "elven archmage"
+        stackName = "magic"
     }
     attr = {
       DAMAGE 15
       DEFENSE 25
       SPELL_DAMAGE 50 
+      INSCRIBING 20
     }
     body = {
         type = Humanoid LARGE
@@ -689,12 +877,13 @@
     name = { 
         name = "elven lightning mage"
         firstNameGen = "ELVEN"
-        stackName = "elven mage"
+        stackName = "magic"
     }
     attr = {
       DAMAGE 15
       DEFENSE 20
       SPELL_DAMAGE 25 
+      INSCRIBING 12
     }
     afterKilledSomeone = {
       CreatureMessage { "are more experienced" "is more experienced"}
@@ -723,12 +912,13 @@
     name = { 
         name = "elven lightning archmage"
         firstNameGen = "ELVEN"
-        stackName = "elven archmage"
+        stackName = "magic"
     }
     attr = {
       DAMAGE 15
       DEFENSE 20
       SPELL_DAMAGE 50 
+      INSCRIBING 20
     }
     body = {
         type = Humanoid LARGE
@@ -754,12 +944,13 @@
     name = { 
         name = "elven spirit mage"
         firstNameGen = "ELVEN"
-        stackName = "elven mage"
+        stackName = "magic"
     }
     attr = {
       DAMAGE 15
       DEFENSE 20
-      SPELL_DAMAGE 25 
+      SPELL_DAMAGE 25
+      INSCRIBING 12 
     }
     afterKilledSomeone = {
       CreatureMessage { "are more experienced" "is more experienced"}
@@ -789,12 +980,13 @@
     name = { 
         name = "elven spirit archmage"
         firstNameGen = "ELVEN"
-        stackName = "elven archmage"
+        stackName = "magic"
     }
     attr = {
       DAMAGE 15
       DEFENSE 20
       SPELL_DAMAGE 35 
+      INSCRIBING 20
     }
     body = {
         type = Humanoid LARGE
@@ -820,12 +1012,13 @@
     name = { 
         name = "elven light mage"
         firstNameGen = "ELVEN"
-        stackName = "elven mage"
+        stackName = "magic"
     }
     attr = {
       DAMAGE 15
       DEFENSE 20
       SPELL_DAMAGE 25 
+      INSCRIBING 12
     }
     afterKilledSomeone = {
       CreatureMessage { "are more experienced" "is more experienced"}
@@ -854,12 +1047,13 @@
     name = { 
         name = "elven light archmage"
         firstNameGen = "ELVEN"
-        stackName = "elven archmage"
+        stackName = "magic"
     }
     attr = {
       DAMAGE 15
       DEFENSE 25
       SPELL_DAMAGE 50 
+      INSCRIBING 20
     }
     body = {
         type = Humanoid LARGE
@@ -885,12 +1079,13 @@
     name = { 
         name = "elven life mage"
         firstNameGen = "ELVEN"
-        stackName = "elven mage"
+        stackName = "magic"
     }
     attr = {
       DAMAGE 15
       DEFENSE 20
       SPELL_DAMAGE 25 
+      INSCRIBING 12
     }
     afterKilledSomeone = {
       CreatureMessage { "are more experienced" "is more experienced"}
@@ -899,7 +1094,7 @@
     body = {
         type = Humanoid LARGE
         }
-    spellSchools = { "restoration" }
+    spellSchools = { "abjuration" }
     aiType = RANGED
     maxLevelIncrease = {
       MELEE 3
@@ -919,17 +1114,18 @@
     name = { 
         name = "elven life archmage"
         firstNameGen = "ELVEN"
-        stackName = "elven archmage"
+        stackName = "magic"
     }
     attr = {
       DAMAGE 15
       DEFENSE 25
-      SPELL_DAMAGE 50
+      SPELL_DAMAGE 35
+      INSCRIBING 20
     }
     body = {
         type = Humanoid LARGE
         }
-    spellSchools = { "restoration" "elven" }
+    spellSchools = { "abjuration" "elven" }
     aiType = RANGED
     maxLevelIncrease = {
       MELEE 3
@@ -950,12 +1146,13 @@
     name = { 
         name = "elven shadow mage"
         firstNameGen = "ELVEN"
-        stackName = "elven mage"
+        stackName = "magic"
     }
     attr = {
       DAMAGE 15
       DEFENSE 20
       SPELL_DAMAGE 25 
+      INSCRIBING 12
     }
     afterKilledSomeone = {
       CreatureMessage { "are more experienced" "is more experienced"}
@@ -984,12 +1181,13 @@
     name = { 
         name = "elven shadow archmage"
         firstNameGen = "ELVEN"
-        stackName = "elven archmage"
+        stackName = "magic"
     }
     attr = {
       DAMAGE 15
       DEFENSE 25
       SPELL_DAMAGE 50 
+      INSCRIBING 20
     }
     body = {
         type = Humanoid LARGE
@@ -1009,120 +1207,7 @@
     promotionCost = 0.25
   }
 
-"ELVEN_HUNTER"
-  {
-    viewId = { "elven_hunter" }
-    attr = {
-      DAMAGE 18
-      DEFENSE 12
-      RANGED_DAMAGE 12 
-    }
-    afterKilledSomeone = {
-      CreatureMessage { "are more experienced" "is more experienced"}
-      Filter Kills 10 {Polymorph "ELVEN_RANGER" none}
-    }
-    body = {
-        type = Humanoid MEDIUM
-        }
-    chatReactionFriendly = "curses all dungeons"
-    chatReactionHostile = "\"Die!\""
-    aiType = RANGED
-    permanentEffects = {
-      ELF_VISION 1
-      ARCHER_VISION 1
-      NO_FRIENDLY_FIRE 1
-      RIDER 1
-    }
-    maxLevelIncrease = {
-      MELEE 3
-      ARCHERY 4
-    }
-    name = {
-      name = "elven hunter"
-      firstNameGen = "ELVEN"
-      pluralName = "elven hunters"
-      stackName = "elven archer"
-    }
-    hatedByEffect = HATE_ELVES
-  }
-
-"ELVEN_RANGER"
-  {
-    viewId = { "elven_ranger" }
-    attr = {
-      DAMAGE 18
-      DEFENSE 12
-      RANGED_DAMAGE 25 
-    }
-    afterKilledSomeone = {
-      CreatureMessage { "are more experienced" "is more experienced"}
-      Filter Kills 25 {Polymorph "ELVEN_MARKSMAN" none}
-    }
-    body = {
-        type = Humanoid LARGE
-        }
-    chatReactionFriendly = "curses all dungeons"
-    chatReactionHostile = "\"Die!\""
-    aiType = RANGED
-    permanentEffects = {
-      ELF_VISION 1
-      ARCHER_VISION 1
-      NO_FRIENDLY_FIRE 1
-      RIDER 1
-    }
-    promotionGroup = "ranged"
-    promotionCost = 0.25
-    spells = { "healing" }
-    maxLevelIncrease = {
-      MELEE 3
-      ARCHERY 7
-    }
-    name = {
-      name = "elven ranger"
-      firstNameGen = "ELVEN"
-      pluralName = "elven rangers"
-      stackName = "elven archer"
-    }
-    hatedByEffect = HATE_ELVES
-  }
-
-"ELVEN_MARKSMAN"
-  {
-    viewId = { "elven_marksman" }
-    attr = {
-      DAMAGE 18
-      DEFENSE 12
-      RANGED_DAMAGE 50 
-    }
-    body = {
-        type = Humanoid LARGE
-        }
-    chatReactionFriendly = "curses all dungeons"
-    chatReactionHostile = "\"Die!\""
-    aiType = RANGED
-    permanentEffects = {
-      MAGIC_RESISTANCE 1
-      ELF_VISION 1
-      ARCHER_VISION 1
-      NO_FRIENDLY_FIRE 1
-      RIDER 1
-    }
-    promotionGroup = "ranged"
-    promotionCost = 0.25
-    spells = { "healing" }
-    maxLevelIncrease = {
-      MELEE 3
-      ARCHERY 12
-    }
-    name = {
-      name = "elven marksman"
-      firstNameGen = "ELVEN"
-      pluralName = "elven marksman"
-      stackName = "elven archer"
-    }
-    hatedByEffect = HATE_ELVES
-  }
-
+#creature
 "HAWK"
  {
     viewId = { "hawk" }
@@ -1180,7 +1265,7 @@
       pluralName = "winged wolves"
       firstNameGen = "DOG"
       groupName = "pack"
-      stackName = "winged wolf"
+      stackName = "creature"
     }
   }
 
@@ -1213,7 +1298,7 @@
       pluralName = "trained winged wolves"
       firstNameGen = "DOG"
       groupName = "pack"
-      stackName = "winged wolf"
+      stackName = "creature"
     }
   }
 
@@ -1226,7 +1311,7 @@
     }
     afterKilledSomeone = {
       ApplyToSteed CreatureMessage { "are more experienced" "is more experienced"}
-      ApplyToSteed Filter Kills 10 {Polymorph "ELDER_RED_DRAKE" none}
+      Filter Kills 10 {ApplyToSteed Polymorph "ELDER_RED_DRAKE" none}
     }
     body = {
       type = FourLegged LARGE
@@ -1249,7 +1334,7 @@
     name = {
       name = "red drake"
       firstNameGen = "DRAKE"
-      stackName = "drake"
+      stackName = "creature"
     }
     hatedByEffect = HATE_DRAGONS
   }
@@ -1263,7 +1348,7 @@
     }
     afterKilledSomeone = {
       ApplyToSteed CreatureMessage { "are more experienced" "is more experienced"}
-      ApplyToSteed Filter Kills 10 {Polymorph "ELDER_GREEN_DRAKE" none}
+      Filter Kills 10 {ApplyToSteed Polymorph "ELDER_GREEN_DRAKE" none}
     }
     body = {
       type = FourLegged LARGE
@@ -1284,7 +1369,7 @@
     }
     name = {
       name = "green drake"
-      stackName = "drake"
+      stackName = "creature"
       firstNameGen = "DRAKE"
     }
     hatedByEffect = HATE_DRAGONS
@@ -1321,7 +1406,7 @@
     name = {
       name = "elder red drake"
       firstNameGen = "DRAKE"
-      stackName = "drake"
+      stackName = "creature"
     }
     hatedByEffect = HATE_DRAGONS
   }
@@ -1355,36 +1440,10 @@
     }
     name = {
       name = "elder green drake"
-      stackName = "drake"
+      stackName = "creature"
       firstNameGen = "DRAKE"
     }
     hatedByEffect = HATE_DRAGONS
-  }
-
-"FAIRY"
-  {
-    attr = {
-      DEFENSE 30
-      SPELL_SPEED 35
-    }
-    viewId = { "fairy" }
-    body = {
-      type = NonHumanoid SMALL
-        material = SPIRIT
-        addBodyPart = {
-          WING 2
-        }
-    }
-    permanentEffects = {
-      FLYING 1
-      RIDER 1
-    }
-    aiType = RANGED
-    spells = { "bolster" "rally" "advanced healing" "haste" "defense bonus" "damage bonus" "directed blast" }
-    name = {
-      name = "fairy"
-        pluralName = "fairies"
-    }
   }
 
 "LESSER_DEMON"

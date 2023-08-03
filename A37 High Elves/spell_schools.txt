@@ -6,14 +6,12 @@
     "heal spirit" 2
     "lightning bolt" 2
     "light bolt" 2
-    "earth elemental" 2
     "ice bolt" 2
     "shadow bolt" 2
     "ice cone" 3
     "magic missile" 3
     "haste" 3
     "healing" 4
-    "jump" 4
     "summon cherub" 4
     "summon lesser demon" 4
     "defense bonus" 5
@@ -58,38 +56,26 @@
   "defense bonus" 5
   "damage bonus" 5
   "advanced magic missile" 7
-  "teleport" 8
-  "expert magic missile" 11
   }
 "advanced elven" SPELL
   {
     "directed blast" 1
-    "summon galeam" 1
     "escape" 2
     "heal spirit" 2
-    "light bolt" 2
-    "earth elemental" 2
     "magic missile" 3
     "haste" 3
     "healing" 4
     "jump" 4
-    "summon cherub" 4
     "defense bonus" 5
     "damage bonus" 5
     "advanced heal spirit" 5
-    "advanced earth elemental" 5
     "cure poison" 6
-    "advanced lightning bolt" 6
-    "advanced light bolt" 6
     "advanced magic missile" 7
     "advanced haste" 8
     "teleport" 8
-    "summon angel" 8
-    "advanced defense bonus" 9
-    "advanced damage bonus" 9
-    "advanced teleport" 10
-    "expert lightning bolt" 10
-    "expert light bolt" 10
+    "advanced defense bonus" 10
+    "advanced damage bonus" 10
+    "advanced teleport" 12
   }
 
 #Basic Elemental Magic 
@@ -240,9 +226,12 @@
   "summon hellish horde" 12
   }
 
-#Divine Power
-"restoration" SPELL
+#Life Magic
+"abjuration" SPELL
   {
+  "healing" 1
+  "defense bonus" 1
+  "damage bonus" 1
   "heal spirit" 2
   "advanced healing" 3
   "advanced heal spirit" 5

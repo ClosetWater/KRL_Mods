@@ -118,7 +118,7 @@
         {item = { "PotionOfProtection"}          work = 10  cost = "GOLD" 75    requireIngredient = "defense_crystal"    tech = "master alchemy"}
         {item = { "PotionOfValor"}               work = 10  cost = "GOLD" 100   requireIngredient = "damage_crystal"     tech = "master alchemy"}
         {item = { "PotionOfSorcery"}             work = 10  cost = "GOLD" 125   requireIngredient = "magic_crystal"      tech = "master alchemy"}
-        {item = { "PotionOfImmortality"}         work = 10  cost = "GOLD" 250   requireIngredient = "immortal_crystal"   tech = "master alchemy"}
+        {item = { "PotionOfImmortality"}         work = 10  cost = "GOLD" 250   requireIngredient = "immortal_crystal"   tech = "athanasia"}
         {{GasPotion("POISON_GAS", "Releases a cloud of poison gas")} 4   "GOLD" 30    "advanced alchemy"}
         {item = {Potion OneTimeBoost() IncreaseAttr DEFENSE 5} work = 20 cost = "GOLD" 100
             requireIngredient = "cyclops_brain" }
@@ -132,7 +132,7 @@
 
     "ENCHANT_TABLE"
     {
-        {item = { "ImmortalCrystal" }        work = 10		cost = "GOLD" 300     requireIngredient = "chiseled_gem"      tech = "alchemical conversion"}
+        {item = { "ImmortalCrystal" }        work = 10		cost = "GOLD" 300     requireIngredient = "chiseled_gem"      tech = "athanasia"}
         {item = { "DamageCrystal" }          work = 10		cost = "GOLD" 200     requireIngredient = "chiseled_gem"	  tech = "alchemical conversion"}
         {item = { "MagicCrystal" }           work = 10		cost = "GOLD" 200     requireIngredient = "chiseled_gem"	  tech = "alchemical conversion"}
         {item = { "DefenseCrystal" }         work = 10		cost = "GOLD" 100     requireIngredient = "chiseled_gem"      tech = "alchemical conversion"}
@@ -160,4 +160,19 @@
         {{Amulet REGENERATION}                      10      "GOLD" 60}
     }
 
+    "INSCRIBING_TABLE"
+    {
+        {item = { "BasicMagicTome" }        work = 10		cost = "GOLD" 50        tech = "sorcery"}
+        {item = { "AdvancedMagicTome" }     work = 30		cost = "GOLD" 200       tech = "advanced sorcery"}
+        {item = { "TomeOfFire" }            work = 20		cost = "GOLD" 100       tech = "elemental magic"}
+        {item = { "TomeOfAir" }             work = 20		cost = "GOLD" 100       tech = "elemental magic"}
+        {item = { "TomeOfWater" }           work = 20		cost = "GOLD" 100       tech = "elemental magic"}
+        {item = { "TomeOfEarth" }           work = 20		cost = "GOLD" 100       tech = "elemental magic"}
+        {item = { "TomeOfLightning" }       work = 20		cost = "GOLD" 200       tech = "advanced elemental magic"}
+        {item = { "TomeOfIce" }             work = 20		cost = "GOLD" 200       tech = "advanced elemental magic"}
+        {item = { "TomeOfLight" }           work = 20		cost = "GOLD" 200       tech = "advanced elemental magic"}
+        {item = { "TomeOfShadow" }          work = 20		cost = "GOLD" 200       tech = "advanced elemental magic"}
+        {item = { "TomeOfSpirits" }         work = 20		cost = "GOLD" 200       tech = "spirit magic"}
+        {item = { "TomeOfLife" }            work = 20		cost = "GOLD" 100       tech = "life magic"}
+    }
     }

@@ -26,7 +26,6 @@ End
     sound = SPELL_BLAST
     }
 
-
 # lightning spells
 "lightning bolt"
     {
@@ -125,7 +124,6 @@ End
     }
 OneTimeAbility("lightning resistance self", "Becomes resistant to lightning.", Permanent LIGHTNING_RESISTANT, "🎯")
 
-
 # fire spells
 "fire bolt"
     {
@@ -222,7 +220,6 @@ OneTimeAbility("lightning resistance self", "Becomes resistant to lightning.", P
     }
 OneTimeAbility("fire resistance self", "Becomes resistant to fire.", Permanent FIRE_RESISTANT, "🎯")
 
-
 # ice spells
 "ice bolt"
     {
@@ -318,7 +315,6 @@ OneTimeAbility("fire resistance self", "Becomes resistant to fire.", Permanent F
     sound = SPELL_STR_BONUS
     }
 OneTimeAbility("cold resistance self", "Becomes resistant to cold.", Permanent COLD_RESISTANT, "🎯")
-
 
 # shadow spells
 "shadow bolt"
@@ -423,7 +419,6 @@ OneTimeAbility("cold resistance self", "Becomes resistant to cold.", Permanent C
     }
 OneTimeAbility("shadow resistance self", "Becomes resistant to shadow.", Permanent SHADOW_RESISTANT, "🎯")
 
-
 # light spells
 "light bolt"
     {
@@ -519,7 +514,6 @@ OneTimeAbility("shadow resistance self", "Becomes resistant to shadow.", Permane
     sound = SPELL_STR_BONUS
     }
 OneTimeAbility("light resistance self", "Becomes resistant to light.", Permanent LIGHT_RESISTANT, "🎯")
-
 
 # earth spells
 "rock bolt"
@@ -635,7 +629,6 @@ OneTimeAbility("light resistance self", "Becomes resistant to light.", Permanent
     cooldown = {15 31}
     sound = SPELL_BLAST
     }
-
 
 # water spells
 "water bolt"
@@ -755,7 +748,6 @@ OneTimeAbility("light resistance self", "Becomes resistant to light.", Permanent
     }
 OneTimeAbility("water resistance self", "Becomes able to breathe in water.", Permanent SWIMMING_SKILL, "🎯")
 
-
 # enchantment
 "advanced panic"
     {
@@ -808,7 +800,6 @@ OneTimeAbility("water resistance self", "Becomes able to breathe in water.", Per
     cooldown = {30 61}
     sound = SPELL_DEX_BONUS
     }
-
 
 # air spells
 "air bolt"
@@ -898,7 +889,6 @@ OneTimeAbility("water resistance self", "Becomes able to breathe in water.", Per
     }
 OneTimeAbility("air flying self", "Becomes flying.", Permanent FLYING, "🎯")
 
-
 # demonology
 "summon succubus ME"
     {
@@ -932,7 +922,6 @@ OneTimeAbility("air flying self", "Becomes flying.", Permanent FLYING, "🎯")
     cooldown = {150 300}
     sound = SPELL_SUMMON_SPIRIT
     }
-
 
 # angeology
 "summon galeam"
@@ -1056,9 +1045,6 @@ OneTimeAbility("air flying self", "Becomes flying.", Permanent FLYING, "🎯")
    message = "go for vitals!" "goes for vitals!"
  }
 
-
-
-
 #Weapon Skills
 "assassinate" 
  {
@@ -1168,7 +1154,7 @@ OneTimeAbility("air flying self", "Becomes flying.", Permanent FLYING, "🎯")
  {
   symbol = "↷"
   effect = Name "heroic leap" { Jump CircularBlast }
-  range = 3
+  range = 5
   cooldown = 10
   endOnly = true
   message = "jump" "jumps"
@@ -1190,7 +1176,7 @@ OneTimeAbility("air flying self", "Becomes flying.", Permanent FLYING, "🎯")
    symbol = "↣"
    range = 7
    effect = Name "charged shot" Description "causes massive damage to a single target" FixedDamage DAMAGE 350 STAB 
-   cooldown = 100
+   cooldown = 50
    sound = SHOOT_BOW
    projectileViewId = {"arrow"}
    message = "go for vitals!" "goes for vitals!"
@@ -1208,12 +1194,9 @@ OneTimeAbility("air flying self", "Becomes flying.", Permanent FLYING, "🎯")
         CreatureMessage { "are spared by the arrow" "is spared by the arrow"}
       )
   range = 20
-  cooldown = 10
+  cooldown = 20
   maxHits = 1
   projectileViewId = {"arrow"}
   message = "shoot an arrow really far" "shoots an arrow really far"
   type = ABILITY
  }
-
-
-
