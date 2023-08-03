@@ -87,25 +87,11 @@
     applyVerb = "drink" "drinks"
     fragile = true
     weight = 0.3
-    description = "Harness powerful magic to grow wings and fly."
+    description = "Harness powerful magic to become immortal."
     effect = Chain {
       FirstSuccessful {
-        Permanent FLYING
-        Permanent REGENERATION
-        Permanent FIRE_RESISTANT
-        Permanent COLD_RESISTANT
-        Permanent ACID_RESISTANT
-        Permanent MELEE_RESISTANCE
-        Permanent MAGIC_RESISTANCE
-        Permanent RANGED_RESISTANCE
+        Permanent INVULNERABLE
         }
-      IncreaseAttr DEFENSE 5
-      IncreaseAttr PARRY 5
-      IncreaseAttr DAMAGE 5
-      IncreaseAttr MULTI_WEAPON 5
-      IncreaseAttr SPELL_DAMAGE 5
-      IncreaseAttr SPELL_SPEED 5
-      IncreaseAttr RANGED_DAMAGE 5
     }
     burnTime = 1
     uses = 1
@@ -850,7 +836,7 @@
     weight = 1
     price = 20
     modifiers = {
-      SPELL_DAMAGE 6
+      DEFENSE 2
     }
     storageIds = {"armor" "equipment"}
     equipmentGroup = "elven clothes"
@@ -1140,4 +1126,269 @@
     resourceId = "MAGIC_GEM"
     weight = 0.5
 	  storageIds = {"resources"}
+  }
+
+Def MagicResearch ()
+{
+Filter Not CreatureFlag "is_researcher" {
+  IncreaseMaxLevel SPELL 3
+  IncreaseAttr SPELL_DAMAGE 2
+  SetCreatureFlag "is_researcher" true								
+}
+Filter CreatureFlag "is_researcher" {
+  Chance 0.05 IncreaseMaxLevel SPELL 1
+  Chance 0.05 IncreaseAttr SPELL_DAMAGE 1
+  Chance 0.05 IncreaseAttr SPELL_SPEED 1					
+}
+}
+End
+
+"BasicMagicTome"
+  {
+    viewId = { "magic_tome_basic"}
+    shortName = "magic tome"
+    name = "tome of basic magic spells"
+    plural = "tomes of basic magic spells"
+    blindName = "book"
+    applyVerb = "study" "studies"
+    fragile = true
+    weight = 0.3
+    effect = { 
+			MagicResearch ()
+			AddSpellSchool "elven"}
+    price = 100
+    burnTime = 1
+    uses = 1
+    storageIds = {"scrolls" "equipment"}
+  }
+
+"AdvancedMagicTome"
+  {
+    viewId = { "magic_tome_advanced"}
+    shortName = "magic tome"
+    name = "tome of advanced magic spells"
+    plural = "tomes of advanced magic spells"
+    blindName = "book"
+    applyVerb = "study" "studies"
+    fragile = true
+    weight = 0.3
+    effect = { 
+			MagicResearch ()
+			AddSpellSchool "advanced elven"}
+    price = 100
+    burnTime = 1
+    uses = 1
+    storageIds = {"scrolls" "equipment"}
+  }
+
+"TomeOfFire"
+  {
+    viewId = { "magic_tome_fire"}
+    shortName = "tome of fire"
+    name = "tome describing fire magic"
+    plural = "tomes describing fire magic"
+    description = "Must be an elementalist to use."
+    blindName = "book"
+    applyVerb = "study" "studies"
+    fragile = true
+    weight = 0.3
+    effect = {
+      Filter CreatureFlag "is_elementalist" { 
+			MagicResearch ()
+			Polymorph "ELVEN_FIRE_MAGE" none}}
+    price = 100
+    burnTime = 1
+    uses = 1
+    storageIds = {"scrolls" "equipment"}
+  }
+
+"TomeOfAir"
+  {
+    viewId = { "magic_tome_air"}
+    shortName = "tome of air"
+    name = "tome describing air magic"
+    plural = "tomes describing air magic"
+    description = "Must be an elementalist to use."
+    blindName = "book"
+    applyVerb = "study" "studies"
+    fragile = true
+    weight = 0.3
+    effect = { 
+      Filter CreatureFlag "is_elementalist" {
+			MagicResearch ()
+			Polymorph "ELVEN_AIR_MAGE" none}}
+    price = 100
+    burnTime = 1
+    uses = 1
+    storageIds = {"scrolls" "equipment"}
+  }
+
+"TomeOfWater"
+  {
+    viewId = { "magic_tome_water"}
+    shortName = "tome of water"
+    name = "tome describing water magic"
+    plural = "tomes describing water magic"
+    description = "Must be an elementalist to use."
+    blindName = "book"
+    applyVerb = "study" "studies"
+    fragile = true
+    weight = 0.3
+    effect = { 
+      Filter CreatureFlag "is_elementalist" {
+		  MagicResearch ()
+			Polymorph "ELVEN_WATER_MAGE" none}}
+    price = 100
+    burnTime = 1
+    uses = 1
+    storageIds = {"scrolls" "equipment"}
+  }
+
+"TomeOfEarth"
+  {
+    viewId = { "magic_tome_earth"}
+    shortName = "tome of earth"
+    name = "tome describing earth magic"
+    plural = "tomes describing earth magic"
+    description = "Must be an elementalist to use."
+    blindName = "book"
+    applyVerb = "study" "studies"
+    fragile = true
+    weight = 0.3
+    effect = { 
+      Filter CreatureFlag "is_elementalist" {
+			MagicResearch ()
+			Polymorph "ELVEN_EARTH_MAGE" none}}
+    price = 100
+    burnTime = 1
+    uses = 1
+    storageIds = {"scrolls" "equipment"}
+  }
+
+"TomeOfLightning"
+  {
+    viewId = { "magic_tome_lightning"}
+    shortName = "tome of lightning"
+    name = "tome describing lightning magic"
+    plural = "tomes describing lightning magic"
+    description = "Must be an elementalist to use."
+    blindName = "book"
+    applyVerb = "study" "studies"
+    fragile = true
+    weight = 0.3
+    effect = { 
+      Filter CreatureFlag "is_elementalist" {
+			MagicResearch ()
+			Polymorph "ELVEN_LIGHTNING_MAGE" none}}
+    price = 100
+    burnTime = 1
+    uses = 1
+    storageIds = {"scrolls" "equipment"}
+  }
+
+"TomeOfIce"
+  {
+    viewId = { "magic_tome_ice"}
+    shortName = "tome of ice"
+    name = "tome describing ice magic"
+    plural = "tomes describing ice magic"
+    description = "Must be an elementalist to use."
+    blindName = "book"
+    applyVerb = "study" "studies"
+    fragile = true
+    weight = 0.3
+    effect = { 
+      Filter CreatureFlag "is_elementalist" {
+			MagicResearch ()
+			Polymorph "ELVEN_ICE_MAGE" none}}
+    price = 100
+    burnTime = 1
+    uses = 1
+    storageIds = {"scrolls" "equipment"}
+  }
+
+"TomeOfLight"
+  {
+    viewId = { "magic_tome_light"}
+    shortName = "tome of light"
+    name = "tome describing light magic"
+    plural = "tomes describing light magic"
+    description = "Must be an elementalist to use."
+    blindName = "book"
+    applyVerb = "study" "studies"
+    fragile = true
+    weight = 0.3
+    effect = { 
+      Filter CreatureFlag "is_elementalist" {
+			MagicResearch ()
+			Polymorph "ELVEN_LIGHT_MAGE" none}}
+    price = 100
+    burnTime = 1
+    uses = 1
+    storageIds = {"scrolls" "equipment"}
+  }
+
+"TomeOfShadow"
+  {
+    viewId = { "magic_tome_shadow"}
+    shortName = "tome of shadow"
+    name = "tome describing shadow magic"
+    plural = "tomes describing shadow magic"
+    description = "Must be an elementalist to use."
+    blindName = "book"
+    applyVerb = "study" "studies"
+    fragile = true
+    weight = 0.3
+    effect = { 
+      Filter CreatureFlag "is_elementalist" {
+			MagicResearch ()
+			Polymorph "ELVEN_SHADOW_MAGE" none}}
+    price = 100
+    burnTime = 1
+    uses = 1
+    storageIds = {"scrolls" "equipment"}
+  }
+
+"TomeOfSpirits"
+  {
+    viewId = { "magic_tome_demon"}
+    shortName = "tome of spirits"
+    name = "tome describing how to summon"
+    plural = "tomes describing how to summon"
+    description = "Must be a summoner to use."
+    blindName = "book"
+    applyVerb = "study" "studies"
+    fragile = true
+    weight = 0.3
+    effect = { 
+      Filter CreatureFlag "is_summoner" {
+			MagicResearch ()
+			Polymorph "ELVEN_SPIRIT_MAGE" none
+      AddCompanion 1 false SPELL_DAMAGE 0.05 { "GREATER_DEMON" }
+      AddCompanion 1 false SPELL_DAMAGE 0.002 { "ANGEL" }}}
+    price = 100
+    burnTime = 1
+    uses = 1
+    storageIds = {"scrolls" "equipment"}
+  }
+
+"TomeOfLife"
+  {
+    viewId = { "magic_tome_life"}
+    shortName = "tome of life"
+    name = "tome describing magic to heal and buff allies"
+    plural = "tomes describing magic to heal and buff allies"
+    description = "Must be a healer to use."
+    blindName = "book"
+    applyVerb = "study" "studies"
+    fragile = true
+    weight = 0.3
+    effect = { 
+      Filter CreatureFlag "is_healer" {
+			MagicResearch ()
+			Polymorph "ELVEN_LIFE_MAGE" none}}
+    price = 100
+    burnTime = 1
+    uses = 1
+    storageIds = {"scrolls" "equipment"}
   }
