@@ -8,13 +8,13 @@
         "chicken breeding" "pig breeding" "cow breeding" "iron working" "jewellery"
         "two-handed weapons" "archery" "sorcery" "advanced sorcery" "magical weapons" "master sorcery"
         "worship" "distillation" "traps"
-        "squire" "knight" "king" "god"
-        "elemental magic" "advanced elemental magic" "spirit magic" "divine power"
-        "mithril weapons" "mithril armor" "unique weapons" "legend smithing"  
-        "crystal etching" "grand enchanting" "master alchemy"
+        "high king of the elves" "commandant" "governance" "athanasia"
+        "elemental magic" "advanced elemental magic" "spirit magic" "life magic"
+        "mithril forging" "unique weapons" "legend smithing"  
+        "grand enchanting" "master alchemy" "inscribing"
     }
     zLevelGroups = { "basic" "lawful" }
-    initialTech = { "iron working" "archery" "alchemy" "squire" "jewellery" }
+    initialTech = { "archery" "sorcery" "high king of the elves" }
     buildingGroups = {
         "structure" "structure_elven" "doors" "floors" "floors_elven" "storage" "zones_elven" "library" "beds"
         "dining table" "pigsty" "training" "crafting_elven" "laboratory_elven" "jeweller_elven" "poetry" "distillery"
@@ -23,9 +23,9 @@
     }
     workshopGroups = { "elven" }
     description = "Play as a not-so-evil elven race. Recruit warriors, archers, and magical creatures!"
-    credit = { "GOLD" 500 "WOOD" 1000 "STONE" 1000 "ADA" 1000 "MITHRIL" 1000  }
+    credit = { "GOLD" 500 "WOOD" 1000 "STONE" 1000 "MITHRIL" 500  }
     minionTraits = { LEADER WORKER NO_LIMIT }
     maxPopulation = 10
-    populationString = "elven"
+    populationString = "high elves"
     noLeader = false
 }

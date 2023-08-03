@@ -2,25 +2,22 @@
 
     "ELVEN_WORKBENCH"
     {
-        {{"Bow"}                    13      "WOOD" 20      "archery"}
-        {{ "ElvenBoots"}            6       "GOLD" 20}
+        {{"Torch"}                  2       "WOOD" 4}
+        {{ "ElvenBoots"}            6}
+        {{ "ElvenTunic"}            6}
+        {{ "ElvenHood"}             6}
+        {{"LeatherGloves"}          1}
+        {{"ElvenShield"}            2       "WOOD" 15}
         {{ "ElvenCloak"}            6       "GOLD" 20}
-        {{ "ElvenTunic"}            6       "GOLD" 20}
+        {{"ElvenWand"}              6       "WOOD" 10}
+        {{"Bow"}                    13      "WOOD" 20      "archery"}
+        {{"HeavyClub"}              5       "WOOD" 20      "two-handed weapons"}
+        {{"ElvenStave"}             10      "WOOD" 20      "magical weapons"}
         {{ "ElvenRobe"}             6       "GOLD" 20      "sorcery"}
         {{ "ElvenPriestRobe"}       6       "GOLD" 20      "worship"}
-        {{ "ElvenHood"}             6       "GOLD" 20      "sorcery"}
-        {{ "ElvenHat"}              6       "GOLD" 20}
-        {{"LeatherArmor"}           6}
-        {{"LeatherHelm"}            1}
-        {{"LeatherBoots"}           2}
-        {{"WoodenShield"}           2       "WOOD" 10}
-        {{"LeatherGloves"}          1}
-        {{"HeavyClub"}              5       "WOOD" 20      "two-handed weapons"}
-        {{"Cornuthaum1"}            5       "GOLD" 0       "sorcery"}
+        {{ "ElvenHat"}              6       "GOLD" 20      "sorcery"}
         {{"Cornuthaum2"}            8       "GOLD" 20      "advanced sorcery"}
         {{"Cornuthaum3"}            12      "GOLD" 40      "master sorcery"}
-        {{"WoodenStaff"}            13      "WOOD" 20      "magical weapons"}
-        {{"Torch"}                  2       "WOOD" 4}
         {item = {"DevilBoots"}       work = 30 cost = "WOOD" 0 requireIngredient = "devil_hooves" }
         {item = {"ArchwoodBow"}  work = 30 cost = "WOOD" 20 requireIngredient = "archwood"  tech = "archery" }
 
@@ -40,32 +37,6 @@
         {item = {"CyclopsHelm"}         work = 30   cost = none     requireIngredient = "cyclops_testes"}
         {item = {"IronGloves"}          work = 3    cost = none                                     materialTab = true}
         {item = {"IronShield"}          work = 12   cost = none                                     materialTab = true}
-        {item = {"MithrilDagger"}       work = 6    cost = none     tech = "mithril weapons"        materialTab = true}
-        {item = {"MithrilShortSword"}   work = 12   cost = none     tech = "mithril weapons"        materialTab = true}
-        {item = {"MithrilLongSword"}    work = 18   cost = none     tech = "mithril weapons"        materialTab = true}
-        {item = {"MithrilHammer"}       work = 18   cost = none     tech = "mithril weapons"        materialTab = true}
-        {item = {"MithrilAxe"}          work = 18   cost = none     tech = "mithril weapons"        materialTab = true}
-        {item = {"MithrilGreatSword"}   work = 18   cost = none     tech = "two-handed weapons"     materialTab = true}
-        {item = {"MithrilWarHammer"}    work = 18   cost = none     tech = "two-handed weapons"     materialTab = true}
-        {item = {"MithrilBattleAxe"}    work = 18   cost = none     tech = "two-handed weapons"     materialTab = true}
-        {item = {"MithrilSpear"}        work = 24   cost = none     tech = "two-handed weapons"     materialTab = true}
-        {item = {"MithrilWhip"}         work = 12   cost = none     tech = "unique weapons"         materialTab = true}
-        {item = {"MithrilMace"}         work = 12   cost = none     tech = "unique weapons"         materialTab = true}
-        {item = {"MithrilSwordStaff"}   work = 24   cost = none     tech = "unique weapons"         materialTab = true}
-        {item = {"MithrilTrident"}      work = 24   cost = none     tech = "unique weapons"         materialTab = true}
-        {item = {"MithrilShortBow"}     work = 15   cost = none     tech = "archery"                materialTab = true}
-        {item = {"MithrilLongBow"}      work = 15   cost = none     tech = "archery"                materialTab = true}
-        {item = {"MithrilCrossBow"}     work = 15   cost = none     tech = "archery"                materialTab = true}
-        {item = {"MithrilArmor"}        work = 30   cost = none     tech = "mithril armor"          materialTab = true}
-        {item = {"MithrilHelm"}         work = 15   cost = none     tech = "mithril armor"          materialTab = true}
-        {item = {"MithrilBoots"}        work = 15   cost = none     tech = "mithril armor"          materialTab = true}
-        {item = {"MithrilGloves"}       work = 6    cost = none     tech = "mithril armor"          materialTab = true}
-        {item = {"ElvenWand"}           work = 6    cost = none     tech = "sorcery"                materialTab = true}
-        {item = {"MithrilWand"}         work = 10   cost = none     tech = "advanced sorcery"   requireIngredient = "chiseled_gem"     materialTab = true}
-        {item = {"MithrilGrandWand"}    work = 14   cost = none     tech = "master sorcery"     requireIngredient = "chiseled_gem"     materialTab = true}
-        {item = {"ElvenStave"}          work = 10   cost = none     tech = "sorcery"                materialTab = true}
-        {item = {"MithrilStaff"}        work = 15   cost = none     tech = "advanced sorcery"   requireIngredient = "chiseled_gem"     materialTab = true}
-        {item = {"MithrilGrandStaff"}   work = 20   cost = none     tech = "master sorcery"     requireIngredient = "chiseled_gem"     materialTab = true}
         {item = {"WarHammer"}           work = 16   cost = none     tech = "two-handed weapons"     materialTab = true}
         {item = {"BattleAxe"}           work = 22   cost = none     tech = "two-handed weapons"     materialTab = true}
         {item = {"AdaSword"}            work = 20   cost = none                                     materialTab = true}
@@ -82,6 +53,33 @@
         {item = {"AdoxiumBoots"}        work = 15   cost = none                                     materialTab = true}
         {item = {"AdoxiumGloves"}       work = 6    cost = none                                     materialTab = true}
         {item = {"AdoxiumStaff"}        work = 20   cost = none     tech = "magical weapons"        materialTab = true}
+        {item = {"MithrilDagger"}       work = 6    cost = none                                     materialTab = true}
+        {item = {"MithrilShortSword"}   work = 12   cost = none     tech = "mithril forging"        materialTab = true}
+        {item = {"MithrilLongSword"}    work = 18   cost = none     tech = "mithril forging"        materialTab = true}
+        {item = {"MithrilHammer"}       work = 18   cost = none     tech = "mithril forging"        materialTab = true}
+        {item = {"MithrilAxe"}          work = 18   cost = none     tech = "mithril forging"        materialTab = true}
+        {item = {"MithrilGreatSword"}   work = 18   cost = none     tech = "two-handed weapons"     materialTab = true}
+        {item = {"MithrilWarHammer"}    work = 18   cost = none     tech = "two-handed weapons"     materialTab = true}
+        {item = {"MithrilBattleAxe"}    work = 18   cost = none     tech = "two-handed weapons"     materialTab = true}
+        {item = {"MithrilSpear"}        work = 24   cost = none     tech = "two-handed weapons"     materialTab = true}
+        {item = {"MithrilWhip"}         work = 12   cost = none     tech = "unique weapons"         materialTab = true}
+        {item = {"MithrilMace"}         work = 12   cost = none     tech = "unique weapons"         materialTab = true}
+        {item = {"MithrilSwordStaff"}   work = 24   cost = none     tech = "unique weapons"         materialTab = true}
+        {item = {"MithrilTrident"}      work = 24   cost = none     tech = "unique weapons"         materialTab = true}
+        {item = {"MithrilShortBow"}     work = 15   cost = none     tech = "archery"                materialTab = true}
+        {item = {"MithrilLongBow"}      work = 15   cost = none     tech = "mithril forging"        materialTab = true}
+        {item = {"MithrilCrossBow"}     work = 15   cost = none     tech = "mithril forging"        materialTab = true}
+        {item = {"MithrilArmor"}        work = 30   cost = none     tech = "mithril forging"        materialTab = true}
+        {item = {"MithrilHelm"}         work = 15   cost = none     tech = "mithril forging"        materialTab = true}
+        {item = {"MithrilBoots"}        work = 15   cost = none     tech = "mithril forging"        materialTab = true}
+        {item = {"MithrilGloves"}       work = 6    cost = none     tech = "mithril forging"        materialTab = true}
+        {item = {"MagicShield"}         work = 12   cost = none     tech = "magical weapons"        materialTab = true}
+        {item = {"MithrilShield"}       work = 12   cost = none     tech = "mithril forging"        materialTab = true}
+        {item = {"MithrilTowerShield"}  work = 30   cost = none     tech = "unique weapons"         materialTab = true}
+        {item = {"MithrilWand"}         work = 10   cost = none     tech = "magical weapons"        materialTab = true}
+        {item = {"MithrilStaff"}        work = 15   cost = none     tech = "magical weapons"        materialTab = true}
+        {item = {"MithrilGrandWand"}    work = 25   cost = none     tech = "master sorcery"     requireIngredient = "chiseled_gem"     materialTab = true}
+        {item = {"MithrilGrandStaff"}   work = 30   cost = none     tech = "master sorcery"     requireIngredient = "chiseled_gem"     materialTab = true}
         {item = {"InferniteSword"}      work = 20   cost = none                                     materialTab = true}
         {item = {"InferniteWarHammer"}  work = 20   cost = none     tech = "two-handed weapons"     materialTab = true}
         {item = {"InferniteBattleAxe"}  work = 22   cost = none     tech = "two-handed weapons"     materialTab = true}
@@ -120,7 +118,7 @@
         {item = { "PotionOfProtection"}          work = 10  cost = "GOLD" 75    requireIngredient = "defense_crystal"    tech = "master alchemy"}
         {item = { "PotionOfValor"}               work = 10  cost = "GOLD" 100   requireIngredient = "damage_crystal"     tech = "master alchemy"}
         {item = { "PotionOfSorcery"}             work = 10  cost = "GOLD" 125   requireIngredient = "magic_crystal"      tech = "master alchemy"}
-        {item = { "PotionOfImmortality"}         work = 10  cost = "GOLD" 250   requireIngredient = "immortal_crystal"   tech = "master alchemy"}
+        {item = { "PotionOfImmortality"}         work = 10  cost = "GOLD" 250   requireIngredient = "immortal_crystal"   tech = "athanasia"}
         {{GasPotion("POISON_GAS", "Releases a cloud of poison gas")} 4   "GOLD" 30    "advanced alchemy"}
         {item = {Potion OneTimeBoost() IncreaseAttr DEFENSE 5} work = 20 cost = "GOLD" 100
             requireIngredient = "cyclops_brain" }
@@ -134,12 +132,12 @@
 
     "ENCHANT_TABLE"
     {
-        {{ "ImmortalCrystal" }		                10		"GOLD" 300	        "crystal etching"}
-        {{ "DamageCrystal" }		                10		"ADOXIUM" 20	    "crystal etching"}
-        {{ "MagicCrystal" }		                    10		"ADOXIUM" 20	    "crystal etching"}
-        {{ "DefenseCrystal" }		                10		"ADOXIUM" 20	    "crystal etching"}
-        {{ "SmithingCrystal" }		                10		"ADOXIUM" 20	    "crystal etching"}
-        {{ "ChiseledGem" }		                    10		"MAGIC_GEM" 20	    "crystal etching"}
+        {item = { "ImmortalCrystal" }        work = 10		cost = "GOLD" 300     requireIngredient = "chiseled_gem"      tech = "athanasia"}
+        {item = { "DamageCrystal" }          work = 10		cost = "GOLD" 200     requireIngredient = "chiseled_gem"	  tech = "alchemical conversion"}
+        {item = { "MagicCrystal" }           work = 10		cost = "GOLD" 200     requireIngredient = "chiseled_gem"	  tech = "alchemical conversion"}
+        {item = { "DefenseCrystal" }         work = 10		cost = "GOLD" 100     requireIngredient = "chiseled_gem"      tech = "alchemical conversion"}
+        {item = { "SmithCrystal" }           work = 10		cost = "GOLD" 100     requireIngredient = "chiseled_gem"      tech = "alchemical conversion"}
+        {{ "ChiseledGem" }		                    10		"MAGIC_GEM" 20	    "alchemical conversion"}
         {{ "WarriorAmulet" }		                10      "GOLD" 100          "grand enchanting"}
         {{ "ArcherAmulet" }		                    10      "GOLD" 100	        "grand enchanting"}
         {{ "MagicAmulet" }		                    10      "GOLD" 100	        "grand enchanting"}
@@ -162,4 +160,19 @@
         {{Amulet REGENERATION}                      10      "GOLD" 60}
     }
 
+    "INSCRIBING_TABLE"
+    {
+        {item = { "BasicMagicTome" }        work = 10		cost = "GOLD" 50        tech = "sorcery"}
+        {item = { "AdvancedMagicTome" }     work = 30		cost = "GOLD" 200       tech = "advanced sorcery"}
+        {item = { "TomeOfFire" }            work = 20		cost = "GOLD" 100       tech = "elemental magic"}
+        {item = { "TomeOfAir" }             work = 20		cost = "GOLD" 100       tech = "elemental magic"}
+        {item = { "TomeOfWater" }           work = 20		cost = "GOLD" 100       tech = "elemental magic"}
+        {item = { "TomeOfEarth" }           work = 20		cost = "GOLD" 100       tech = "elemental magic"}
+        {item = { "TomeOfLightning" }       work = 20		cost = "GOLD" 200       tech = "advanced elemental magic"}
+        {item = { "TomeOfIce" }             work = 20		cost = "GOLD" 200       tech = "advanced elemental magic"}
+        {item = { "TomeOfLight" }           work = 20		cost = "GOLD" 200       tech = "advanced elemental magic"}
+        {item = { "TomeOfShadow" }          work = 20		cost = "GOLD" 200       tech = "advanced elemental magic"}
+        {item = { "TomeOfSpirits" }         work = 20		cost = "GOLD" 200       tech = "spirit magic"}
+        {item = { "TomeOfLife" }            work = 20		cost = "GOLD" 100       tech = "life magic"}
+    }
     }

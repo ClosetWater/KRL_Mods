@@ -1,6 +1,6 @@
 "DefenseCrystal"
   {
-    viewId = { "defensecrystal" }
+    viewId = { "defense_crystal" }
     name = "defense crystal"
     itemClass = OTHER
     weight = 1
@@ -10,7 +10,7 @@
   }
 "DamageCrystal"
   {
-    viewId = { "damagecrystal" }
+    viewId = { "damage_crystal" }
     name = "damage crystal"
     itemClass = OTHER
     weight = 1
@@ -20,7 +20,7 @@
   }
 "MagicCrystal"
   {
-    viewId = { "magiccrystal" }
+    viewId = { "magic_crystal" }
     name = "magic crystal"
     itemClass = OTHER
     weight = 1
@@ -30,7 +30,7 @@
   }
 "ImmortalCrystal"
   {
-    viewId = { "immortalcrystal" }
+    viewId = { "immortal_crystal" }
     name = "immortal crystal"
     itemClass = OTHER
     weight = 1
@@ -40,7 +40,7 @@
   }
 "SmithCrystal"
   {
-    viewId = { "smithcrystal" }
+    viewId = { "smith_crystal" }
     name = "smithing crystal"
     itemClass = OTHER
     weight = 1
@@ -50,7 +50,7 @@
   }
 "ChiseledGem"
   {
-    viewId = { "chiseledgem" }
+    viewId = { "chiseled_gem" }
     name = "chiseled gem"
     itemClass = OTHER
     weight = 1
@@ -61,7 +61,7 @@
 
 "ElvenTea"
   {
-    viewId = { "elventea" }
+    viewId = { "elven_tea" }
     name = "bottle of elven tea"
     shortName = "tea"
     plural = "bottles of elven tea"
@@ -79,7 +79,7 @@
   }
 "PotionOfImmortality"
   {
-    viewId = { "immortalpotion" }
+    viewId = { "immortal_potion" }
     name = "immortality Potion"
     shortName = "potion of immortality"
     plural = "potions"
@@ -87,25 +87,11 @@
     applyVerb = "drink" "drinks"
     fragile = true
     weight = 0.3
-    description = "Harness powerful magic to grow wings and fly."
+    description = "Harness powerful magic to become immortal."
     effect = Chain {
       FirstSuccessful {
-        Permanent FLYING
-        Permanent REGENERATION
-        Permanent FIRE_RESISTANT
-        Permanent COLD_RESISTANT
-        Permanent ACID_RESISTANT
-        Permanent MELEE_RESISTANCE
-        Permanent MAGIC_RESISTANCE
-        Permanent RANGED_RESISTANCE
+        Permanent INVULNERABLE
         }
-      IncreaseAttr DEFENSE 5
-      IncreaseAttr PARRY 5
-      IncreaseAttr DAMAGE 5
-      IncreaseAttr MULTI_WEAPON 5
-      IncreaseAttr SPELL_DAMAGE 5
-      IncreaseAttr SPELL_SPEED 5
-      IncreaseAttr RANGED_DAMAGE 5
     }
     burnTime = 1
     uses = 1
@@ -114,7 +100,7 @@
   }
 "PotionOfProtection"
   {
-    viewId = { "defensepotion" }
+    viewId = { "defense_potion" }
     name = "Defense Potion"
     shortName = "Potion of Defense "
     plural = "potions"
@@ -138,7 +124,7 @@
   }
 "PotionOfValor"
   {
-    viewId = { "damagepotion" }
+    viewId = { "damage_potion" }
     name = "valor potion"
     shortName = "potion of valor"
     plural = "potions"
@@ -158,7 +144,7 @@
   }
 "PotionOfSorcery"
   {
-    viewId = { "magicpotion" }
+    viewId = { "magic_potion" }
     name = "sorcery potion"
     shortName = "potion of sorcery"
     plural = "potions"
@@ -182,7 +168,7 @@
   }
 "PotionOfSmithing"
   {
-    viewId = { "smithpotion" }
+    viewId = { "smith_potion" }
     name = "smithing potion"
     shortName = "potion of smithing"
     plural = "potions"
@@ -212,16 +198,13 @@
     plural = "mithril daggers"
     itemClass = WEAPON
     equipmentSlot = WEAPON
+    equipedAbility = {"assassinate"}
     weight = 0.3
     modifiers = {
       DAMAGE 3
     }
     price = 5
     craftingCost = "MITHRIL" 5
-    equipedEffect = {AMBUSH_SKILL}
-    specialAttr = {
-      DAMAGE 30 Name "against tribe leaders when hidden" And { CreatureStatus LEADER Attacker Hidden }
-    }
     weaponInfo = {
       attackType = STAB
       attackMsg = THRUST
@@ -236,13 +219,14 @@
     name = "mithril short sword"
     itemClass = WEAPON
     equipmentSlot = WEAPON
+    equipedAbility = {"escape slash"}
     weight = 1
     modifiers = {
       DAMAGE 6
     }
     price = 10
     craftingCost = "MITHRIL" 10
-    maxUpgrades = 2
+    maxUpgrades = 1
     weaponInfo = {
       attackType = CUT
     }
@@ -259,13 +243,14 @@
     name = "mithril long sword"
     itemClass = WEAPON
     equipmentSlot = WEAPON
+    equipedAbility = {"weapon strike"}
     weight = 1.5
     modifiers = {
       DAMAGE 12
     }
     price = 20
     craftingCost = "MITHRIL" 15
-    maxUpgrades = 3
+    maxUpgrades = 2
     weaponInfo = {
       attackType = CUT
     }
@@ -286,16 +271,17 @@
     name = "mithril hammer"
     itemClass = WEAPON
     equipmentSlot = WEAPON
+    equipedAbility = {"armor strike"}
     weight = 6
     modifiers = {
-      DAMAGE 11
+      DAMAGE 12
     }
     price = 20
     craftingCost = "MITHRIL" 15
     weaponInfo = {
       attackType = CRUSH
     }
-    maxUpgrades = 1
+    maxUpgrades = 2
 	  storageIds = {"weapons" "equipment"}
   }
 "MithrilAxe"
@@ -306,9 +292,10 @@
     name = "mithril axe"
     itemClass = WEAPON
     equipmentSlot = WEAPON
+    equipedAbility = {"wild swing"}
     weight = 4
     modifiers = {
-      DAMAGE 14
+      DAMAGE 12
     }
     price = 20
     craftingCost = "MITHRIL" 15
@@ -327,6 +314,7 @@
     name = "mithril great sword"
     itemClass = WEAPON
     equipmentSlot = WEAPON
+    equipedAbility = {"air render"}
     weight = 1.5
     modifiers = {
       DAMAGE 12
@@ -352,6 +340,7 @@
     name = "mithril war hammer"
     itemClass = WEAPON
     equipmentSlot = WEAPON
+    equipedAbility = {"cripple"}
     weight = 6
     modifiers = {
       DAMAGE 11
@@ -382,6 +371,7 @@
     name = "mithril battle axe"
     itemClass = WEAPON
     equipmentSlot = WEAPON
+    equipedAbility = {"battle cry"}
     weight = 4
     modifiers = {
       DAMAGE 14
@@ -438,13 +428,13 @@
     plural = "mithril whips"
     itemClass = WEAPON
     equipmentSlot = RANGED_WEAPON
+    equipedAbility = {"mystic whip"}
     weight = 1
     modifiers = {
       DAMAGE 9
     }
     price = 5
     craftingCost = "MITHRIL" 7
-    equipedAbility = {"mystic whip"}
     weaponInfo = {
       attackType = HIT
       attackMsg = SWING
@@ -459,6 +449,7 @@
     name = "mithril mace"
     itemClass = WEAPON
     equipmentSlot = WEAPON
+    equipedAbility = {"spinning chain"}
     weight = 4
     modifiers = {
       DAMAGE 12
@@ -483,7 +474,7 @@
     name = "mithril sword staff"
     itemClass = WEAPON
     equipmentSlot = WEAPON
-    equipedAbility = {"kings charge"}
+    equipedAbility = {"triple strike"}
     weight = 2
     modifiers = {
       DAMAGE 24
@@ -512,7 +503,7 @@
     name = "mithril trident"
     itemClass = WEAPON
     equipmentSlot = WEAPON
-    equipedAbility = {"kings charge"}
+    equipedAbility = {"leap"}
     weight = 2
     modifiers = {
       DAMAGE 24
@@ -625,6 +616,7 @@
     } 
     maxUpgrades =  1
 		storageIds = {"weapons" "equipment"}
+    equipmentGroup = "magic equipment"
   }
 "MithrilWand" inherit "ElvenWand"
   {
@@ -633,15 +625,18 @@
     effectDescription = false
     name = "mithril wand"
     plural = "mithril wands"
-    description = "A magic weapon that can shoot ice freezing enemies."
+    description = "A magic weapon that can shoot enemies."
     price = 30
-    modifiers =  { SPELL_DAMAGE 4 } 
+    craftingCost = "MITHRIL" 10
+    modifiers =  { SPELL_DAMAGE 8 } 
     weaponInfo =  { 
       attackType = SPELL 
       attackMsg = WAVE 
       meleeAttackAttr = SPELL_DAMAGE 
     } 
     maxUpgrades =  1 
+    storageIds = {"weapons" "equipment"}
+    equipmentGroup = "magic equipment"
   }
 "MithrilGrandWand" inherit "ElvenWand"
   {
@@ -651,14 +646,17 @@
     name = "mithril grand wand"
     plural = "mithril grand wands"
     description = "A magic weapon that can shoot enemies."
-    price = 60 
-    modifiers =  { SPELL_DAMAGE 4 } 
+    price = 60
+    craftingCost = "MITHRIL" 20 
+    modifiers =  { SPELL_DAMAGE 16 } 
     weaponInfo =  { 
       attackType = SPELL 
       attackMsg = WAVE 
       meleeAttackAttr = SPELL_DAMAGE 
     } 
-    maxUpgrades = 1 
+    maxUpgrades = 1
+    storageIds = {"weapons" "equipment"}
+    equipmentGroup = "magic equipment"
   }
 "ElvenStave"
   {
@@ -699,7 +697,7 @@
       SPELL_DAMAGE 13
       SPELL_SPEED 10
     }
-    price = 1800
+    price = 180
     craftingCost = "MITHRIL" 20
     genPrefixes = {
       1 VictimEffect 0.2 Lasting INSANITY
@@ -715,44 +713,21 @@
     equipedViewId = { "mithril_grand_staff_v" }
     name = "mithril grand staff"
     modifiers = {
-      SPELL_DAMAGE 13
-      SPELL_SPEED 10
+      SPELL_DAMAGE 20
+      SPELL_SPEED 15
     }
     price = 1800
-    craftingCost = "MITHRIL" 20
+    craftingCost = "MITHRIL" 40
     genPrefixes = {
       1 VictimEffect 0.2 Lasting INSANITY
       1 VictimEffect 0.2 DestroyEquipment
       1 VictimEffect 0.5 Fire{20}
     }
     maxUpgrades = 5
+    storageIds = {"weapons" "equipment"}
     equipmentGroup = "magic equipment"
   }
 
-"ElvenShoes"
-  {
-    viewId = { "elven_shoes" }
-    shortName = "shoes"
-    name = "pair of elven shoes"
-    plural = "pairs of elven shoes"
-    itemClass = ARMOR
-    equipmentSlot = BOOTS
-    weight = 2
-    price = 20
-    craftingCost = "GOLD" 20
-    modifiers = {
-      DEFENSE 2
-      SPELL_SPEED 5
-    }
-    genPrefixes = {
-      1 LastingEffect FLYING
-      1 LastingEffect SPEED
-      2 ItemAttrBonus DEFENSE 3
-    }
-    maxUpgrades = 2
-    storageIds = {"armor" "equipment"}
-    equipmentGroup = "elven clothes"
-  }
 "ElvenBoots"
   {
     viewId = { "elven_boots" }
@@ -763,7 +738,6 @@
     equipmentSlot = BOOTS
     weight = 2
     price = 20
-    craftingCost = "GOLD" 20
     modifiers = {
       DEFENSE 2
       SPELL_SPEED 5
@@ -806,7 +780,6 @@
     equipmentSlot = BODY_ARMOR
     weight = 1.5
     price = 20
-    craftingCost = "GOLD" 20
     modifiers = {
       DEFENSE 3
     }
@@ -831,7 +804,7 @@
       1 LastingEffect MAGIC_RESISTANCE
     }
     storageIds = {"armor" "equipment"}
-    equipmentGroup = "elven clothes"
+    equipmentGroup = "magic clothes"
   }
 "ElvenPriestRobe"
   {
@@ -851,7 +824,7 @@
       1 LastingEffect MAGIC_RESISTANCE
     }
     storageIds = {"armor" "equipment"}
-    equipmentGroup = "elven clothes"
+    equipmentGroup = "magic clothes"
   }
 "ElvenHood"
   {
@@ -862,9 +835,8 @@
     equipmentSlot = HELMET
     weight = 1
     price = 20
-    craftingCost = "GOLD" 20
     modifiers = {
-      SPELL_DAMAGE 6
+      DEFENSE 2
     }
     storageIds = {"armor" "equipment"}
     equipmentGroup = "elven clothes"
@@ -894,7 +866,7 @@
     }
     maxUpgrades = 3
     storageIds = {"armor" "equipment"}
-    equipmentGroup = "elven clothes"
+    equipmentGroup = "magic clothes"
   }
 
 "MithrilBoots"
@@ -931,7 +903,7 @@
     price = 25
     craftingCost = "MITHRIL" 2
     modifiers = {
-      DEFENSE 3
+      DEFENSE 4
       SPELL_SPEED 10
     }
     genPrefixes = {
@@ -953,8 +925,8 @@
     price = 40
     craftingCost = "MITHRIL" 16
     modifiers = {
-      DEFENSE 4
-      SPELL_SPEED 15 
+      DEFENSE 5
+      SPELL_SPEED 12 
     }
     maxUpgrades = 2
     genPrefixes = {
@@ -974,8 +946,79 @@
     weight = 13
     price = 160
     craftingCost = "MITHRIL" 40
-    modifiers = { DEFENSE 8 }
+    modifiers = { DEFENSE 10 }
     maxUpgrades = 4
+    storageIds = {"armor" "equipment"}
+    equipmentGroup = "mithril equipment"
+  }
+
+"ElvenShield"
+  {
+    viewId = { "elven_shield" }
+    shortName = "elven"
+    name = "elven shield"
+    itemClass = ARMOR
+    equipmentSlot = SHIELD
+    weight = 1
+    price = 10
+    modifiers = {
+      PARRY 2
+      DEFENSE 2
+    }
+    maxUpgrades = 0
+    storageIds = {"armor" "equipment"}
+    equipmentGroup = "basic equipment"
+  }
+"MagicShield"
+  {
+    viewId = { "magic_shield" }
+    shortName = "magic"
+    name = "magic shield"
+    itemClass = ARMOR
+    equipmentSlot = SHIELD
+    weight = 1
+    price = 50
+    craftingCost = "MITHRIL" 24
+    modifiers = {
+      SPELL_SPEED 5
+      DEFENSE 4
+    }
+    maxUpgrades = 2
+    storageIds = {"armor" "equipment"}
+    equipmentGroup = "adamantine equipment"
+  }
+"MithrilShield"
+  {
+    viewId = { "mithril_shield" }
+    shortName = "mithril"
+    name = "mithril shield"
+    itemClass = ARMOR
+    equipmentSlot = SHIELD
+    weight = 1.5
+    price = 50
+    craftingCost = "MITHRIL" 24
+    modifiers = {
+      PARRY 4
+      DEFENSE 5
+    }
+    maxUpgrades = 2
+    storageIds = {"armor" "equipment"}
+    equipmentGroup = "mithril equipment"
+  }
+"MithrilTowerShield"
+  {
+    viewId = { "mithril_tower_shield" }
+    shortName = "mithril"
+    name = "mithril tower shield"
+    itemClass = ARMOR
+    equipmentSlot = SHIELD
+    weight = 1.5
+    price = 50
+    craftingCost = "MITHRIL" 32
+    modifiers = {
+      DEFENSE 15
+    }
+    maxUpgrades = 3
     storageIds = {"armor" "equipment"}
     equipmentGroup = "mithril equipment"
   }
@@ -988,8 +1031,8 @@
     weight = 0.05
     equipedEffect = {FAST_CRAFTING}
     modifiers = {
-      FORGE 20
-      WORKSHOP 20
+      ELVEN_CRAFT 20
+      ELVEN_FORGE 20
     }
     equipmentSlot = AMULET
     price = 1
@@ -1085,250 +1128,267 @@
 	  storageIds = {"resources"}
   }
 
-
-Def SHARP_WEAPON_PREFIXES()
-    genPrefixes =
-	{
-      1 VictimEffect 0.3 Fire { 25 }
-      1 VictimEffect 0.2 Acid{30}
-      1 VictimEffect 0.2 Ice{30}
-      1 VictimEffect 0.1 Lasting 20 POISON
-      1 VictimEffect 0.1 Lasting 20 BLEEDING
-      1 VictimEffect 0.1 Lasting 100 FIRE_VULNERABILITY
-      1 VictimEffect 0.1 Lasting 100 COLD_VULNERABILITY
-      1 VictimEffect 0.1 Lasting 100 ACID_VULNERABILITY
-      1 VictimEffect 0.1 Lasting 100 MELEE_VULNERABILITY
-      1 VictimEffect 0.1 Lasting 100 MAGIC_VULNERABILITY
-      1 VictimEffect 0.1 Lasting 100 RANGED_VULNERABILITY
-      1 LastingEffect RAGE
-	  1 LastingEffect LIGHT_SOURCE	  
-      1 LastingEffect SLOW_CRAFTING
-      1 LastingEffect SLOW_TRAINING
-      1 LastingEffect HATE_DWARVES
-      1 LastingEffect HATE_HUMANS
-      1 LastingEffect HATE_GREENSKINS
-      1 LastingEffect HATE_ELVES
-      1 LastingEffect HATE_UNDEAD
-      1 LastingEffect HATE_DRAGONS
-      1 SpecialAttr DAMAGE 10 HatedBy HATE_UNDEAD
-      1 JoinPrefixes { ItemAttrBonus DAMAGE 3 LastingEffect HALLU }
-    }
+Def MagicResearch ()
+{
+Filter Not CreatureFlag "is_researcher" {
+  IncreaseMaxLevel SPELL 3
+  IncreaseAttr SPELL_DAMAGE 2
+  SetCreatureFlag "is_researcher" true								
+}
+Filter CreatureFlag "is_researcher" {
+  Chance 0.05 IncreaseMaxLevel SPELL 1
+  Chance 0.05 IncreaseAttr SPELL_DAMAGE 1
+  Chance 0.05 IncreaseAttr SPELL_SPEED 1					
+}
+}
 End
 
-Def BLUNT_WEAPON_PREFIXES()
-    genPrefixes =
-	{
-      1 VictimEffect 0.3 Fire { 25 }
-      1 VictimEffect 0.2 Acid{30}
-      1 VictimEffect 0.2 Ice{30}
-      1 VictimEffect 0.3 Lasting 20 COLLAPSED
-      1 VictimEffect 0.7 Lasting 20 SLOWED
-      1 LastingEffect RAGE
-	  1 LastingEffect LIGHT_SOURCE
-      1 LastingEffect MELEE_VULNERABILITY
-      1 LastingEffect RANGED_VULNERABILITY
-      1 SpecialAttr DAMAGE 10 HatedBy HATE_UNDEAD
-      1 ItemAttrBonus DIGGING 20
-      1 JoinPrefixes { ItemAttrBonus DAMAGE 3 LastingEffect HALLU }
-    }
-End
+"BasicMagicTome"
+  {
+    viewId = { "magic_tome_basic"}
+    shortName = "magic tome"
+    name = "tome of basic magic spells"
+    plural = "tomes of basic magic spells"
+    blindName = "book"
+    applyVerb = "study" "studies"
+    fragile = true
+    weight = 0.3
+    effect = { 
+			MagicResearch ()
+			AddSpellSchool "elven"}
+    price = 100
+    burnTime = 1
+    uses = 1
+    storageIds = {"scrolls" "equipment"}
+  }
 
-Def MAGIC_WEAPON_PREFIXES()
-    genPrefixes =
-	{
-      1 VictimEffect 1.0 Escape{}
-      1 VictimEffect 0.4 DestroyEquipment
-      1 VictimEffect 0.2 Lasting INSANITY
-      1 VictimEffect 0.2 DestroyEquipment
-      1 VictimEffect 0.5 Fire{20}
-      1 VictimEffect 0.3 Lasting 20 PEACEFULNESS
-      1 VictimEffect 0.3 Lasting 20 SLEEP
-      1 VictimEffect 0.3 Lasting 20 PANIC
-      1 VictimEffect 0.3 Lasting 20 HALLU
-      1 LastingEffect FIRE_VULNERABILITY
-      1 LastingEffect COLD_VULNERABILITY
-      1 LastingEffect ACID_VULNERABILITY
-      1 LastingEffect MAGIC_VULNERABILITY
-      1 LastingEffect PANIC
-      1 JoinPrefixes { ItemAttrBonus SPELL_DAMAGE 20 AttackerEffect Suicide DIE }
-	}
-End
+"AdvancedMagicTome"
+  {
+    viewId = { "magic_tome_advanced"}
+    shortName = "magic tome"
+    name = "tome of advanced magic spells"
+    plural = "tomes of advanced magic spells"
+    blindName = "book"
+    applyVerb = "study" "studies"
+    fragile = true
+    weight = 0.3
+    effect = { 
+			MagicResearch ()
+			AddSpellSchool "advanced elven"}
+    price = 100
+    burnTime = 1
+    uses = 1
+    storageIds = {"scrolls" "equipment"}
+  }
 
-Def BOOTS_PREFIXES()
-    genPrefixes =
-	{
-      1 ItemAttrBonus DEFENSE 3
-      1 LastingEffect SPEED
-      1 LastingEffect FLYING
-      1 LastingEffect SWARMER
-      1 LastingEffect STEED
-      1 LastingEffect REGENERATION
-      1 LastingEffect SLOWED
-      1 LastingEffect COLLAPSED
-      1 LastingEffect EXPLORE_SKILL
-      1 LastingEffect EXPLORE_NOCTURNAL_SKILL
-      1 LastingEffect EXPLORE_CAVES_SKILL
-      1 LastingEffect CAN_DANCE
-    }
-End
+"TomeOfFire"
+  {
+    viewId = { "magic_tome_fire"}
+    shortName = "tome of fire"
+    name = "tome describing fire magic"
+    plural = "tomes describing fire magic"
+    description = "Must be an elementalist to use."
+    blindName = "book"
+    applyVerb = "study" "studies"
+    fragile = true
+    weight = 0.3
+    effect = {
+      Filter CreatureFlag "is_elementalist" { 
+			MagicResearch ()
+			Polymorph "ELVEN_FIRE_MAGE" none}}
+    price = 100
+    burnTime = 1
+    uses = 1
+    storageIds = {"scrolls" "equipment"}
+  }
 
-Def GLOVES_PREFIXES()
-    genPrefixes =
-	{
-      1 ItemAttrBonus PARRY 3
-      1 ItemAttrBonus DAMAGE 5
-      1 ItemAttrBonus SPELL_DAMAGE 5
-      1 ItemAttrBonus RANGED_DAMAGE 5
-      1 LastingEffect POISON
-      1 LastingEffect BLEEDING
-      1 LastingEffect SWIMMING_SKILL
-      1 LastingEffect DISARM_TRAPS_SKILL
-      1 LastingEffect BRIDGE_BUILDING_SKILL
-      1 LastingEffect DISTILLATION_SKILL
-    }
-End
+"TomeOfAir"
+  {
+    viewId = { "magic_tome_air"}
+    shortName = "tome of air"
+    name = "tome describing air magic"
+    plural = "tomes describing air magic"
+    description = "Must be an elementalist to use."
+    blindName = "book"
+    applyVerb = "study" "studies"
+    fragile = true
+    weight = 0.3
+    effect = { 
+      Filter CreatureFlag "is_elementalist" {
+			MagicResearch ()
+			Polymorph "ELVEN_AIR_MAGE" none}}
+    price = 100
+    burnTime = 1
+    uses = 1
+    storageIds = {"scrolls" "equipment"}
+  }
 
-Def HELM_PREFIXES()
-    genPrefixes =
-	{
-      1 LastingEffect WARNING
-      1 LastingEffect SLEEP_RESISTANT
-      1 ItemAttrBonus DEFENSE 5
-      1 LastingEffect TELEPATHY
-      1 LastingEffect NO_FRIENDLY_FIRE
-      1 LastingEffect PSYCHIATRY
-      1 LastingEffect BAD_BREATH
-      1 LastingEffect SUNLIGHT_VULNERABLE
-      1 LastingEffect MAGIC_CANCELLATION
-      1 LastingEffect INSANITY
-      1 LastingEffect PEACEFULNESS
-      1 LastingEffect LIGHT_SOURCE
-      1 LastingEffect SLEEP
-      1 LastingEffect PANIC
-      1 LastingEffect RAGE
-      1 LastingEffect HALLU
-      1 LastingEffect BLIND
-      1 LastingEffect ARCHER_VISION
-      1 LastingEffect ELF_VISION
-      1 LastingEffect NIGHT_VISION
-      1 LastingEffect WARNING
-      1 LastingEffect RESTED
-      1 LastingEffect FAST_CRAFTING
-      1 LastingEffect FAST_TRAINING
-      1 LastingEffect ENTERTAINER
-      1 LastingEffect RIDER
-      1 LastingEffect SLOW_CRAFTING
-      1 LastingEffect SLOW_TRAINING
-      1 LastingEffect HATE_DWARVES
-      1 LastingEffect HATE_HUMANS
-      1 LastingEffect HATE_GREENSKINS
-      1 LastingEffect HATE_ELVES
-      1 LastingEffect HATE_UNDEAD
-      1 LastingEffect HATE_DRAGONS
-    }
-End
+"TomeOfWater"
+  {
+    viewId = { "magic_tome_water"}
+    shortName = "tome of water"
+    name = "tome describing water magic"
+    plural = "tomes describing water magic"
+    description = "Must be an elementalist to use."
+    blindName = "book"
+    applyVerb = "study" "studies"
+    fragile = true
+    weight = 0.3
+    effect = { 
+      Filter CreatureFlag "is_elementalist" {
+		  MagicResearch ()
+			Polymorph "ELVEN_WATER_MAGE" none}}
+    price = 100
+    burnTime = 1
+    uses = 1
+    storageIds = {"scrolls" "equipment"}
+  }
 
-Def ARMOUR_PREFIXES()
-    genPrefixes =
-	{
-      1 ItemAttrBonus DEFENSE 5
-      1 LastingEffect PLAGUE
-      1 LastingEffect CAPTURE_RESISTANCE
-      1 LastingEffect POISON_RESISTANT
-      1 LastingEffect FIRE_RESISTANT
-      1 LastingEffect COLD_RESISTANT
-      1 LastingEffect MAGIC_RESISTANCE
-      1 LastingEffect ACID_RESISTANT
-      1 LastingEffect MELEE_RESISTANCE
-      1 LastingEffect RANGED_RESISTANCE
-      1 LastingEffect FIRE_VULNERABILITY
-      1 LastingEffect COLD_VULNERABILITY
-      1 LastingEffect ACID_VULNERABILITY
-      1 LastingEffect MELEE_VULNERABILITY
-      1 LastingEffect MAGIC_VULNERABILITY
-      1 LastingEffect RANGED_VULNERABILITY
-      1 LastingEffect FIRE_IMMUNITY
-      1 LastingEffect COLD_IMMUNITY
-      1 LastingEffect ACID_IMMUNITY
-      1 LastingEffect MELEE_IMMUNITY
-      1 LastingEffect MAGIC_IMMUNITY
-      1 LastingEffect RANGED_IMMUNITY
-      1 LastingEffect PLAGUE_RESISTANT
-      1 LastingEffect INVISIBLE
-      1 LastingEffect ENTANGLED
-      1 LastingEffect TIED_UP
-      1 LastingEffect IMMOBILE
-      1 LastingEffect PREGNANT
-      1 LastingEffect SATIATED
-      1 LastingEffect SPYING
-      1 LastingEffect AMBUSH_SKILL
-      1 LastingEffect COPULATION_SKILL	  
-    }
-End
+"TomeOfEarth"
+  {
+    viewId = { "magic_tome_earth"}
+    shortName = "tome of earth"
+    name = "tome describing earth magic"
+    plural = "tomes describing earth magic"
+    description = "Must be an elementalist to use."
+    blindName = "book"
+    applyVerb = "study" "studies"
+    fragile = true
+    weight = 0.3
+    effect = { 
+      Filter CreatureFlag "is_elementalist" {
+			MagicResearch ()
+			Polymorph "ELVEN_EARTH_MAGE" none}}
+    price = 100
+    burnTime = 1
+    uses = 1
+    storageIds = {"scrolls" "equipment"}
+  }
 
-"Knife" modify append { SHARP_WEAPON_PREFIXES()  }
-"AssassinsKnife" modify append { SHARP_WEAPON_PREFIXES()  }
-"UnicornHorn" modify append { SHARP_WEAPON_PREFIXES()  }
-"Spear" modify append { SHARP_WEAPON_PREFIXES()  }
-"Sword" modify append { SHARP_WEAPON_PREFIXES()  }
-"AdaSword" modify append { SHARP_WEAPON_PREFIXES()  }
-"InferniteSword" modify append { SHARP_WEAPON_PREFIXES()  }
-"ElvenSword" modify append { SHARP_WEAPON_PREFIXES()  }
-"BattleAxe" modify append { SHARP_WEAPON_PREFIXES()  }
-"AdaBattleAxe" modify append { SHARP_WEAPON_PREFIXES()  }
-"InferniteBattleAxe" modify append { SHARP_WEAPON_PREFIXES()  }
-"InferniteTrident" modify append { SHARP_WEAPON_PREFIXES()  }
+"TomeOfLightning"
+  {
+    viewId = { "magic_tome_lightning"}
+    shortName = "tome of lightning"
+    name = "tome describing lightning magic"
+    plural = "tomes describing lightning magic"
+    description = "Must be an elementalist to use."
+    blindName = "book"
+    applyVerb = "study" "studies"
+    fragile = true
+    weight = 0.3
+    effect = { 
+      Filter CreatureFlag "is_elementalist" {
+			MagicResearch ()
+			Polymorph "ELVEN_LIGHTNING_MAGE" none}}
+    price = 100
+    burnTime = 1
+    uses = 1
+    storageIds = {"scrolls" "equipment"}
+  }
 
-"WarHammer" modify append { BLUNT_WEAPON_PREFIXES() }
-"AdaWarHammer" modify append { BLUNT_WEAPON_PREFIXES() }
-"InferniteWarHammer" modify append { BLUNT_WEAPON_PREFIXES() }
-"Club" modify append { BLUNT_WEAPON_PREFIXES() }
-"HeavyClub" modify append { BLUNT_WEAPON_PREFIXES() }
-"BalrogsWhip" modify append { BLUNT_WEAPON_PREFIXES() }
+"TomeOfIce"
+  {
+    viewId = { "magic_tome_ice"}
+    shortName = "tome of ice"
+    name = "tome describing ice magic"
+    plural = "tomes describing ice magic"
+    description = "Must be an elementalist to use."
+    blindName = "book"
+    applyVerb = "study" "studies"
+    fragile = true
+    weight = 0.3
+    effect = { 
+      Filter CreatureFlag "is_elementalist" {
+			MagicResearch ()
+			Polymorph "ELVEN_ICE_MAGE" none}}
+    price = 100
+    burnTime = 1
+    uses = 1
+    storageIds = {"scrolls" "equipment"}
+  }
 
-"WoodenStaff" modify append { MAGIC_WEAPON_PREFIXES() }
-"IronStaff" modify append { MAGIC_WEAPON_PREFIXES() }
-"AdoxiumStaff"  modify append { MAGIC_WEAPON_PREFIXES() }
-"ElvenStaff" modify append { MAGIC_WEAPON_PREFIXES() }
-"Sceptre" modify append { MAGIC_WEAPON_PREFIXES() }
+"TomeOfLight"
+  {
+    viewId = { "magic_tome_light"}
+    shortName = "tome of light"
+    name = "tome describing light magic"
+    plural = "tomes describing light magic"
+    description = "Must be an elementalist to use."
+    blindName = "book"
+    applyVerb = "study" "studies"
+    fragile = true
+    weight = 0.3
+    effect = { 
+      Filter CreatureFlag "is_elementalist" {
+			MagicResearch ()
+			Polymorph "ELVEN_LIGHT_MAGE" none}}
+    price = 100
+    burnTime = 1
+    uses = 1
+    storageIds = {"scrolls" "equipment"}
+  }
 
-"LeatherBoots" modify append { BOOTS_PREFIXES() }
-"IronBoots" modify append { BOOTS_PREFIXES() }
-"AdaBoots" modify append { BOOTS_PREFIXES() }
-"AdoxiumBoots" modify append { BOOTS_PREFIXES() }
-"DevilBoots" modify append { BOOTS_PREFIXES() }
+"TomeOfShadow"
+  {
+    viewId = { "magic_tome_shadow"}
+    shortName = "tome of shadow"
+    name = "tome describing shadow magic"
+    plural = "tomes describing shadow magic"
+    description = "Must be an elementalist to use."
+    blindName = "book"
+    applyVerb = "study" "studies"
+    fragile = true
+    weight = 0.3
+    effect = { 
+      Filter CreatureFlag "is_elementalist" {
+			MagicResearch ()
+			Polymorph "ELVEN_SHADOW_MAGE" none}}
+    price = 100
+    burnTime = 1
+    uses = 1
+    storageIds = {"scrolls" "equipment"}
+  }
 
-"Bow" modify append { HELM_PREFIXES() }
-"ElvenBow" modify append { HELM_PREFIXES() }
-"ArchwoodBow" modify append { HELM_PREFIXES() }
-"Crossbow" modify append { HELM_PREFIXES() }
+"TomeOfSpirits"
+  {
+    viewId = { "magic_tome_demon"}
+    shortName = "tome of spirits"
+    name = "tome describing how to summon"
+    plural = "tomes describing how to summon"
+    description = "Must be a summoner to use."
+    blindName = "book"
+    applyVerb = "study" "studies"
+    fragile = true
+    weight = 0.3
+    effect = { 
+      Filter CreatureFlag "is_summoner" {
+			MagicResearch ()
+			Polymorph "ELVEN_SPIRIT_MAGE" none
+      AddCompanion 1 false SPELL_DAMAGE 0.05 { "GREATER_DEMON" }
+      AddCompanion 1 false SPELL_DAMAGE 0.002 { "ANGEL" }}}
+    price = 100
+    burnTime = 1
+    uses = 1
+    storageIds = {"scrolls" "equipment"}
+  }
 
-"LeatherGloves" modify append { GLOVES_PREFIXES() }
-"IronGloves" modify append { GLOVES_PREFIXES() }
-"AdaGloves" modify append { GLOVES_PREFIXES() }
-"AdoxiumGloves" modify append { GLOVES_PREFIXES() }
-
-"LeatherHelm" modify append { HELM_PREFIXES() }
-"IronHelm" modify append { HELM_PREFIXES() }
-"CyclopsHelm" modify append { HELM_PREFIXES() }
-"AdaHelm" modify append { HELM_PREFIXES() }
-"AdoxiumHelm" modify append { HELM_PREFIXES() }
-"Cornuthaum1" modify append { HELM_PREFIXES() }
-"Cornuthaum2" modify append { HELM_PREFIXES() }
-"Cornuthaum3" modify append { HELM_PREFIXES() }
-
-"WoodenShield" modify append { ARMOUR_PREFIXES() }
-"IronShield" modify append { ARMOUR_PREFIXES() }
-"AdaShield" modify append { ARMOUR_PREFIXES() }
-"LeatherArmor" modify append { ARMOUR_PREFIXES() }
-"ChainArmor" modify append { ARMOUR_PREFIXES() }
-"RedDragonArmor" modify append { ARMOUR_PREFIXES() }
-"BlackDragonArmor" modify append { ARMOUR_PREFIXES() }
-"WhiteDragonArmor" modify append { ARMOUR_PREFIXES() }
-"YellowDragonScales" modify append { ARMOUR_PREFIXES() }
-"YellowDragonArmor" modify append { ARMOUR_PREFIXES() }
-"GreenDragonArmor" modify append { ARMOUR_PREFIXES() }
-"AdaArmor" modify append { ARMOUR_PREFIXES() }
-"AdoxiumArmor" modify append { ARMOUR_PREFIXES() }
-"Robe" modify append { ARMOUR_PREFIXES() }
-"HalloweenCostume" modify append { ARMOUR_PREFIXES() }
+"TomeOfLife"
+  {
+    viewId = { "magic_tome_life"}
+    shortName = "tome of life"
+    name = "tome describing magic to heal and buff allies"
+    plural = "tomes describing magic to heal and buff allies"
+    description = "Must be a healer to use."
+    blindName = "book"
+    applyVerb = "study" "studies"
+    fragile = true
+    weight = 0.3
+    effect = { 
+      Filter CreatureFlag "is_healer" {
+			MagicResearch ()
+			Polymorph "ELVEN_LIFE_MAGE" none}}
+    price = 100
+    burnTime = 1
+    uses = 1
+    storageIds = {"scrolls" "equipment"}
+  }
