@@ -18,12 +18,11 @@
   destroyFX = { ROCK_CLOUD Rgb 120 87 46 255 } #RGB 120 87 46 255 is Brown
   tryDestroyFX = { DESTROY_FURNITURE Rgb 120 87 46 255 }
   }
-"ELVEN_ANVIL" inherit "FORGE"
+"ELVEN_ANVIL"
   {
   name = "elven anvil"
   viewId = { "elven_anvil" }
   upgrade = "FORGE"
-  usageType = UsageEffect "forge on" { IncreaseAttr ELVEN_FORGE 20 } 
   blockMovement = true
   usageTime = 5
   canHideHere = true
@@ -49,9 +48,9 @@
   tickType = SetFurnitureOnFire
   usageType = UsageEffect "smelt " Chain
 	  { Chance 0.7 CreatureMessage { "smelt some ore" "smelts some ore" }
-	    Chance 0.5 Filter And { CreatureId "ELVEN_SMITH" Not Indoors } DropItems {"IronOre"} 1
-	    Chance 0.5 Filter And { CreatureId "ELVEN_LEGEND_SMITH" Not Indoors } DropItems {"IronOre"} 3
-	    Chance 0.5 Filter And { CreatureFlag "ARTISAN" Not Indoors } DropItems {"IronOre"} 2
+	    Chance 0.5 Filter And { CreatureId "ELVEN_SMITH" Indoors } DropItems {"IronOre"} 1
+	    Chance 0.5 Filter And { CreatureId "ELVEN_LEGEND_SMITH" Indoors } DropItems {"IronOre"} 3
+	    Chance 0.5 Filter And { CreatureFlag "ARTISAN" Indoors } DropItems {"IronOre"} 2
 	  }
   itemDrop = {{{{Simple "IronOre"} 1 { 10 20 }}}}
   strength2 = {
@@ -98,15 +97,34 @@
   destroyFX = { ROCK_CLOUD Rgb 120 87 46 255 }
   tryDestroyFX = { DESTROY_FURNITURE Rgb 120 87 46 255 }
   }
+"INSCRIBING_TABLE" inherit "WORKSHOP"
+  {
+  name = "insribing table"
+  viewId = { "inscribing_table" }
+  blockMovement = true
+  usageTime = 5
+  canHideHere = true
+  fire = 50
+  strength = 80
+  requiresLight = true
+  usageFX = WORKSHOP
+  itemDrop = {{{{Simple "WoodPlank"} 1 { 7 15 }}}}
+  strength2 = {
+    30 DIG
+    30 CUT
+  }
+  destroyFX = { ROCK_CLOUD Rgb 120 87 46 255 } #RGB 120 87 46 255 is Brown
+  tryDestroyFX = { DESTROY_FURNITURE Rgb 120 87 46 255 }
+  }
 "ELVEN_MINION_VASE"
   {
   name = "elven vase"
   viewId = { "elven_minion_vase" }
   blockMovement = true
   canHideHere = true
-  luxury = 0.3
+  luxury = 0.7
   strength = 50
-  populationIncrease = { 3 none }
+  populationIncrease = { 2 none }
   destroyFX = { DESTROY_FURNITURE Rgb 120 120 120 255 }
   }
 "ELVEN_PILLAR"
@@ -149,6 +167,21 @@
   viewId = { "elven_carpet" }
   luxury = 1.0
   layer = FLOOR
+  }
+"ELVEN_ROAD"
+  {
+  name = "elven road"
+  viewId = { "elven_road" }
+  luxury = 0.3
+  layer = FLOOR
+  canBuildOutsideOfTerritory = true
+  xForgetAfterBuilding = true
+  strength2 = {
+    100 BOULDER
+    100 DIG
+    300 HOSTILE_DIG
+  }
+  itemDrop = {{{{Simple "Rock"} 1 { 1 2 }}}}
   }
 "MITHRIL_ORE"
   {

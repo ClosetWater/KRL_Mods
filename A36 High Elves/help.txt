@@ -38,3 +38,8 @@
   viewId = {"soft_monster"}           
   title = "World History"
 }
+{
+  scriptedId = "high_elves"
+  viewId = {"elf_lord"}           
+  title = "High Elves"
+}

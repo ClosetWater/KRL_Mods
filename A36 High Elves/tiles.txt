@@ -8,6 +8,7 @@
 { viewId = "elven_guard" symbol = "g" color = ColorId GREEN weaponOrigin = {7 17} }
 { viewId = "elven_knight" symbol = "K" color = ColorId DARK_GREEN weaponOrigin = {2 15} }
 { viewId = "elven_lord" symbol = "L" color = ColorId DARK_GREEN weaponOrigin = {2 15} }
+{ viewId = "elven_mage" symbol = "M" color = ColorId GREEN weaponOrigin = {7 17} }
 { viewId = "elven_fire_mage" symbol = "m" color = ColorId GREEN weaponOrigin = {7 17} }
 { viewId = "elven_air_mage" symbol = "m" color = ColorId GREEN weaponOrigin = {7 17} }
 { viewId = "elven_water_mage" symbol = "m" color = ColorId GREEN weaponOrigin = {7 17} }
@@ -31,12 +32,13 @@
 { "elven_hunter" "e" ColorId GREEN }
 { "elven_ranger" "e" ColorId GREEN }
 { "elven_marksman" "e" ColorId GREEN }
-{ "elven_smith" "b" ColorId LIGHT_BROWN }
-{ "elven_legend_smith" "b" ColorId LIGHT_BROWN }
-{ "elven_enchanter" "b" ColorId LIGHT_BROWN }
-{ "elven_grand_enchanter" "b" ColorId LIGHT_BROWN }
-{ "elven_alchemist" "b" ColorId LIGHT_BROWN }
-{ "elven_master_alchemist" "b" ColorId LIGHT_BROWN }
+{ "elven_artisan" "e" ColorId LIGHT_BROWN }
+{ "elven_smith" "s" ColorId LIGHT_BROWN }
+{ "elven_legend_smith" "S" ColorId LIGHT_BROWN }
+{ "elven_enchanter" "e" ColorId LIGHT_BROWN }
+{ "elven_grand_enchanter" "E" ColorId LIGHT_BROWN }
+{ "elven_alchemist" "a" ColorId LIGHT_BROWN }
+{ "elven_master_alchemist" "A" ColorId LIGHT_BROWN }
 { "hawk" "h" ColorId LIGHT_BROWN }
 { "winged_wolf" "w" ColorId LIGHT_BROWN }
 { "trained_winged_wolf" "W" ColorId LIGHT_BROWN }
@@ -105,6 +107,7 @@
 { viewId = "mithril_axe_v" symbol = ")" color = ColorId WHITE weaponOrigin = {13 13} }
 { viewId = "mithril_battle_axe_v" symbol = ")" color = ColorId WHITE weaponOrigin = {11 14} }
 { viewId = "mithril_spear_v" symbol = "/" color = ColorId WHITE weaponOrigin = {14 15} }
+{ "elven_shoes" "]" ColorId LIGHT_BLUE }
 { "elven_boots" "]" ColorId LIGHT_BLUE }
 { "elven_cloak" "]" ColorId LIGHT_BLUE }
 { "elven_tunic" "]" ColorId LIGHT_BLUE }
@@ -117,6 +120,10 @@
 { "mithril_helm" "]" ColorId LIGHT_BLUE }
 { "mithril_armor" "]" ColorId LIGHT_BLUE }
 { "mithril_light_armor" "]" ColorId LIGHT_BLUE }
+{ "elven_shield" "]" ColorId PURPLE }
+{ "magic_shield" "]" ColorId LIGHT_BLUE }
+{ "mithril_shield" "]" ColorId LIGHT_BLUE }
+{ "mithril_tower_shield" "]" ColorId LIGHT_BLUE }
 { "smith_amulet" "\"" ColorId YELLOW }
 { "holy_amulet" "\"" ColorId YELLOW }
 { "magic_amulet" "\"" ColorId YELLOW }
@@ -125,14 +132,30 @@
 { "god_amulet" "\"" ColorId YELLOW }
 { "lightning_damage_icon" "1" ColorId WHITE }
 { "lt_book_library" "?" ColorId BLUE }
+{ "magic_tome_basic" "?" ColorId BROWN }
+{ "magic_tome_advanced" "?" ColorId BROWN }
+{ "magic_tome_fire" "?" ColorId BROWN }
+{ "magic_tome_water" "?" ColorId BLACK }
+{ "magic_tome_air" "?" ColorId BROWN }
+{ "magic_tome_earth" "?" ColorId BROWN }
+{ "magic_tome_ice" "?" ColorId BROWN }
+{ "magic_tome_lightning" "?" ColorId WHITE }
+{ "magic_tome_light" "?" ColorId YELLOW }
+{ "magic_tome_shadow" "?" ColorId GRAY }
+{ "magic_tome_demon" "?" ColorId BLACK }
+{ "magic_tome_angel" "?" ColorId YELLOW }
+{ "magic_tome_life" "?" ColorId PURPLE }
 { viewId = "elven_pillar" symbol = "⌑" isSymbolFont = true color = ColorId LIGHT_GRAY }
 { viewId = "elven_wall" symbol = "#" color = ColorId LIGHT_GRAY
   wallShadow = true wallConnections = true }
 { viewId = "elven_arrowslit_wall" symbol = "#" color = ColorId ALMOST_WHITE
   wallShadow = true wallConnections = true }
+{ viewId = "elven_road" symbol = "." color = ColorId GRAY
+  connectionId = {"elven_road"}
+  roadConnections = true }
 { "elven_stone_floor" "." ColorId LIGHT_GRAY }
 { "elven_carpet" "." ColorId PURPLE }
-{ viewId = "elven_anvil" symbol = "&" color = ColorId LIGHT_GRAY
+{ viewId = "elven_anvil"  symbol = "&"  color = ColorId LIGHT_GRAY
   roundShadow = true }
 { viewId = "elven_forge" symbol = "&" color = ColorId LIGHT_RED
   roundShadow = true }
@@ -141,6 +164,8 @@
 { viewId = "enchant_table" symbol = "&" color = ColorId YELLOW
   roundShadow = true }
 { viewId = "alchemy_stand" symbol = "&" color = ColorId LIGHT_GRAY
+  roundShadow = true }
+{ viewId = "inscribing_table" symbol = "&" color = ColorId LIGHT_BROWN
   roundShadow = true }
 { viewId = "elven_minion_vase" symbol = "&" color = ColorId LIGHT_GRAY
   roundShadow = true fx = GoldGlitter() }

@@ -74,4 +74,10 @@
   help = "Defines the creature's skill at enchanting at the elven enchanting table."
   }
 
-  
+"INSCRIBING" {
+  name = "INSCRIBING"
+  viewId = { "inscribing_table" }
+  adjective = "knowledge"
+  absorptionCap = 25
+  help = "Defines the creature's skill at creating magic tomes."
+  }  
