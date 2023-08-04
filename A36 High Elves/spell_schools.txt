@@ -1,14 +1,8 @@
 "elven king" SPELL
   {
     "directed blast" 1
-    "summon galeam" 1
     "escape" 2
     "heal spirit" 2
-    "lightning bolt" 2
-    "light bolt" 2
-    "ice bolt" 2
-    "shadow bolt" 2
-    "ice cone" 3
     "magic missile" 3
     "haste" 3
     "healing" 4
@@ -17,13 +11,8 @@
     "defense bonus" 5
     "damage bonus" 5
     "advanced heal spirit" 5
-    "advanced earth elemental" 5
     "cure poison" 6
     "invisibility" 6
-    "advanced lightning bolt" 6
-    "advanced light bolt" 6
-    "advanced ice bolt" 6
-    "advanced shadow bolt" 6
     "advanced magic missile" 7
     "advanced haste" 8
     "teleport" 8
@@ -33,14 +22,7 @@
     "advanced damage bonus" 9
     "heal spirit group" 9
     "advanced teleport" 10
-    "expert lightning bolt" 10
-    "expert ice bolt" 10
-    "expert light bolt" 10
-    "expert shadow bolt" 10
     "expert magic missile" 11
-    "advanced invisibility" 12
-    "mass defense bonus" 12
-    "mass damage bonus" 12
     "meteor shower" 12
   }
 

@@ -971,7 +971,7 @@ OneTimeAbility("air flying self", "Becomes flying.", Permanent FLYING, "🎯")
  {
    symbol = "👱"
    range = 1
-   effect = Name "decapitate" { LoseBodyPart HEAD Lasting 20 BLEEDING }
+   effect = Name "decapitate" Description "rip off enemies head" { LoseBodyPart HEAD Lasting 20 BLEEDING }
    cooldown = 200
    sound = BLADE_DAMAGE
  }
@@ -979,7 +979,7 @@ OneTimeAbility("air flying self", "Becomes flying.", Permanent FLYING, "🎯")
  {
    symbol = "👞"
    range = 1
-   effect = Name "leg strike" { LoseBodyPart LEG Lasting 20 BLEEDING }
+   effect = Name "leg strike" Description "rip off enemies leg" { LoseBodyPart LEG Lasting 20 BLEEDING }
    cooldown = 50
    sound = BLADE_DAMAGE
  }
@@ -987,7 +987,7 @@ OneTimeAbility("air flying self", "Becomes flying.", Permanent FLYING, "🎯")
  {
    symbol = "✋"
    range = 1
-   effect = Name "arm strike" { LoseBodyPart ARM Lasting 20 BLEEDING }
+   effect = Name "arm strike" Description "rip off enemies arm" { LoseBodyPart ARM Lasting 20 BLEEDING }
    cooldown = 50
    sound = BLADE_DAMAGE
  }
