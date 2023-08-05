@@ -1,20 +1,26 @@
 "craft" {
-    "artisan" {"elven_anvil"}
-        Description "Increases crafting attributes by 8"
+    "blacksmith" {"elven_anvil"}
+        Description "Increases crafting attributes by 8, learn elven forging techniques when applied for first time."
         {
-          IncreaseAttr "WORKSHOP" 8
-          IncreaseAttr "FORGE" 8
+          Filter Not CreatureFlag "is_blacksmith" Polymorph ELVEN_SMITH none
+          SetCreatureFlag "is_blacksmith" true
+          IncreaseAttr "ELVEN_CRAFT" 8
+          IncreaseAttr "ELVEN_FORGE" 8
           IncreaseAttr FURNACE 8
         }
-    "brewer" {"alchemy_stand"}
-        Description "Increases brewing attributes by 8"
+    "alchemist" {"alchemy_stand"}
+        Description "Increases brewing attributes by 8, increases alchemy skill by 20 when applied for first time."
         {
-          IncreaseAttr "LABORATORY" 8
+          Filter Not CreatureFlag "is_alchemist" Polymorph ELVEN_ALCHEMIST none
+          SetCreatureFlag "is_alchemist" true
+          IncreaseAttr "ELVEN_ALCHEMY" 8
         }
     "enchanter" {"enchant_table"}
-        Description "Increases enchanting attributes by 8"
+        Description "Increases enchanting attributes by 8, increases enchant skill by 20 when applied for first time."
         {
-          IncreaseAttr "JEWELER" 8
+          Filter Not CreatureFlag "is_enchanter" Polymorph ELVEN_ENCHANTER none
+          SetCreatureFlag "is_enchanter" true
+          IncreaseAttr "ELVEN_ENCHANT" 8
         }
         }
 
@@ -29,7 +35,7 @@
         {
           IncreaseAttr DEFENSE 7
         }
-    "veteran warrior" {"war_hammer"}
+    "martial arts training" {"war_hammer"}
         Description "Increases max melee training by 3."
         {
           IncreaseMaxLevel MELEE 3
@@ -37,12 +43,12 @@
         }
 
 "ranged" {
-    "range training" {"bow"}
+    "offensive training" {"bow"}
         Description "Increases ranged damage by 7."
         {
           IncreaseAttr RANGED_DAMAGE 7
         }
-    "precision training" {"archery_range"}
+    "archery training" {"archery_range"}
         Description "Increases max archery training level by 3."
         {
           IncreaseMaxLevel ARCHERY 3
@@ -50,20 +56,29 @@
         }
 
 "magic" {
-    "damage research" {"bookcase_wood"}
-        Description "Increases max spell damage by 7."
-        {
-          IncreaseAttr SPELL_DAMAGE 7
-        }
-    "spell research" {"bookcase_iron"}
-        Description "Increases max spell training level by 3."
+    "magic research" {"bookcase_gold"}
+        Description "Increases max spell speed/damage by 7 and training level by 3."
         {
           IncreaseMaxLevel SPELL 3
+          IncreaseAttr SPELL_SPEED 7
+          IncreaseAttr SPELL_DAMAGE 7
         }
-    "elven research" {"bookcase_gold"}
-        Description "Increases the variety of spells available."
+    "elementalist" {"magic_tome_fire"}
+        Description "Able to learn elemental magic tomes."
         {
-          Filter Not CreatureFlag "is_researcher" AddSpellSchool "advanced elven"
-          SetCreatureFlag "is_researcher" true
+          Filter Not CreatureFlag "is_elementalist"
+          SetCreatureFlag "is_elementalist" true
+        }
+    "summoner" {"magic_tome_demon"}
+        Description "Able to learn summoning magic tomes."
+        {
+          Filter Not CreatureFlag "is_summoner"
+          SetCreatureFlag "is_summoner" true
+        }
+    "healer" {"magic_tome_life"}
+        Description "Able to learn abjuration magic tome."
+        {
+          Filter Not CreatureFlag "is_healer"
+          SetCreatureFlag "is_healer" true
         }
         }

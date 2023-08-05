@@ -26,7 +26,6 @@ End
     sound = SPELL_BLAST
     }
 
-
 # lightning spells
 "lightning bolt"
     {
@@ -125,7 +124,6 @@ End
     }
 OneTimeAbility("lightning resistance self", "Becomes resistant to lightning.", Permanent LIGHTNING_RESISTANT, "🎯")
 
-
 # fire spells
 "fire bolt"
     {
@@ -222,7 +220,6 @@ OneTimeAbility("lightning resistance self", "Becomes resistant to lightning.", P
     }
 OneTimeAbility("fire resistance self", "Becomes resistant to fire.", Permanent FIRE_RESISTANT, "🎯")
 
-
 # ice spells
 "ice bolt"
     {
@@ -318,7 +315,6 @@ OneTimeAbility("fire resistance self", "Becomes resistant to fire.", Permanent F
     sound = SPELL_STR_BONUS
     }
 OneTimeAbility("cold resistance self", "Becomes resistant to cold.", Permanent COLD_RESISTANT, "🎯")
-
 
 # shadow spells
 "shadow bolt"
@@ -423,7 +419,6 @@ OneTimeAbility("cold resistance self", "Becomes resistant to cold.", Permanent C
     }
 OneTimeAbility("shadow resistance self", "Becomes resistant to shadow.", Permanent SHADOW_RESISTANT, "🎯")
 
-
 # light spells
 "light bolt"
     {
@@ -519,7 +514,6 @@ OneTimeAbility("shadow resistance self", "Becomes resistant to shadow.", Permane
     sound = SPELL_STR_BONUS
     }
 OneTimeAbility("light resistance self", "Becomes resistant to light.", Permanent LIGHT_RESISTANT, "🎯")
-
 
 # earth spells
 "rock bolt"
@@ -635,7 +629,6 @@ OneTimeAbility("light resistance self", "Becomes resistant to light.", Permanent
     cooldown = {15 31}
     sound = SPELL_BLAST
     }
-
 
 # water spells
 "water bolt"
@@ -755,7 +748,6 @@ OneTimeAbility("light resistance self", "Becomes resistant to light.", Permanent
     }
 OneTimeAbility("water resistance self", "Becomes able to breathe in water.", Permanent SWIMMING_SKILL, "🎯")
 
-
 # enchantment
 "advanced panic"
     {
@@ -808,7 +800,6 @@ OneTimeAbility("water resistance self", "Becomes able to breathe in water.", Per
     cooldown = {30 61}
     sound = SPELL_DEX_BONUS
     }
-
 
 # air spells
 "air bolt"
@@ -898,7 +889,6 @@ OneTimeAbility("water resistance self", "Becomes able to breathe in water.", Per
     }
 OneTimeAbility("air flying self", "Becomes flying.", Permanent FLYING, "🎯")
 
-
 # demonology
 "summon succubus ME"
     {
@@ -932,7 +922,6 @@ OneTimeAbility("air flying self", "Becomes flying.", Permanent FLYING, "🎯")
     cooldown = {150 300}
     sound = SPELL_SUMMON_SPIRIT
     }
-
 
 # angeology
 "summon galeam"
@@ -968,7 +957,7 @@ OneTimeAbility("air flying self", "Becomes flying.", Permanent FLYING, "🎯")
     sound = SPELL_SUMMON_SPIRIT
     }
 
-#martial
+# martial
 "throw sand" 
  {
    symbol = "△"
@@ -982,7 +971,7 @@ OneTimeAbility("air flying self", "Becomes flying.", Permanent FLYING, "🎯")
  {
    symbol = "👱"
    range = 1
-   effect = Name "decapitate" { LoseBodyPart HEAD Lasting 20 BLEEDING }
+   effect = Name "decapitate" Description "rip off enemies head" { LoseBodyPart HEAD Lasting 20 BLEEDING }
    cooldown = 200
    sound = BLADE_DAMAGE
  }
@@ -990,7 +979,7 @@ OneTimeAbility("air flying self", "Becomes flying.", Permanent FLYING, "🎯")
  {
    symbol = "👞"
    range = 1
-   effect = Name "leg strike" { LoseBodyPart LEG Lasting 20 BLEEDING }
+   effect = Name "leg strike" Description "rip off enemies leg" { LoseBodyPart LEG Lasting 20 BLEEDING }
    cooldown = 50
    sound = BLADE_DAMAGE
  }
@@ -998,7 +987,7 @@ OneTimeAbility("air flying self", "Becomes flying.", Permanent FLYING, "🎯")
  {
    symbol = "✋"
    range = 1
-   effect = Name "arm strike" { LoseBodyPart ARM Lasting 20 BLEEDING }
+   effect = Name "arm strike" Description "rip off enemies arm" { LoseBodyPart ARM Lasting 20 BLEEDING }
    cooldown = 50
    sound = BLADE_DAMAGE
  }
@@ -1010,6 +999,30 @@ OneTimeAbility("air flying self", "Becomes flying.", Permanent FLYING, "🎯")
    cooldown = 80
    sound = BLADE_DAMAGE
    message = "go for vitals!" "goes for vitals!"
+ }
+"martial blast"
+  {
+    symbol = "💥"
+    effect = Name "martial blast" { Area 2 Blast }
+    cooldown = 2
+    sound = SPELL_AIR_BLAST
+  }
+"martial strike"
+  {
+    symbol = "💥"
+    effect = Name "martial strike" { Damage DAMAGE CUT Blast }
+	range = 4
+    cooldown = 20
+    sound = BLUNT_DAMAGE
+  }
+"double strike"
+ {
+   symbol = "☽☽"
+   effect = Name "double strike" { Damage DAMAGE CUT Damage DAMAGE STAB }
+   range = 1
+   cooldown = 10
+   sound = BLADE_DAMAGE
+   message = "hit twice" "hits twice"
  }
 "advanced vitals strike" 
  {
@@ -1031,13 +1044,159 @@ OneTimeAbility("air flying self", "Becomes flying.", Permanent FLYING, "🎯")
    sound = BLADE_DAMAGE
    message = "go for vitals!" "goes for vitals!"
  }
+
+#Weapon Skills
+"assassinate" 
+ {
+   symbol = "🗡"
+   range = 1
+   effect = Name "assassinate" Description "causes massive damage to a single target" FixedDamage DAMAGE 350 CUT 
+   cooldown = 200
+   sound = BLADE_DAMAGE
+   message = "go for vitals!" "goes for vitals!"
+   type = ABILITY
+ }
+"escape slash"
+ {
+   symbol ="✈️☽"
+   effect = Name "escape slash" { Damage DAMAGE CUT Escape{} }
+   range = 1
+   cooldown = 4
+   sound = BLADE_DAMAGE
+   message = "use magic in an attack" "uses magic in an attack"
+   type = ABILITY
+ }
+"weapon strike"
+ {
+   symbol = "💥⚔"
+   effect = Name "weapon strike" { Damage DAMAGE CUT Enhance WEAPON -1 }
+   range = 1
+   cooldown = 4
+   sound = BLUNT_DAMAGE
+   message = "damage a weapon" "damages a weapon"
+   type = ABILITY
+ }
+"air render"
+  {
+    symbol = "☽"
+    effect = Name "air render" { Damage DAMAGE CUT }
+	range = 3
+    cooldown = 12
+	endOnly = true
+    sound = SPELL_AIR_BLAST
+    type = ABILITY
+  }
+"armor strike"
+ {
+   symbol = "💥🛡"
+   effect = Name "armor strike" { Damage DAMAGE CUT Enhance ARMOR -1 }
+   range = 1
+   cooldown = 4
+   sound = BLUNT_DAMAGE
+   message = "damage an armor piece" "damages an armor piece"
+   type = ABILITY
+ }
+"cripple"
+ {
+   symbol = "X"
+   range = 1
+   effect = Name "cripple" Lasting 20 COLLAPSED
+   cooldown = 20
+   sound = BLUNT_DAMAGE
+   type = ABILITY
+ }
+"wild swing"
+  {
+    symbol = "🌀💥"
+    effect = Name "wild swing" { Area 1 Damage DAMAGE CUT CircularBlast }
+    cooldown = 2
+    sound = BLADE_DAMAGE
+    type = ABILITY
+  }
+"battle cry"
+  {
+    symbol = "💪"
+    effect = Name "battle cry" Lasting 20 RAGE
+    cooldown = 90
+    sound = SPELL_STR_BONUS
+    type = ABILITY
+  }
+"spinning chain"
+  {
+    symbol = "🌀💥"
+    effect = Name "spinning chain" { Area 1 Lasting 10 COLLAPSED CircularBlast }
+    cooldown = 2
+    sound = BLADE_DAMAGE
+    type = ABILITY
+  }
 "mystic whip"
  {
   symbol = "ℒ"
   effect = Name "mithril whip" Description "Causes magical damage" { Damage SPELL_DAMAGE SPELL }
   fx = {BALROGS_WHIP ColorId LIGHT_BLUE}
-  range = 4
+  range = 5
   cooldown = 2
   endOnly = true
   message = "lash your whip!" "lashes their whip!"
+  type = ABILITY
+ }
+"triple strike"
+ {
+   symbol = "☽☽☽"
+   effect = Name "triple strike" { Damage DAMAGE CUT Damage DAMAGE STAB Damage DAMAGE CUT }
+   range = 1
+   cooldown = 8
+   sound = BLADE_DAMAGE
+   message = "hit three times" "hits three times"
+   type = ABILITY
+ }
+"leap"
+ {
+  symbol = "↷"
+  effect = Name "heroic leap" { Jump CircularBlast }
+  range = 5
+  cooldown = 10
+  endOnly = true
+  message = "jump" "jumps"
+  type = ABILITY
+ }
+"barrage"
+ {
+   symbol = "↣↣↣"
+   effect = Name "barrage" { Damage RANGED_DAMAGE CUT Damage RANGED_DAMAGE STAB Damage RANGED_DAMAGE CUT }
+   range = 1
+   cooldown = 20
+   sound = SHOOT_BOW
+   projectileViewId = {"arrow"}
+   message = "shoot three times" "shoots three times"
+   type = ABILITY
+ }
+"charged shot" 
+ {
+   symbol = "↣"
+   range = 7
+   effect = Name "charged shot" Description "causes massive damage to a single target" FixedDamage DAMAGE 350 STAB 
+   cooldown = 50
+   sound = SHOOT_BOW
+   projectileViewId = {"arrow"}
+   message = "go for vitals!" "goes for vitals!"
+   type = ABILITY
+ }
+"long shot"
+ {
+  symbol = "↣"
+  effect = MinDistanceFromStrongEnemy(4) Name "long shot" Description "Shoots an arrow really far"
+      TryNoFriendlyFire(
+        {
+          CreatureMessage { "are hit by the arrow" "is hit by the arrow"}
+          Damage RANGED_DAMAGE SHOOT
+        },
+        CreatureMessage { "are spared by the arrow" "is spared by the arrow"}
+      )
+  range = 20
+  cooldown = 20
+  maxHits = 1
+  projectileViewId = {"arrow"}
+  message = "shoot an arrow really far" "shoots an arrow really far"
+  type = ABILITY
  }

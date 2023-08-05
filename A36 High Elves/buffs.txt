@@ -162,7 +162,7 @@
   {
   name = "Stoneskin"
   adjective = "skin have turned to stone"
-  description = "Creature's skin turns intro stone "
+  description = "Creature's skin turns into stone "
   addedMessage = ARE "skin have turned to stone"
   removedMessage = ARE "no longer have skin of stone"
   color = ColorId SKY_BLUE
@@ -189,3 +189,15 @@
   fx = DEBUFF_BLUE
   color = ColorId RED
   }
+
+"ELVEN_FORGING" {
+  name = "elven forging"
+  adjective = "forging"
+  description = "advanced forging techniques"
+  addedMessage = ARE "forging"
+  removedMessage = ARE "no longer forging"
+  startEffect = IncreaseAttr ELVEN_FORGE 30
+  endEffect = IncreaseAttr ELVEN_FORGE -30
+  canWishFor = false
+  color = ColorId LIGHT_BLUE
+} 

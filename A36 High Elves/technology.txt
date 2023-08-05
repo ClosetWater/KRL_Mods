@@ -1,15 +1,14 @@
-"squire"                        { "Begin your journey." }
-"knight"                        { "Train your martial skills."                                                          {"squire"}}
-"king"                          { "Become a great leader of your people."                                               {"knight"}}
-"god"                           { "Unlock the secrets of Immortality."                                                  {"king"}}
+"high king of the elves"        { "You are the high king of the elves." }
+"commandant"                    { "Become a great commander of the high elves."                                         {"high king of the elves"}}
+"governance"                    { "Become a great leader of the high elves."                                            {"commandant"}}
+"athanasia"                     { "Unlock the secrets of Immortality."                                                  {"life magic"}}
 "elemental magic"               { "Unlock powerful magic of four basic elements: Fire, Air, Water, Earth."              {"advanced sorcery"}}
 "advanced elemental magic"      { "Unlock powerful magic of four advanced elements: Lightning, Ice, light, and dark"    {"elemental magic"}}
 "spirit magic"                  { "Unlock powerful magic to summon Angels and Demons."                                  {"sorcery"}}
-"divine power"                  { "Unlock powerful divine power to heal and buff allies."                               {"worship"}}
-"mithril forging"               { "Learn the secrects of forging mithril weapons and armor."                            {"iron working"}}
-"unique weapons"                { "Learn the secrects of smithing legendary weapons and armor."                         {"iron working"}}
-"legend smithing"               { "Learn the secrects of smithing legendary weapons and armor."                         {"iron working"}}
-"gem etching"                   { "Learn the secrets of crafting jewlellery with powerful enchantments."                {"jewellery"}}
-"gem altering"                  { "Learn the secrets of crafting jewlellery with powerful enchantments."                {"gem etching"}}
-"grand enchanting"              { "Learn the secrets of crafting jewlellery with powerful enchantments."                {"gem etching"}}
-"master alchemy"                { "Learn the secrets to brew powerful potions."                                         {"alchemy"}}
+"life magic"                    { "Unlock powerful life magic to heal and buff allies."                                 {"worship"}}
+"mithril forging"               { "Learn the technique to forge mithril into weapons and armor."                        {"iron working"}}
+"unique weapons"                { "Learn how to forge unique mithril weapons."                                          {"iron working"}}
+"legend smithing"               { "Learn the secrects of smithing legendary weapons and armor."                         {"mithril forging"}}
+"grand enchanting"              { "Learn the secrets of crafting jewlellery with powerful enchantments."                {"jewellery"}}
+"master alchemy"                { "Learn the secrets to brew powerful potions."                                         {"advanced alchemy"}}
+"inscribing"                    { "Learn the secrets to producing magic tomes."                                         {"sorcery"}}
