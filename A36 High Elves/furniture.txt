@@ -29,6 +29,11 @@
   strength = 80
   requiresLight = true
   usageFX = FORGE
+  usageType = UsageEffect "forge " Chain {
+    Chance 0.9 CreatureMessage { "forge some ore" "forges some ore" }
+    Chance 0.3 Filter And { CreatureId "ELVEN_SMITH" } Lasting 3 ELVEN_FORGING
+	  Chance 0.5 Filter And { CreatureId "ELVEN_LEGEND_SMITH" } Lasting 3 ELVEN_FORGING
+  }
   itemDrop = {{{{Simple "IronOre"} 1 { 10 20 }}}}
   strength2 = {
     30 DIG
@@ -50,7 +55,6 @@
 	  { Chance 0.7 CreatureMessage { "smelt some ore" "smelts some ore" }
 	    Chance 0.5 Filter And { CreatureId "ELVEN_SMITH" Indoors } DropItems {"IronOre"} 1
 	    Chance 0.5 Filter And { CreatureId "ELVEN_LEGEND_SMITH" Indoors } DropItems {"IronOre"} 3
-	    Chance 0.5 Filter And { CreatureFlag "ARTISAN" Indoors } DropItems {"IronOre"} 2
 	  }
   itemDrop = {{{{Simple "IronOre"} 1 { 10 20 }}}}
   strength2 = {
