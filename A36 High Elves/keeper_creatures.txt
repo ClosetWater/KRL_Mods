@@ -16,7 +16,7 @@
     zLevelGroups = { "basic" "lawful" }
     initialTech = { "archery" "sorcery" "high king of the elves" }
     buildingGroups = {
-        "structure" "structure_elven" "doors" "floors" "floors_elven" "storage" "zones_elven" "library" "beds"
+        "structure" "structure_elven" "doors" "floors" "floors_elven" "storage" "zones" "library" "beds"
         "dining table" "pigsty" "training" "crafting_elven" "laboratory_elven" "jeweller_elven" "poetry" "distillery"
         "furnace" "prison" "orders" "throne" "decor_elven" "installations" "traps"
         "magical_installations" "healing_totem" "minion_statues"
