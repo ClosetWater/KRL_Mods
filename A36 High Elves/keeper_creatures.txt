@@ -16,14 +16,13 @@
     zLevelGroups = { "basic" "lawful" }
     initialTech = { "archery" "sorcery" "high king of the elves" }
     buildingGroups = {
-        "structure" "structure_elven" "doors" "floors" "floors_elven" "storage" "zones" "library" "beds"
+        "structure" "structure_elven" "doors" "floors" "floors_elven" "storage" "zones_elven" "library" "beds"
         "dining table" "pigsty" "training" "crafting_elven" "laboratory_elven" "jeweller_elven" "poetry" "distillery"
         "furnace" "prison" "orders" "throne" "decor_elven" "installations" "traps"
         "magical_installations" "healing_totem" "minion_statues"
     }
     workshopGroups = { "elven" }
     description = "Play as a not-so-evil elven race. Recruit warriors, archers, and magical creatures!"
-    credit = { "GOLD" 500 "WOOD" 1000 "STONE" 1000 "MITHRIL" 500  }
     minionTraits = { LEADER WORKER NO_LIMIT }
     maxPopulation = 10
     populationString = "high elves"

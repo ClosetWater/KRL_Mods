@@ -23,7 +23,6 @@
     }
     workshopGroups = { "elven" }
     description = "Play as a not-so-evil elven race. Recruit warriors, archers, and magical creatures!"
-    credit = { "GOLD" 500 "WOOD" 1000 "STONE" 1000 "MITHRIL" 500  }
     minionTraits = { LEADER WORKER NO_LIMIT }
     maxPopulation = 10
     populationString = "high elves"
