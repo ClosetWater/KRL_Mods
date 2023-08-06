@@ -1,48 +1,80 @@
-  {
-    counts = { 
-        "STONE"       {4 6} 8 4
-        "IRON_ORE"    {4 6} 6 4
-        "MITHRIL_ORE" {3 5} 4 3
-    }
-    minDepth = 1
-    maxDepth = 1
+# At every level, including ground (level 0), the game randomly chooses one of available sets.
+{
+  counts = {
+      "STONE" {5 10} 1 2
+      "MITHRIL_ORE" {5 10} 1 2
   }
-  {
-    counts = {
-        "STONE"       {6 8} 8 5
-        "IRON_ORE"    {6 8} 5 3
-        "MITHRIL_ORE" {4 6} 3 2
-    }
-    minDepth = 2
+  minDepth = -3
+  maxDepth = 0
+}
+{
+  counts = {
+      "STONE" {5 10} 1 2
+      "IRON_ORE" {5 10} 1 2
   }
-  {
-    counts = {
-        "GOLD_ORE"     {4 8} 5 3
-        "MAGIC_GEM"    {3 5} 4 3
-		    "MITHRIL_ORE"  {1 2} 4 3
-    }
-    minDepth = 3
+  minDepth = -2
+  maxDepth = 0
+}
+{
+  counts = {
+      "STONE" {5 10} 2 0
+      "IRON_ORE" {5 10} 2 0
+      "GOLD_ORE" {5 10} 1 0
   }
-  {
-    counts = {
-        "STONE"         {4 6} 6 4
-        "MITHRIL_ORE"   {6 8} 5 3
-        "MAGIC_GEM"     {2 6} 5 3
-    }
-    minDepth = 3
+  minDepth = 1
+}
+{
+  counts = {
+      "STONE" {5 10} 2 0
+      "MITHRIL_ORE" {5 10} 2 0
+      "MAGIC_GEM" {5 10} 1 0
   }
-  {
-    counts = {
-        "IRON_ORE"         {3 6} 5 5
-        "INFERNITE_ORE"    {1 2} 5 4
-		    "MITHRIL_ORE"      {1 2} 5 4
-    }
-    minDepth = 5
+  minDepth = 1
+}
+{
+  counts = {
+      "GOLD_ORE" {5 10} 2 0
+      "ADAMANTIUM_ORE" {5 10} 2 0
   }
-  {
-    counts = {
-        "GOLD_ORE"       {4 6} 4 4
-        "ADAMANTIUM_ORE" {2 5} 5 4
-    }
-    minDepth = 6
+  minDepth = 6
+}
+{
+  counts = {
+      "MAGIC_GEM" {5 10} 2 0
+      "MITHRIL_ORE" {5 10} 2 0
   }
+  minDepth = 6
+}
+{
+  counts = {
+      "GIANT_MUSHROOM" {5 10} 6 0
+  }
+  minDepth = 4
+}
+{
+  counts = {
+      "STONE" {5 10} 1 0
+      "IRON_ORE" {5 10} 1 0
+      "GOLD_ORE" {5 10} 1 0
+      "ADOXIUM_ORE" {2 4} 2 0
+  }
+  minDepth = 12
+}
+{
+  counts = {
+      "STONE" {5 10} 1 0
+      "IRON_ORE" {5 10} 1 0
+      "MITHRIL_ORE" {5 10} 1 0
+      "MAGIC_GEM" {2 4} 2 0
+  }
+  minDepth = 12
+}
+{
+  counts = {
+      "STONE" {5 10} 1 0
+      "IRON_ORE" {5 10} 1 0
+      "GOLD_ORE" {5 10} 1 0
+      "INFERNITE_ORE" {2 4} 2 0
+  }
+  minDepth = 12
+}
