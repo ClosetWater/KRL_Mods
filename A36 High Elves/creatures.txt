@@ -15,32 +15,29 @@
       }
     }
     attr = {
-      DAMAGE 25
+      DAMAGE 21
       DEFENSE 25
-      SPELL_DAMAGE 25
-      RANGED_DAMAGE 25
-      MULTI_WEAPON 25
-      ELVEN_ENCHANT 25
-      ELVEN_ALCHEMY 25
-      ELVEN_FORGE 25
-      ELVEN_CRAFT 25
-      INSCRIBING 25
+      SPELL_DAMAGE 18
+      RANGED_DAMAGE 37
+      MULTI_WEAPON 20
+      ELVEN_CRAFT 10
+      INSCRIBING 10
     }
     permanentEffects = {
-      MAGIC_RESISTANCE 1
-      MELEE_RESISTANCE 1
       ELF_VISION 1
       ARCHER_VISION 1
       RIDER 1
     }
     maxLevelIncrease = {
-      SPELL 12
-      MELEE 12
-      ARCHERY 12
+      SPELL 4
+      MELEE 4
+      ARCHERY 4
     }
     aiType = RANGED
-    spellSchools = {"martial arts" "elven king" }
-    spells = { "advanced healing" "haste" "defense bonus" "damage bonus" "directed blast" }
+    spellSchools = {"martial arts"}
+    spells = { "advanced healing" "advanced haste" "advanced defense bonus" "advanced damage bonus" "directed blast" }
+    promotionGroup = "king"
+    promotionCost = 0.20
     hatedByEffect = HATE_ELVES
   }
 
@@ -105,7 +102,7 @@
         ELF_VISION 1
         }
     promotionGroup = "craft"
-    promotionCost = 0.25
+    promotionCost = 0.20
     hatedByEffect = HATE_ELVES
   }
 
@@ -135,7 +132,7 @@
         ELF_VISION 1
         }
     promotionGroup = "craft"
-    promotionCost = 0.25
+    promotionCost = 0.20
     hatedByEffect = HATE_ELVES
   }
 
@@ -194,7 +191,7 @@
         FAST_CRAFTING 1
         }
     promotionGroup = "craft"
-    promotionCost = 0.25
+    promotionCost = 0.20
     hatedByEffect = HATE_ELVES
   }
 
@@ -250,7 +247,7 @@
         FAST_CRAFTING 1
         }
     promotionGroup = "craft"
-    promotionCost = 0.25
+    promotionCost = 0.20
     hatedByEffect = HATE_ELVES
   }
 
@@ -338,7 +335,7 @@
       RIDER 1
     }
     promotionGroup = "melee"
-    promotionCost = 0.25
+    promotionCost = 0.20
     spellSchools = { "martial arts" }
     spells = { "advanced healing" "haste" "defense bonus" }
     maxLevelIncrease = {
@@ -373,7 +370,7 @@
       RIDER 1
     }
     promotionGroup = "melee"
-    promotionCost = 0.25
+    promotionCost = 0.20
     spellSchools = { "martial arts" }
     spells = { "advanced healing" "haste" "defense bonus" "damage bonus" "directed blast" }
     maxLevelIncrease = {
@@ -449,7 +446,7 @@
       RIDER 1
     }
     promotionGroup = "ranged"
-    promotionCost = 0.25
+    promotionCost = 0.20
     spells = { "healing" }
     maxLevelIncrease = {
       MELEE 3
@@ -490,7 +487,7 @@
       RIDER 1
     }
     promotionGroup = "ranged"
-    promotionCost = 0.25
+    promotionCost = 0.20
     spells = { "healing" }
     maxLevelIncrease = {
       MELEE 3
@@ -533,7 +530,7 @@
       NO_FRIENDLY_FIRE 1
     }
     promotionGroup = "magic"
-    promotionCost = 0.25
+    promotionCost = 0.20
   }
 
 "ELVEN_FIRE_MAGE"
@@ -568,7 +565,7 @@
       NO_FRIENDLY_FIRE 1
     }
     promotionGroup = "magic"
-    promotionCost = 0.25
+    promotionCost = 0.20
   }
 
 "ELVEN_FIRE_ARCHMAGE"
@@ -600,7 +597,7 @@
       NO_FRIENDLY_FIRE 1
     }
     promotionGroup = "magic"
-    promotionCost = 0.25
+    promotionCost = 0.20
   }
 
 "ELVEN_AIR_MAGE"
@@ -635,7 +632,7 @@
       NO_FRIENDLY_FIRE 1
     }
     promotionGroup = "magic"
-    promotionCost = 0.25
+    promotionCost = 0.20
   }
 
 "ELVEN_AIR_ARCHMAGE"
@@ -667,7 +664,7 @@
       NO_FRIENDLY_FIRE 1
     }
     promotionGroup = "magic"
-    promotionCost = 0.25
+    promotionCost = 0.20
   }
 
 "ELVEN_WATER_MAGE"
@@ -702,7 +699,7 @@
       NO_FRIENDLY_FIRE 1
     }
     promotionGroup = "magic"
-    promotionCost = 0.25
+    promotionCost = 0.20
   }
 
 "ELVEN_WATER_ARCHMAGE"
@@ -734,7 +731,7 @@
       NO_FRIENDLY_FIRE 1
     }
     promotionGroup = "magic"
-    promotionCost = 0.25
+    promotionCost = 0.20
   }
 
 "ELVEN_EARTH_MAGE"
@@ -769,7 +766,7 @@
       NO_FRIENDLY_FIRE 1
     }
     promotionGroup = "magic"
-    promotionCost = 0.25
+    promotionCost = 0.20
   }
 
 "ELVEN_EARTH_ARCHMAGE"
@@ -801,7 +798,7 @@
       NO_FRIENDLY_FIRE 1
     }
     promotionGroup = "magic"
-    promotionCost = 0.25
+    promotionCost = 0.20
   }
 
 "ELVEN_ICE_MAGE"
@@ -836,7 +833,7 @@
       NO_FRIENDLY_FIRE 1
     }
     promotionGroup = "magic"
-    promotionCost = 0.25
+    promotionCost = 0.20
   }
 
 "ELVEN_ICE_ARCHMAGE"
@@ -868,7 +865,7 @@
       NO_FRIENDLY_FIRE 1
     }
     promotionGroup = "magic"
-    promotionCost = 0.25
+    promotionCost = 0.20
   }
 
 "ELVEN_LIGHTNING_MAGE"
@@ -903,7 +900,7 @@
       NO_FRIENDLY_FIRE 1
     }
     promotionGroup = "magic"
-    promotionCost = 0.25
+    promotionCost = 0.20
   }
 
 "ELVEN_LIGHTNING_ARCHMAGE"
@@ -935,7 +932,7 @@
       NO_FRIENDLY_FIRE 1
     }
     promotionGroup = "magic"
-    promotionCost = 0.25
+    promotionCost = 0.20
   }
 
 "ELVEN_SPIRIT_MAGE"
@@ -971,7 +968,7 @@
       NO_FRIENDLY_FIRE 1
     }
     promotionGroup = "magic"
-    promotionCost = 0.25
+    promotionCost = 0.20
   }
 
 "ELVEN_SPIRIT_ARCHMAGE"
@@ -1003,7 +1000,7 @@
       NO_FRIENDLY_FIRE 1
     }
     promotionGroup = "magic"
-    promotionCost = 0.25
+    promotionCost = 0.20
   }
 
 "ELVEN_LIGHT_MAGE"
@@ -1038,7 +1035,7 @@
       NO_FRIENDLY_FIRE 1
     }
     promotionGroup = "magic"
-    promotionCost = 0.25
+    promotionCost = 0.20
   }
 
 "ELVEN_LIGHT_ARCHMAGE"
@@ -1070,7 +1067,7 @@
       NO_FRIENDLY_FIRE 1
     }
     promotionGroup = "magic"
-    promotionCost = 0.25
+    promotionCost = 0.20
   }
 
 "ELVEN_LIFE_MAGE"
@@ -1094,7 +1091,7 @@
     body = {
         type = Humanoid LARGE
         }
-    spellSchools = { "abjuration" }
+    spellSchools = { "life" }
     aiType = RANGED
     maxLevelIncrease = {
       MELEE 3
@@ -1105,7 +1102,7 @@
       NO_FRIENDLY_FIRE 1
     }
     promotionGroup = "magic"
-    promotionCost = 0.25
+    promotionCost = 0.20
   }
 
 "ELVEN_LIFE_ARCHMAGE"
@@ -1125,7 +1122,7 @@
     body = {
         type = Humanoid LARGE
         }
-    spellSchools = { "abjuration" "elven" }
+    spellSchools = { "life" "elven" }
     aiType = RANGED
     maxLevelIncrease = {
       MELEE 3
@@ -1137,7 +1134,7 @@
       NO_FRIENDLY_FIRE 1
     }
     promotionGroup = "magic"
-    promotionCost = 0.25
+    promotionCost = 0.20
   }
 
 "ELVEN_SHADOW_MAGE"
@@ -1172,7 +1169,7 @@
       NO_FRIENDLY_FIRE 1
     }
     promotionGroup = "magic"
-    promotionCost = 0.25
+    promotionCost = 0.20
   }
 
 "ELVEN_SHADOW_ARCHMAGE"
@@ -1204,7 +1201,7 @@
       NO_FRIENDLY_FIRE 1
     }
     promotionGroup = "magic"
-    promotionCost = 0.25
+    promotionCost = 0.20
   }
 
 #creature
@@ -1237,6 +1234,34 @@
     }
   }
 
+"GREAT_HAWK"
+ {
+    viewId = { "great_hawk" }
+    attr = {
+      DAMAGE 12
+      DEFENSE 18 
+    }
+    body = {
+      type = Bird MEDIUM
+      weight = 200
+      deathSound = none
+      addBodyPart = {
+        WING 2
+      }
+    }
+    aiType = RANGED
+    noChase = true
+    permanentEffects = {
+      SPEED 1
+      STEED 1
+      FLYING 1
+    }
+    name = {
+      name = "great hawk"
+      groupName = "flock"
+    }
+  }
+
 "WINGED_WOLF"
   {
     viewId = { "winged_wolf" }
@@ -1245,7 +1270,7 @@
       DEFENSE 11 
     }
     body = {
-      type = FourLegged MEDIUM
+      type = FourLegged LARGE
       weight = 400
       intrinsicAttacks = {
         HEAD {{itemType = { Intrinsic { "bite_attack" }  "fangs" 7 { attackType = BITE attackMsg = BITE} } isExtraAttack = true }}
