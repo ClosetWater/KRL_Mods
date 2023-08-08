@@ -31,8 +31,6 @@
     { Furniture {{ "ELVEN_ANVIL" } "IRON" 25 }                      "Elven anvil"        "Crafting"
         "Quality of crafted items increases with the crafter's forge skill by a factor of up to 2. Must be placed next to elven forge."
         none { TechId "iron working" }}
-    { Furniture {{ "ELVEN_FORGE" }      "STONE" 40 }                      "Elven forge"             "Crafting"
-        "Produces metal to be formed into weapons and armor on elven anvil."    none { TechId "iron working" }}
   }
 
 "laboratory_elven"

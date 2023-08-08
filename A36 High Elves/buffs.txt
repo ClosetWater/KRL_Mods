@@ -196,8 +196,8 @@
   description = "advanced forging techniques"
   addedMessage = ARE "forging"
   removedMessage = ARE "no longer forging"
-  startEffect = IncreaseAttr ELVEN_FORGE 30
-  endEffect = IncreaseAttr ELVEN_FORGE -30
+  startEffect = IncreaseAttr FORGE 30
+  endEffect = IncreaseAttr FORGE -30
   canWishFor = false
   color = ColorId LIGHT_BLUE
 } 

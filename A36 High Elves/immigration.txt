@@ -23,7 +23,7 @@
         }
         specialTraits = {
             { 0.05 { OneOfTraits { Lasting { FAST_CRAFTING } Lasting { SLOW_CRAFTING } } }}
-            { 0.05 { AttrBonus ELVEN_CRAFT 20 Lasting { INSANITY } }}
+            { 0.05 { AttrBonus WORKSHOP 20 Lasting { INSANITY } }}
             { 0.03 { Lasting { BAD_BREATH } }}
             { 0.01 { Lasting { ENTERTAINER } }}
         }
@@ -38,8 +38,8 @@
             { 0.0 MinTurnRequirement 25000 }
         }
         specialTraits = {
-            { 0.03 { AttrBonus ELVEN_CRAFT 20 Lasting { INSANITY } }}
-            { 0.05 { AttrBonus ELVEN_FORGE 20 Lasting { INSANITY } }}
+            { 0.03 { AttrBonus WORKSHOP 20 Lasting { INSANITY } }}
+            { 0.05 { AttrBonus FORGE 20 Lasting { INSANITY } }}
             { 0.03 { Lasting { BAD_BREATH } }}
             { 0.01 { Lasting { ENTERTAINER } }}
         }
@@ -54,7 +54,7 @@
             { 0.0 MinTurnRequirement 25000 }
         }
         specialTraits = {
-            { 0.05 { AttrBonus ELVEN_ENCHANT 20 Lasting { INSANITY } }}
+            { 0.05 { AttrBonus JEWELER 20 Lasting { INSANITY } }}
             { 0.03 { Lasting { BAD_BREATH } }}
             { 0.01 { Lasting { ENTERTAINER } }}
         }
@@ -69,7 +69,7 @@
             { 0.0 MinTurnRequirement 25000 }
         }
         specialTraits = {
-            { 0.05 { AttrBonus ELVEN_ALCHEMY 20 Lasting { INSANITY } }}
+            { 0.05 { AttrBonus LABORATORY 20 Lasting { INSANITY } }}
             { 0.03 { Lasting { BAD_BREATH } }}
             { 0.01 { Lasting { ENTERTAINER } }}
         }

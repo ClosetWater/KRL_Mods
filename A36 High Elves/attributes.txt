@@ -42,38 +42,6 @@
   help = "Base damage value of lightning charge."
   }
 
-"ELVEN_CRAFT" {
-  name = "elven crafting"
-  viewId = { "elven_workbench" }
-  adjective = "inventive"
-  absorptionCap = 25
-  help = "Defines the creature's skill at crafting at the elven workbench."
-  }
-
-"ELVEN_FORGE" {
-  name = "elven forging"
-  viewId = { "elven_anvil" }
-  adjective = "metallic"
-  absorptionCap = 25
-  help = "Defines the creature's skill at smithing at the elven anvil."
-  }
-
-"ELVEN_ALCHEMY" {
-  name = "elven alchemy"
-  viewId = { "alchemy_stand" }
-  adjective = "chemically active"
-  absorptionCap = 25
-  help = "Defines the creature's skill at brewing at the elven alchemy stand."
-  }
-
-"ELVEN_ENCHANT" {
-  name = "elven enchanting"
-  viewId = { "enchant_table" }
-  adjective = "golden"
-  absorptionCap = 25
-  help = "Defines the creature's skill at enchanting at the elven enchanting table."
-  }
-
 "INSCRIBING" {
   name = "INSCRIBING"
   viewId = { "inscribing_table" }
