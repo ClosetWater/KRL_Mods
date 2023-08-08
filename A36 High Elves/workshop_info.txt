@@ -1,22 +1,22 @@
 "ELVEN_WORKBENCH" {
   furniture = "ELVEN_WORKBENCH"
   name = "elven workbench"
-  attr = "ELVEN_CRAFT"
+  attr = "WORKSHOP"
   }
 "ELVEN_ANVIL" {
   furniture = "ELVEN_ANVIL"
   name = "elven anvil"
-  attr = "ELVEN_FORGE"
+  attr = "FORGE"
   }
 "ALCHEMY_STAND" {
   furniture = "ALCHEMY_STAND"
   name = "alchemy stand"
-  attr = "ELVEN_ALCHEMY"
+  attr = "LABORATORY"
   }
 "ENCHANT_TABLE" {
   furniture = "ENCHANT_TABLE"
   name = "enchanting table"
-  attr = "ELVEN_ENCHANT"
+  attr = "JEWELER"
   }
 "INSCRIBING_TABLE" {
   furniture = "INSCRIBING_TABLE"

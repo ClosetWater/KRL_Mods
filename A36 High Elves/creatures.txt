@@ -20,7 +20,7 @@
       SPELL_DAMAGE 18
       RANGED_DAMAGE 37
       MULTI_WEAPON 20
-      ELVEN_CRAFT 10
+      WORKSHOP 10
       INSCRIBING 10
     }
     permanentEffects = {
@@ -90,7 +90,7 @@
         stackName = "craft"
     }
     attr = { 
-      ELVEN_CRAFT 20
+      WORKSHOP 20
     }
     body = {
         type = Humanoid MEDIUM
@@ -119,8 +119,8 @@
 	    DAMAGE 10
       DEFENSE 10 
       FURNACE 20
-      ELVEN_CRAFT 20
-      ELVEN_FORGE 20
+      WORKSHOP 20
+      FORGE 20
     }
     body = {
         type = Humanoid LARGE
@@ -149,8 +149,8 @@
 	    DAMAGE 10
       DEFENSE 10 
       FURNACE 50
-      ELVEN_CRAFT 50
-      ELVEN_FORGE 50
+      WORKSHOP 50
+      FORGE 50
     }
     body = {
         type = Humanoid LARGE
@@ -177,7 +177,7 @@
     attr = {
 	    DAMAGE 10
       DEFENSE 10
-      ELVEN_ENCHANT 20
+      JEWELER 20
 
     }
     body = {
@@ -207,7 +207,7 @@
     attr = {
 	    DAMAGE 10
       DEFENSE 10 
-      ELVEN_ENCHANT 50
+      JEWELER 50
     }
     body = {
         type = Humanoid LARGE
@@ -234,7 +234,7 @@
     attr = {
 	    DAMAGE 10
       DEFENSE 10 
-      ELVEN_ALCHEMY 20
+      LABORATORY 20
     }
     body = {
         type = Humanoid LARGE
@@ -263,7 +263,7 @@
     attr = {
 	    DAMAGE 10
       DEFENSE 10 
-      ELVEN_ALCHEMY 50
+      LABORATORY 50
     }
     body = {
         type = Humanoid LARGE

@@ -4,8 +4,8 @@
         {
           Filter Not CreatureFlag "is_blacksmith" Polymorph ELVEN_SMITH none
           SetCreatureFlag "is_blacksmith" true
-          IncreaseAttr "ELVEN_CRAFT" 8
-          IncreaseAttr "ELVEN_FORGE" 8
+          IncreaseAttr "WORKSHOP" 8
+          IncreaseAttr "FORGE" 8
           IncreaseAttr FURNACE 8
         }
     "alchemist" {"alchemy_stand"}
@@ -13,14 +13,14 @@
         {
           Filter Not CreatureFlag "is_alchemist" Polymorph ELVEN_ALCHEMIST none
           SetCreatureFlag "is_alchemist" true
-          IncreaseAttr "ELVEN_ALCHEMY" 8
+          IncreaseAttr "LABORATORY" 8
         }
     "enchanter" {"enchant_table"}
         Description "Increases enchanting attributes by 8, increases enchant skill by 20 when applied for first time."
         {
           Filter Not CreatureFlag "is_enchanter" Polymorph ELVEN_ENCHANTER none
           SetCreatureFlag "is_enchanter" true
-          IncreaseAttr "ELVEN_ENCHANT" 8
+          IncreaseAttr "JEWELER" 8
         }
         }
 
@@ -124,25 +124,25 @@
         {
           Filter CreatureFlag "magic_crafter"{
           Filter Not CreatureFlag "master_crafter"{
-            IncreaseAttr "ELVEN_CRAFT" 20
-            IncreaseAttr "ELVEN_FORGE" 20
-            IncreaseAttr "ELVEN_ALCHEMY" 20
-            IncreaseAttr "ELVEN_ENCHANT" 20
+            IncreaseAttr "WORKSHOP" 20
+            IncreaseAttr "FORGE" 20
+            IncreaseAttr "LABORATORY" 20
+            IncreaseAttr "JEWELER" 20
             IncreaseAttr "INSCRIBING" 20
             SetCreatureFlag "master_crafter" true
           }
           }
           Filter CreatureFlag "crafter"{
           Filter Not CreatureFlag "magic_crafter"{
-            IncreaseAttr "ELVEN_FORGE" 15
-            IncreaseAttr "ELVEN_ALCHEMY" 15
-            IncreaseAttr "ELVEN_ENCHANT" 15
+            IncreaseAttr "FORGE" 15
+            IncreaseAttr "LABORATORY" 15
+            IncreaseAttr "JEWELER" 15
             SetCreatureFlag "magic_crafter" true
           }
           }
           Filter Not CreatureFlag "crafter"{
-            IncreaseAttr "ELVEN_CRAFT" 10
-            IncreaseAttr "ELVEN_FORGE" 10
+            IncreaseAttr "WORKSHOP" 10
+            IncreaseAttr "FORGE" 10
             SetCreatureFlag "crafter" true
         }
         }

@@ -178,8 +178,8 @@
     weight = 0.3
     description = "Harness powerful magic to increase ability to craft."
     effect = Chain {
-      IncreaseAttr FORGE 3
-      IncreaseAttr WORKSHOP 3
+      IncreaseAttr FORGE 5
+      IncreaseAttr WORKSHOP 5
       FirstSuccessful {
         Permanent FAST_CRAFTING
         }
@@ -1031,8 +1031,8 @@
     weight = 0.05
     equipedEffect = {FAST_CRAFTING}
     modifiers = {
-      ELVEN_CRAFT 20
-      ELVEN_FORGE 20
+      WORKSHOP 20
+      FORGE 20
     }
     equipmentSlot = AMULET
     price = 1
