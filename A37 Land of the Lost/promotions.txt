@@ -1,0 +1,23 @@
+"ranger" {
+    "melee" {"energy_blade"}
+        Description "Increases max melee training level by 3."
+        {
+          IncreaseMaxLevel MELEE 3
+        }
+
+    "range" {"rifle"}
+        Description "Increases max damage with guns."
+        {
+          IncreaseAttr SHOOTING 5
+        }
+    
+    "knowledge" {"computer"}
+        Description "Increases crafting attributes by 8"
+        {
+          IncreaseAttr "WORKSHOP" 8
+          IncreaseAttr "FORGE" 8
+          IncreaseAttr "LABORATORY" 8
+          IncreaseAttr "TECH" 8
+          IncreaseAttr FURNACE 8
+        }
+}

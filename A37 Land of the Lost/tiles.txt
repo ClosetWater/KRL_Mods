@@ -1,0 +1,63 @@
+{ viewId = "ranger_m" symbol = "@" color = ColorId GREEN weaponOrigin = {12 15} }
+{ viewId = "ranger_f" symbol = "@" color = ColorId GREEN weaponOrigin = {12 15} }
+{ viewId = "ranger2" symbol = "@" color = ColorId GREEN weaponOrigin = {12 15} }
+{ viewId = "ranger3" symbol = "@" color = ColorId GREEN weaponOrigin = {12 15} }
+{ viewId = "ranger4" symbol = "@" color = ColorId GREEN weaponOrigin = {12 15} }
+{ viewId = "ranger5" symbol = "@" color = ColorId GREEN weaponOrigin = {12 15} }
+{ viewId = "android" symbol = "A" color = ColorId WHITE weaponOrigin = {12 15} }
+{ viewId = "combat_android" symbol = "A" color = ColorId BLACK weaponOrigin = {12 15} }
+{ viewId = "drone" symbol = "d" color = ColorId GRAY }
+{ viewId = "craft_drone" symbol = "d" color = ColorId GRAY }
+{ viewId = "combat_drone" symbol = "d" color = ColorId GRAY }
+{ viewId = "repair_drone" symbol = "d" color = ColorId GRAY }
+{ "blade" ")" ColorId LIGHT_GRAY }
+{ viewId = "blade_v" symbol = ")" color = ColorId LIGHT_GRAY weaponOrigin = {12 15} }
+{ "energy_blade" ")" ColorId LIGHT_BLUE }
+{ viewId = "energy_blade_v" symbol = ")" color = ColorId LIGHT_BLUE weaponOrigin = {12 15} }
+{ "handgun" ")" ColorId GRAY }
+{ viewId = "handgun_v" symbol = ")" color = ColorId GRAY weaponOrigin = {12 15} }
+{ "shotgun" ")" ColorId GRAY }
+{ viewId = "shotgun_v" symbol = ")" color = ColorId GRAY weaponOrigin = {12 15} }
+{ "rifle" ")" ColorId GRAY }
+{ viewId = "rifle_v" symbol = ")" color = ColorId GRAY weaponOrigin = {12 15} }
+{ "rocket_launcher" ")" ColorId GRAY }
+{ viewId = "rocket_launcher_v" symbol = ")" color = ColorId GRAY weaponOrigin = {12 16} }
+{ "gloves" "[" ColorId LIGHT_GRAY }
+{ "boots" "[" ColorId LIGHT_GRAY }
+{ "armor" "[" ColorId LIGHT_GRAY }
+{ "helmet" "[" ColorId LIGHT_GRAY }
+{ "tactical_gloves" "[" ColorId LIGHT_GREEN }
+{ "tactical_boots" "[" ColorId LIGHT_GREEN }
+{ "tactical_armor" "[" ColorId LIGHT_GREEN }
+{ "tactical_helmet" "[" ColorId LIGHT_GREEN }
+{ "basic_circuit" "C" ColorId GRAY }
+{ "advanced_circuit" "C" ColorId GRAY }
+{ "basic_combat_circuit" "C" ColorId RED }
+{ "advanced_combat_circuit" "C" ColorId RED }
+{ "repair_circuit" "C" ColorId BLUE }
+{ "damage_chip" "c" ColorId RED }
+{ "defense_chip" "c" ColorId GREEN }
+{ "speed_chip" "c" ColorId YELLOW }
+{ "repair_chip" "c" ColorId BLUE }
+{ "performance_chip" "c" ColorId PURPLE }
+{ viewId = "metal_wall" symbol = "#" color = ColorId LIGHT_GRAY wallShadow = true wallConnections = true }
+{ viewId = "metal_window" symbol = "#" color = ColorId ALMOST_WHITE wallShadow = true wallConnections = true }
+{ viewId = "metal_grate" symbol = "_" color = ColorId GRAY }
+{ viewId = "metal_door_ew" symbol = "-" color = ColorId LIGHT_BLUE    wallShadow = true }
+{ viewId = "metal_door_ns" symbol = "|" color = ColorId LIGHT_BLUE }
+{ "metal_floor" "." ColorId LIGHT_GRAY }
+{ "metal_hazard_floor" "." ColorId YELLOW }
+{ viewId = "clone_vat" symbol = "⚱️" color = ColorId WHITE isSymbolFont = true roundShadow = true }
+{ viewId = "clone_vat_active" symbol = "⚱️" color = ColorId GREEN isSymbolFont = true roundShadow = true }
+{ viewId = "metal_shelf" symbol = "▤" color = ColorId LIGHT_GRAY roundShadow = true isSymbolFont = true }
+{ viewId = "motion_sensor" symbol = "m" color = ColorId GRAY }
+{ viewId = "metal_chest" symbol = "c" color = ColorId GRAY roundShadow = true }
+{ viewId = "resource_barrel" symbol = "b" color = ColorId BROWN roundShadow = true }
+{ viewId = "metal_barricade" symbol = "B" color = ColorId YELLOW }
+{ "generator"  "g" ColorId ORANGE }
+{ "3D_printer"  "p" ColorId ORANGE }
+{ "computer"  "c" ColorId ORANGE }
+{ "hard_drive"  "h" ColorId ORANGE }
+{ "sleep_pod"  "s" ColorId ORANGE }
+{ "bullet" "/" ColorId GRAY }
+{ "rocket" "/" ColorId GRAY }

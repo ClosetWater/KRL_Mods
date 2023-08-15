@@ -1,0 +1,407 @@
+"Blade"
+  {
+    viewId = { "blade" }
+    equipedViewId = { "blade_v" }
+    name = "blade"
+    plural = "blades"
+    itemClass = WEAPON
+    equipmentSlot = WEAPON
+    weight = 0.3
+    modifiers = {
+      DAMAGE 5
+    }
+    price = 1
+    weaponInfo = {
+      attackType = STAB
+      attackMsg = THRUST
+    }
+    genPrefixes = {
+      1 VictimEffect 0.1 Lasting POISON
+    }
+    storageIds = {"weapons" "equipment"}
+    equipmentGroup = "basic equipment"
+  }
+"EnergyBlade"
+  {
+    viewId = { "energy_blade" }
+    equipedViewId = { "energy_blade_v" }
+    name = "energy blade"
+    itemClass = WEAPON
+    equipmentSlot = WEAPON
+    weight = 1.5
+    modifiers = {
+      DAMAGE 8
+    }
+    price = 4
+    craftingCost = "IRON" 20
+    weaponInfo = {
+      attackType = CUT
+    }
+    genPrefixes = {
+      1 VictimEffect 0.3 Fire { 25 }
+      1 VictimEffect 0.1 Lasting POISON
+      1 LastingEffect RAGE
+      1 JoinPrefixes {
+        ItemAttrBonus DAMAGE 3
+        LastingEffect HALLU
+      }
+    }
+    maxUpgrades = 1
+    storageIds = {"weapons" "equipment"}
+    equipmentGroup = "advanced equipment"
+  }
+
+"Handgun"
+  {
+    viewId = { "handgun" }
+    equipedViewId = { "handgun_v" }
+    name = "handgun"
+    itemClass = RANGED_WEAPON
+    equipmentSlot = RANGED_WEAPON
+    equipedAbility = {"shoot bullet"}
+    weight = 1
+    modifiers = {
+      SHOOTING 10
+    }
+    price = 12
+    maxUpgrades = 1
+    storageIds = {"guns" "weapons" "equipment"}
+    equipmentGroup = "ranged weapons"
+  }
+"Shotgun"
+  {
+    viewId = { "shotgun" }
+    equipedViewId = { "shotgun_v" }
+    name = "shotgun"
+    itemClass = RANGED_WEAPON
+    equipmentSlot = RANGED_WEAPON
+    equipedAbility = {"shoot shell"}
+    weight = 1
+    weaponInfo = {
+      twoHanded = true
+    }
+    modifiers = {
+      SHOOTING 22
+    }
+    price = 100
+    maxUpgrades = 1
+    storageIds = {"guns" "weapons" "equipment"}
+    equipmentGroup = "ranged weapons"
+  }
+"Rifle" inherit "Handgun"
+  {
+    viewId = { "rifle" }
+    equipedViewId = { "rifle_v" }
+    equipmentSlot = RANGED_WEAPON
+    weaponInfo = {
+      twoHanded = true
+    }
+    modifiers = {
+      SHOOTING 16
+    }
+    name = "rifle"
+    price = 100
+  }
+"RocketLauncher"
+  {
+    viewId = { "rocket_launcher" }
+    equipedViewId = { "rocket_launcher_v" }
+    name = "rocket launcher"
+    itemClass = RANGED_WEAPON
+    equipmentSlot = RANGED_WEAPON
+    equipedAbility = {"shoot rocket"}
+    weaponInfo = {
+      twoHanded = true
+    }
+    weight = 1
+    modifiers = {
+      SHOOTING 15
+    }
+    price = 90
+    maxUpgrades = 1
+    storageIds = {"guns" "weapons" "equipment"}
+    equipmentGroup = "ranged weapons"
+  }
+
+"Gloves"
+  {
+    viewId = { "gloves" }
+    shortName = "gloves"
+    name = "pair of gloves"
+    plural = "pairs of gloves"
+    itemClass = ARMOR
+    equipmentSlot = GLOVES
+    weight = 0.3
+    price = 2
+    modifiers = {
+      DEFENSE 3
+    }
+    maxUpgrades = 0
+    storageIds = {"armor" "equipment"}
+    equipmentGroup = "basic equipment"
+  }
+"Boots"
+  {
+    viewId = { "boots" }
+    shortName = "boots"
+    name = "pair of boots"
+    plural = "pairs of boots"
+    itemClass = ARMOR
+    equipmentSlot = BOOTS
+    weight = 2
+    price = 2
+    modifiers = {
+      DEFENSE 3
+    }
+    genPrefixes = {
+      1 LastingEffect FLYING
+      1 LastingEffect SPEED
+      2 ItemAttrBonus DEFENSE 3
+    }
+    maxUpgrades = 0
+    storageIds = {"armor" "equipment"}
+    equipmentGroup = "basic equipment"
+  }
+"Armor"
+  {
+    viewId = { "armor" }
+    shortName = "armor"
+    name = "light armor"
+    itemClass = ARMOR
+    equipmentSlot = BODY_ARMOR
+    weight = 7
+    price = 4
+    modifiers = {
+      DEFENSE 5
+    }
+    genPrefixes = {
+      1 ItemAttrBonus DEFENSE 3
+    }
+    maxUpgrades = 0
+    storageIds = {"armor" "equipment"}
+    equipmentGroup = "basic equipment"
+  }
+"Helmet"
+  {
+    viewId = { "helmet" }
+    shortName = "helmet"
+    name = "light helmet"
+    itemClass = ARMOR
+    equipmentSlot = HELMET
+    weight = 1.5
+    price = 1
+    modifiers = {
+      DEFENSE 3
+    }
+    genPrefixes = {
+      1 LastingEffect TELEPATHY
+      1 LastingEffect SLEEP_RESISTANT
+      2 ItemAttrBonus DEFENSE 3
+    }
+    maxUpgrades = 0
+    storageIds = {"armor" "equipment"}
+    equipmentGroup = "basic equipment"
+  }
+
+"TacticalGloves"
+  {
+    viewId = { "tactical_gloves" }
+    shortName = "gloves"
+    name = "pair of tactical gloves"
+    plural = "pairs of tactical gloves"
+    itemClass = ARMOR
+    equipmentSlot = GLOVES
+    weight = 0.7
+    price = 25
+    craftingCost = "ADA" 2
+    modifiers = {
+      DEFENSE 3
+    }
+    genPrefixes = {
+      1 ItemAttrBonus DAMAGE 3
+      1 ItemAttrBonus SPELL_DAMAGE 3
+    }
+    maxUpgrades = 2
+    storageIds = {"armor" "equipment"}
+    equipmentGroup = "tactical equipment"
+  }
+"TacticalBoots"
+  {
+    viewId = { "tactical_boots" }
+    shortName = "boots"
+    name = "pair of tactical boots"
+    plural = "pairs of tactical boots"
+    itemClass = ARMOR
+    equipmentSlot = BOOTS
+    weight = 3
+    price = 50
+    craftingCost = "ADA" 24
+    modifiers = {
+      DEFENSE 4
+    }
+    genPrefixes = {
+      1 LastingEffect SPEED
+    }
+    maxUpgrades = 2
+    storageIds = {"armor" "equipment"}
+    equipmentGroup = "tactical equipment"
+  }
+"TacticalArmor"
+  {
+    viewId = { "tactical_armor" }
+    shortName = "armor"
+    name = "tactical armor"
+    itemClass = ARMOR
+    equipmentSlot = BODY_ARMOR
+    weight = 13
+    price = 160
+    craftingCost = "ADA" 40
+    modifiers = {
+      DEFENSE 8
+    }
+    genPrefixes = {
+      1 ItemAttrBonus DEFENSE 3
+    }
+    maxUpgrades = 4
+    storageIds = {"armor" "equipment"}
+    equipmentGroup = "tactical equipment"
+  }
+"TacticalHelmet"
+  {
+    viewId = { "tactical_helmet" }
+    shortName = "helmet"
+    name = "tactical helmet"
+    itemClass = ARMOR
+    equipmentSlot = HELMET
+    weight = 3
+    price = 40
+    craftingCost = "ADA" 16
+    modifiers = {
+      DEFENSE 4 
+    }
+    genPrefixes = {
+      1 LastingEffect TELEPATHY
+      1 LastingEffect REGENERATION
+    }
+    maxUpgrades = 2
+    storageIds = {"armor" "equipment"}
+    equipmentGroup = "tactical equipment"
+  }
+
+"BasicCircuit"
+  {
+    viewId = { "basic_circuit" }
+    name = "basic circuit"
+    itemClass = OTHER
+    weight = 0.1
+    price = 100
+    ingredientType = "basic_circuit"
+    storageIds = {"equipment"}
+  }
+"AdvancedCircuit"
+  {
+    viewId = { "advanced_circuit" }
+    name = "advanced circuit"
+    itemClass = OTHER
+    weight = 0.1
+    price = 100
+    ingredientType = "advanced_circuit"
+    storageIds = {"equipment"}
+  }
+"BasicCombatCircuit"
+  {
+    viewId = { "basic_combat_circuit" }
+    name = "basic combat circuit"
+    itemClass = OTHER
+    weight = 0.1
+    price = 100
+    ingredientType = "basic_combat_circuit"
+    storageIds = {"equipment"}
+  }
+"AdvancedCombatCircuit"
+  {
+    viewId = { "advanced_combat_circuit" }
+    name = "advanced combat circuit"
+    itemClass = OTHER
+    weight = 0.1
+    price = 100
+    ingredientType = "advanced_combat_circuit"
+    storageIds = {"equipment"}
+  }
+"RepairCircuit"
+  {
+    viewId = { "repair_circuit" }
+    name = "repair circuit"
+    itemClass = OTHER
+    weight = 0.1
+    price = 100
+    ingredientType = "repair_circuit"
+    storageIds = {"equipment"}
+  }
+
+"DamageChip"
+  {
+    viewId = { "damage_chip" }
+    name = "damage chip"
+    itemClass = CORPSE
+    price = 0
+    weight = 0.1
+	  ingredientType = "damage_chip"
+    storageIds = {"equipment"}
+  }
+"DefenseChip"
+  {
+    viewId = { "defense_chip" }
+    name = "defense chip"
+    itemClass = CORPSE
+    price = 0
+    weight = 0.1
+	  ingredientType = "defense_chip"
+    storageIds = {"equipment"}
+  }
+"SpeedChip"
+  {
+    viewId = { "speed_chip" }
+    name = "speed chip"
+    itemClass = CORPSE
+    price = 0
+    weight = 0.1
+	  ingredientType = "speed_chip"
+    storageIds = {"equipment"}
+  }
+"RepairChip"
+  {
+    viewId = { "repair_chip" }
+    name = "repair chip"
+    itemClass = CORPSE
+    price = 0
+    weight = 0.1
+	  ingredientType = "repair_chip"
+    storageIds = {"equipment"}
+  }
+"PerformanceChip"
+  {
+    viewId = { "performance_chip" }
+    name = "damage chip"
+    itemClass = CORPSE
+    price = 0
+    weight = 0.1
+	  ingredientType = "performance_chip"
+    storageIds = {"equipment"}
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

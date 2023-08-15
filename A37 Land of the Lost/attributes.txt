@@ -1,0 +1,15 @@
+"TECH" {
+  name = "advanced crafting"
+  viewId = { "computer" }
+  adjective = "inventive"
+  absorptionCap = 25
+  help = "Defines the creature's skill at crafting advanced components, gear, and drones."
+  }
+"SHOOTING" {
+  name = "shooting"
+  viewId = { "rifle" }
+  adjective = "accurate"
+  absorptionCap = 25
+  isAttackAttr = true
+  help = "Base value of skill with guns."
+}

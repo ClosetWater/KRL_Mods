@@ -1,0 +1,5 @@
+"3D_PRINTER" {
+  furniture = "3D_PRINTER"
+  name = "3D printer"
+  attr = "TECH"
+}

@@ -1,0 +1,160 @@
+"structure_tech"
+  {
+    { Furniture {{ "METAL_WALL" }                "IRON" 5 }      "Metal wall"    "Structure"
+      "Outdoor building. Tiles covered by the roof are considered territory and can be built on." }
+    { Furniture {{ "METAL_WINDOW" }                "IRON" 10 }     "Metal wall with window"  "Structure"
+      "Outdoor metal wall with a window to shoot out of." }
+    { Furniture {{ "METAL_GRATE" }               "IRON" 5 }      "Metal grate"      "Structure"
+      "Build to pass over water or lava." }
+  }
+
+"doors_tech"
+  {
+    { Furniture {{ "WOOD_DOOR" }                  "WOOD" 5 }       "Wooden door"       "Doors"
+      "Stops enemies. You can pass freely unless you lock it."  "DOORS" {} true BUILD_DOOR}
+    { Furniture {{ "METAL_DOOR" }                  "IRON" 5 }       "Metal door"         "Doors"
+        "Stops enemies. You can pass freely unless you lock it." }
+  }
+
+"floors_tech"
+  {
+    { Furniture {{ "FLOOR_WOOD1" }                "WOOD" 2 }       "Wooden"            "Floors"
+        "" "FLOORS" {} true BUILD_FLOOR}
+    { Furniture {{ "FLOOR_WOOD2" }                "WOOD" 2 }       "Wooden"            "Floors"
+        "" none {} true BUILD_FLOOR}
+    { Furniture {{ "METAL_FLOOR" }               "IRON" 2 }      "Metal"             "Floors" }
+    { Furniture {{ "METAL_HAZARD_FLOOR" }        "IRON" 5 }      "Metal"             "Floors" }
+    { DestroyLayers {FLOOR}                                    "Remove floor"      "Floors" }
+  }
+
+"storage_tech"
+  {
+    { Zone STORAGE_RESOURCES                                   "Resources"         "Storage"
+        "Only wood, iron, granite, and adamantium can be stored here." "STORAGE" {} true RESOURCE_STORAGE}
+
+    { Zone STORAGE_EQUIPMENT                                   "Equipment"         "Storage"
+        "All equipment for your minions can be stored here." none {} false EQUIPMENT_STORAGE }
+
+    { Furniture {{ "RESOURCE_BARREL" }             "IRON" 5  }      "Resource barrel"    "Storage"
+        "All your resources are stored here." }
+
+    { Furniture {{ "METAL_CHEST" }                "IRON" 10  }     "Metal chest"      "Storage"
+        "All your components, gear, and drugs can be stored here." }
+
+    { Furniture {{ "GRAVE" }                      "STONE" 5 }      "Grave"             "Storage"
+        "All corpses are stored here."}
+  }
+
+"zones_tech"
+  {
+    { Zone QUARTERS                                           "Quarters"        "Zones"
+        "Designate separate quarters for chosen minions." "QUARTERS" {} true}
+
+    { Zone LEISURE                                             "Leisure"           "Zones"
+        "Designate leisure zone where minions will hang out when they have nothing to do."}
+
+    { Zone GUARD1                                               "Guard area 1"        "Zones"
+        "Designate an area that minions will actively guard."}
+
+    { Zone GUARD2                                               "Guard area 2"        "Zones"
+        "Designate an area that minions will actively guard."}
+
+    { Zone GUARD3                                               "Guard area 3"        "Zones"
+        "Designate an area that minions will actively guard."}
+   }
+
+"library_tech"
+  {
+    { Furniture {{ "METAL_SHELF" }   "IRON" 15 }                 "Metal shelf"   "Library"
+        "Increase your technical knowledge here." "BOOKCASES"     {TechId "advanced knowledge"} true BUILD_LIBRARY }
+  }
+
+"beds_tech"
+  {
+    { Furniture {{ "BED1" }       "WOOD" 12 }                      "Basic bed"         "Living"
+        "Humanoids sleep here." "BEDS" {} true  BUILD_BED }
+    { Furniture {{ "SLEEP_POD" }       "IRON" 12 }                      "Sleep pod"          "Living"
+        "Humanoids sleep here." }
+  }
+
+"dining_tech"
+  {
+    { Furniture {{ "DINING_TABLE" }"WOOD" 5 }                      "Dining table"      "Living"
+        "A place to eat for humanoids" none {}}
+  }
+
+"training_tech"
+  {
+    { Furniture {{ "TRAINING_WOOD" } "WOOD" 12 }                   "Wooden dummy"      "Training room"
+        "Train your minions' melee skills here." "TRAINING_DUMMIES" {} true  TRAINING_ROOM}
+    { Furniture {{ "TRAINING_IRON" } "IRON" 12 }                   "Iron dummy"        "Training room"
+        "Train your minions' melee skills here."   none { TechId "iron working" } }
+    { Furniture {{ "TRAINING_ADA" }  "ADA"  12 }                   "Adamantine dummy"  "Training room"
+        "Train your minions' melee skills here."   none { TechId "iron working" }}
+    { Furniture {{ "ARCHERY_RANGE" } "WOOD" 12 }                   "Shooting target"    "Training room"
+        "Train your shooting skills here." none { TechId "munitions" }}
+  }
+
+"crafting_tech"
+  {
+    { Furniture {{ "WORKSHOP" }   "WOOD" 15 }                      "Workshop"          "Crafting"
+        "Produces leather equipment, traps, first-aid kits and other." "WORKSHOPS" {} true  BUILD_WORKSHOP}
+    { Furniture {{ "FORGE" }      "IRON" 20 }                      "Forge"             "Crafting"
+        "Produces metal weapons and armor."    none { TechId "iron working" }}
+    { Furniture {{ "3D_PRINTER" }      "IRON" 200 }                      "3D printer"             "Crafting"
+        "Produces components and gear."    none { TechId "3D printing" }}
+  }
+
+"laboratory_tech"
+  {
+    { Furniture {{ "LABORATORY" } "STONE" 10 }                     "Laboratory"        "Crafting"
+        "Produces drugs."            none { TechId "alchemy" }}
+  }
+
+"installations_tech"
+  {
+    { Furniture {{ "METAL_BARRICADE" }     "WOOD" 5 }                    "Metal barricade"         "Installations"
+        "Blocks enemy movement, but projectiles and spells can pass over it." }
+    { Furniture {{ "TORCH_N" "TORCH_E" "TORCH_S" "TORCH_W" }}          "Torch"             "Installations"
+        "Place it on tiles next to a wall." "TORCH" {} false BUILD_TORCH}
+    { Furniture {{ "CANDELABRUM_N" "CANDELABRUM_E" "CANDELABRUM_S" "CANDELABRUM_W" } "GOLD" 5 }
+        "Candelabrum"             "Installations"       "Place it on tiles next to a wall." }
+    { Furniture {{ "GROUND_TORCH" }  "WOOD" 10  }                  "Standing torch"    "Installations"
+        "" none {} false BUILD_TORCH }
+    { Furniture {{ "PAINTING_N" "PAINTING_E" "PAINTING_S" "PAINTING_W" }} "Painting canvas"   "Installations"
+        "Place it on tiles next to a wall."}
+    { Furniture {{ "MOTION_SENSOR" }              "IRON"   25 }                   "Motion sensor"           "Installations"
+        "Makes the area around it visible."}
+    { Furniture { types = { "GENERATOR" } cost = "IRON" 100} "Generator" "Installations"
+        "Generate power for devices."  none { TechId "power" }}
+    { Furniture { types = { "COMPUTER" } cost = "IRON" 25} "Computer" "Installations"
+        "Control other devices."  none { TechId "computers" }}
+    { Furniture { types = { "HARD_DRIVE" } cost = "IRON" 50} "Hard drive" "Installations"
+        "Storage for data."  none { TechId "computers" }} 
+  }
+
+"phylactery_tech"
+  {
+    { Furniture { types = { "PHYLACTERY" } cost = "IRON" 500} "Clone vat" "Installations"
+        "Prepare clones for future use."  none { TechId "cloning" }}
+  }
+
+"traps_tech"
+  {
+    { Furniture {{ "TERROR_TRAP" }         "WOOD" 20 }  "Terror trap"       "Traps"
+        "Causes the trespasser to panic." none                  { TechId "traps" }}
+    { Furniture {{ "POISON_GAS_TRAP" }     "WOOD" 20 }  "Gas trap"          "Traps"
+        "Releases a cloud of poisonous gas." none               { TechId "traps" }}
+    { Furniture {{ "ALARM_TRAP" }          "WOOD" 20 }  "Alarm trap"        "Traps"
+        "Summons all minions" none                              { TechId "traps" }}
+    { Furniture {{ "WEB_TRAP" }            "WOOD" 20 }  "Web trap"          "Traps"
+        "Immobilises the trespasser for some time." none        { TechId "traps" }}
+    { Furniture {{ "SURPRISE_TRAP" }       "WOOD" 20 }  "Surprise trap"     "Traps"
+        "Teleports nearby minions to deal with the trespasser." none { TechId "traps" }}
+    { Furniture {{ "FIRE_TRAP" }           "WOOD" 20 }  "Fire trap"         "Traps"
+        "Causes a tower of flame to errupt under the trespasser." none{ TechId "traps" }}
+    { Furniture {{ "BOULDER_TRAP" }        "STONE" 120 }"Boulder trap"      "Traps"
+        "Causes a huge boulder to roll towards the enemy." none { TechId "traps" }}
+    { Furniture {{ "BLAST_TRAP" }          "WOOD" 20 }  "Blast trap"        "Traps"
+        "Causes an air blast to throw the enemy across a few tiles." none { TechId "traps" }}
+  }

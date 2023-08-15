@@ -1,0 +1,54 @@
+"shoot bullet"
+{
+  symbol = "-"
+  effect = MinDistanceFromStrongEnemy(4) Name "shoot bullet" Description "Shoots an bullet"
+      TryNoFriendlyFire(
+        {
+          CreatureMessage { "are hit by the bullet" "is hit by the bullet"}
+          Damage RANGED_DAMAGE SHOOT
+        },
+        CreatureMessage { "are spared by the bullet" "is spared by the bullet"}
+      )
+  range = 12
+  cooldown = 1
+  maxHits = 1
+  projectileViewId = {"bullet"}
+  message = "shoot a bullet" "shoots a bullet"
+  type = ABILITY
+}
+"shoot shell"
+{
+  symbol = "-"
+  effect = MinDistanceFromStrongEnemy(4) Name "shoot shell" Description "Shoots a shell"
+      TryNoFriendlyFire(
+        {
+          CreatureMessage { "are hit by the bullets" "is hit by the bullets"}
+          Damage RANGED_DAMAGE SHOOT Damage RANGED_DAMAGE SHOOT Damage RANGED_DAMAGE SHOOT
+        },
+        CreatureMessage { "are spared by the bullets" "is spared by the bullets"}
+      )
+  range = 7
+  cooldown = 1
+  maxHits = 1
+  projectileViewId = {"bullet"}
+  message = "shoot a bullet" "shoots a bullet"
+  type = ABILITY
+}
+"shoot rocket"
+{
+  symbol = "⇾"
+  effect = MinDistanceFromStrongEnemy(4) Name "shoot rocket" Description "Shoots a rocket"
+      TryNoFriendlyFire(
+        {
+          CreatureMessage { "are hit by the rocket" "is hit by the rocket"}
+          Damage RANGED_DAMAGE SHOOT
+        },
+        CreatureMessage { "are spared by the rocket" "is spared by the rocket"}
+      )
+  range = 15
+  cooldown = 3
+  maxHits = 1
+  projectileViewId = {"rocket"}
+  message = "shoot a rocket" "shoots a rocket"
+  type = ABILITY
+}

@@ -1,0 +1,199 @@
+"METAL_WALL"
+{
+  name = "metal wall"
+  viewId = { "metal_wall" }
+  strength2 = {
+    300 BOULDER
+    100 DIG
+    1900 HOSTILE_DIG
+  }
+  blockMovement = true
+  blockAllVision = true
+  wall = true
+  viewLayer = FLOOR_BACKGROUND
+  canBuildOutsideOfTerritory = true
+}
+"METAL_WINDOW" inherit "METAL_WALL"
+{
+  name = "metal wall with window"
+  viewId = { "metal_window" }
+  blockVision = { NORMAL ELF }
+}
+"METAL_GRATE"
+{
+  name = "metal grate"
+  viewId = { "metal_grate" }
+  overrideMovement = true
+  fire = 0
+  removeNonFriendly = true
+  removeWithCreaturePresent = false
+  bridge = true
+  canBuildOutsideOfTerritory = true
+}
+"METAL_DOOR"
+{
+  name = "metal door"
+  viewId = { "metal_door_ew" }
+  blockingEnemies = true
+  canHideHere = true
+  blockAllVision = true
+  strength = 480
+  clickType = LOCK
+  canBuildOutsideOfTerritory = true
+  requiredSupport = { { { E W } } { { N S } {"metal_door_ns"} } }
+  destroyFX = { DESTROY_FURNITURE Rgb 120 120 120 255 }
+}
+"METAL_FLOOR"
+{
+  name = "metal floor"
+  viewId = { "metal_floor" }
+  luxury = 0.3
+  layer = FLOOR
+}
+"METAL_HAZARD_FLOOR"
+{
+  name = "metal floor"
+  viewId = { "metal_hazard_floor" }
+  luxury = 0.7
+  layer = FLOOR
+  lastingEffect = ALLY SPEED 0
+}
+"PHYLACTERY" modify append
+{
+  name = "clone vat"
+  viewId = { "clone_vat" }
+  blockMovement = true
+  canHideHere = true
+  luxury = 1.0
+  strength = 200
+  destroyFX = { DESTROY_FURNITURE Rgb 190 190 40 255 }
+  usageType = UsageEffect "copy DNA to" {
+    Area 1
+    Filter And { FurnitureType "PHYLACTERY" Not Flag "tmp" } {
+      PlaceFurniture "PHYLACTERY_ACTIVE"
+      SetPhylactery
+      SetFlag "tmp" true
+    }
+    SetFlag "tmp" false
+  }
+}
+"PHYLACTERY_ACTIVE" modify append
+{
+  usageType = none
+  name = "active clone vat"
+  viewId = { "clone_vat_active" }
+}
+"METAL_SHELF"
+{
+  name = "metal shelf"
+  viewId = { "metal_shelf" }
+  blockMovement = true
+  usageType = BuiltinUsageId STUDY
+  usageTime = 5
+  canHideHere = true
+  fire = 0
+  strength = 50
+  requiresLight = true
+  destroyFX = { DESTROY_FURNITURE Rgb 120 120 120 255 }
+}
+"MOTION_SENSOR"
+{
+  name = "motion sensor"
+  viewId = { "motion_sensor" }
+  blockMovement = true
+  canHideHere = true
+  lightEmission = 8.2
+  strength = 30
+  canBuildOutsideOfTerritory = true
+  eyeball = true
+}
+"METAL_CHEST"
+{
+  name = "metal chest"
+  viewId = { "metal_chest" }
+  canHideHere = true
+  fire = 0
+  strength = 30
+  storageIds = {"equipment" "technology"}
+  hidesItems = true
+}
+"RESOURCE_BARREL"
+{
+  name = "resource barrel"
+  viewId = { "resource_barrel" }
+  canHideHere = true
+  fire = 0
+  strength = 30
+  storageIds = {"resources"}
+  hidesItems = true
+}
+"METAL_BARRICADE"
+{
+  name = "metal barricade"
+  viewId = { "metal_barricade" }
+  blockMovement = true
+  fire = 0
+  strength = 100
+  destroyFX = { DESTROY_FURNITURE Rgb 120 87 46 255 }
+}
+"GENERATOR" 
+{
+  name = "generator"
+  viewId = { "generator" }
+  blockMovement = true
+  canHideHere = true
+  strength = 80
+  requiresLight = true
+  destroyFX = { DESTROY_FURNITURE Rgb 120 120 120 255 }
+  canBuildOutsideOfTerritory = true
+}
+"3D_PRINTER"
+{
+  name = "3D printer"
+  viewId = { "3D_printer" }
+  blockMovement = true
+  usageTime = 5
+  canHideHere = true
+  strength = 80
+  requiresLight = true
+  destroyFX = { DESTROY_FURNITURE Rgb 120 120 120 255 }
+  usagePredicate = Not Area 5 Not FurnitureType "COMPUTER"
+  usageFX = FORGE
+}
+"COMPUTER"
+{
+  name = "computer"
+  viewId = { "computer" }
+  blockMovement = true
+  usageTime = 5
+  canHideHere = true
+  strength = 80
+  requiresLight = true
+  destroyFX = { DESTROY_FURNITURE Rgb 120 120 120 255 }
+  usagePredicate = Not Area 1 Not FurnitureType "HARD_DRIVE"
+  usageFX = FORGE
+}
+"HARD_DRIVE"
+{
+  name = "hard drive"
+  viewId = { "hard_drive" }
+  blockMovement = true
+  canHideHere = true
+  strength = 80
+  requiresLight = true
+  destroyFX = { DESTROY_FURNITURE Rgb 120 120 120 255 }
+  usagePredicate = Not Area 10 Not FurnitureType "GENERATOR"
+  usageFX = none
+}
+"SLEEP_POD"
+{
+  name = "sleep pod"
+  viewId = { "sleep_pod" }
+  usagePredicate = Not Area 10 Not FurnitureType "GENERATOR"
+  usageType = UsageEffect "sleep in" Lasting SLEEP
+  tickType = Effect BedHeal()
+  canHideHere = true
+  strength = 80
+  bedType = BED
+  destroyFX = { DESTROY_FURNITURE Rgb 120 87 46 255 }
+}

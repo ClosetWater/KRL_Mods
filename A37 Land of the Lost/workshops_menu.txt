@@ -1,0 +1,89 @@
+"industry"
+{
+    "WORKSHOP"
+    {
+        {item = {"Club"}    work = 3 cost = "WOOD" 10    tech = none      tutorialHighlight = SCHEDULE_CLUB}
+        {{"Boots"}          2}
+        {{"Gloves"}         1}
+        {{"Armor"}          6}
+        {{"Helmet"}         1}
+        {{"WoodenShield"}          2        "WOOD" 10}
+        {item = {"DevilBoots"}       work = 30 cost = "WOOD" 0 requireIngredient = "devil_hooves" }
+        {{"Torch"}                 2        "WOOD" 4}
+    }
+
+    "FORGE"
+    {
+        {item = { "BasicCircuit" }          work = 10   cost = "IRON" 25    tech = "drone construction" materialTab = true}
+        {item = {"Blade"}                   work = 10   cost = "IRON" 10    materialTab = true}
+        {item = {"ChainArmor"}              work = 30   cost = none   materialTab = true}
+        {item = {"RedDragonArmor"}          work = 30   cost = none   requireIngredient = "red_scales" }
+        {item = {"BlackDragonArmor"}        work = 30   cost = none   requireIngredient = "black_scales" }
+        {item = {"WhiteDragonArmor"}        work = 30   cost = none   requireIngredient = "white_scales" }
+        {item = {"GreenDragonArmor"}        work = 30   cost = none   requireIngredient = "green_scales" }
+        {item = {"YellowDragonArmor"}       work = 30   cost = none   requireIngredient = "yellow_scales" }
+        {item = {"IronHelm"}                work = 8    cost = none   materialTab = true}
+        {item = {"IronBoots"}               work = 12   cost = none   materialTab = true}
+        {item = {"CyclopsHelm"}             work = 30   cost = none requireIngredient = "cyclops_testes" }
+        {item = {"IronGloves"}              work = 3    cost = none   materialTab = true}
+        {item = {"IronShield"}              work = 12   cost = none   materialTab = true}
+        {item = {"WarHammer"}               work = 16   cost = none   tech = "two-handed weapons"  materialTab = true}
+        {item = {"BattleAxe"}               work = 22   cost = none   tech = "two-handed weapons"  materialTab = true}
+        {item = {"Handgun"}                 work = 6    cost = "IRON" 25    tech = "munitions"}
+        {item = {"Shotgun"}                 work = 15   cost = "IRON" 25    tech = "munitions"}
+        { item = {Assembled{ "DRONE" "drone" {NO_EQUIPMENT NO_LIMIT FIGHTER WORKER NO_LEISURE_ZONE} }}
+            work = 30 cost = "IRON" 50 applyImmediately = true  tech = "drone construction" materialTab = true}
+        { item = {Assembled{ "CRAFT_DRONE" "craft drone" {NO_EQUIPMENT NO_LIMIT FIGHTER NO_LEISURE_ZONE} }}
+            work = 30 cost = "IRON" 50 requireIngredient = "basic_circuit" applyImmediately = true  tech = "drone construction" materialTab = true}
+        {item = {"AdaSword"}                work = 20   cost = none   materialTab = true}
+        {item = {"AdaArmor"}                work = 30   cost = none   materialTab = true}
+        {item = {"AdaHelm"}                 work = 15   cost = none   materialTab = true}
+        {item = {"AdaBoots"}                work = 15   cost = none   materialTab = true}
+        {item = {"AdaGloves"}               work = 6    cost = none   materialTab = true}
+        {item = {"AdaShield"}               work = 12   cost = none   materialTab = true}
+        {item = {"AdaWarHammer"}            work = 20   cost = none   tech = "two-handed weapons"  materialTab = true}
+        {item = {"AdaBattleAxe"}            work = 22   cost = none   tech = "two-handed weapons"  materialTab = true}
+        {item = {"IronStaff"}               work = 20   cost = none   tech = "magical weapons"  materialTab = true}
+        {item = {"AdoxiumArmor"}            work = 30   cost = none   materialTab = true}
+        {item = {"AdoxiumHelm"}             work = 15   cost = none   materialTab = true}
+        {item = {"AdoxiumBoots"}            work = 15   cost = none   materialTab = true}
+        {item = {"AdoxiumGloves"}           work = 6    cost = none   materialTab = true}
+        {item = {"AdoxiumStaff"}            work = 20   cost = none   tech = "magical weapons"  materialTab = true}
+        {item = {"InferniteSword"}          work = 20   cost = none   materialTab = true}
+        {item = {"InferniteWarHammer"}      work = 20   cost = none   tech = "two-handed weapons"  materialTab = true}
+        {item = {"InferniteBattleAxe"}      work = 22   cost = none   tech = "two-handed weapons"  materialTab = true}
+    }
+
+    "3D_PRINTER"
+    {
+        {item = {"TacticalBoots"}           work = 5   cost = none}
+        {item = {"TacticalGloves"}          work = 5   cost = none}
+        {item = {"TacticalArmor"}           work = 10  cost = none}
+        {item = {"TacticalHelmet"}          work = 5   cost = none}
+        {item = {"Handgun"}                 work = 5   cost = "IRON" 25    tech = "munitions"}
+        {item = {"Shotgun"}                 work = 5   cost = "IRON" 25    tech = "munitions"}
+        {item = {"Rifle"}                   work = 10  cost = "IRON" 25    tech = "advanced munitions"}
+        {item = {"RocketLauncher"}          work = 20  cost = "IRON" 25    tech = "advanced munitions"}
+        {item = { "DamageChip" }            work = 5   cost = "IRON" 20    tech = "components"}
+        {item = { "DefenseChip" }           work = 5   cost = "IRON" 20    tech = "components"}
+        {item = { "SpeedChip" }             work = 5   cost = "IRON" 20    tech = "components"}
+        {item = { "RepairChip" }            work = 5   cost = "IRON" 20    tech = "components"}
+        {item = { "PerformanceChip" }       work = 5   cost = "IRON" 20    tech = "components"}
+        {item = { "BasicCircuit" }          work = 10  cost = "IRON" 20    tech = "drone construction"}
+        {item = { "BasicCombatCircuit" }    work = 10  cost = "IRON" 20    tech = "advanced drone construction"}
+        {item = { "AdvancedCircuit" }       work = 50  cost = "IRON" 25    requireIngredient = "basic_circuit"     tech = "android construction"}
+        {item = { "AdvancedCombatCircuit" } work = 50  cost = "IRON" 25    requireIngredient = "basic_combat_circuit"   tech = "android construction"}
+        { item = {Assembled{ "DRONE" "drone" {NO_EQUIPMENT NO_LIMIT FIGHTER WORKER NO_LEISURE_ZONE} }}
+            work = 10 cost = "IRON" 40 applyImmediately = true  tech = "drone construction"}
+        { item = {Assembled{ "CRAFT_DRONE" "craft drone" {NO_EQUIPMENT NO_LIMIT FIGHTER NO_LEISURE_ZONE} }}
+            work = 10 cost = "IRON" 40 requireIngredient = "basic_circuit" applyImmediately = true  tech = "drone construction"}
+        { item = {Assembled{ "COMBAT_DRONE" "combat drone" {NO_EQUIPMENT NO_LIMIT FIGHTER NO_LEISURE_ZONE} }}
+            work = 10 cost = "IRON" 50 requireIngredient = "basic_combat_circuit" applyImmediately = true  tech = "advanced drone construction"}
+        { item = {Assembled{ "REPAIR_DRONE" "repair drone" {NO_EQUIPMENT NO_LIMIT FIGHTER NO_LEISURE_ZONE} }}
+            work = 10 cost = "IRON" 50 requireIngredient = "basic_circuit" applyImmediately = true  tech = "advanced drone construction"}
+        { item = {Assembled{ "ANDROID" "android" { LEADER WORKER } }}
+            work = 10 cost = "IRON" 100 requireIngredient = "advanced_circuit" applyImmediately = true  tech = "android construction"}
+        { item = {Assembled{ "COMBAT_ANDROID" "combat android" { LEADER FIGHTER } }}
+            work = 10 cost = "IRON" 100 requireIngredient = "advanced_combat_circuit" applyImmediately = true  tech = "android construction"}
+    }
+}
