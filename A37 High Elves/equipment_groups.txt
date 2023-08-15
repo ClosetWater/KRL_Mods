@@ -1,4 +1,0 @@
-"mithril equipment" {"mithril_great_sword"}
-"magic equipment" {"mithril_grand_staff"}
-"elven clothes" {"elven_cloak"}
-"magic clothes" {"elven_priest_robe"}
