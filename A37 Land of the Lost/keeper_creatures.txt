@@ -1,0 +1,26 @@
+"11_ranger"
+{
+  creatureId = { "KEEPER_RANGER" "KEEPER_RANGER_F" }
+  tribeAlignment = LAWFUL
+  immigrantGroups = {}
+  technology = {
+      "alchemy" "advanced alchemy" "alchemical conversion" "iron working" "3D printing"
+      "two-handed weapons" "traps" "advanced knowledge"
+      "components"  "power" "computers" "cloning" 
+      "munitions" "advanced munitions"
+      "drone construction" "advanced drone construction" "android construction"
+  }
+  zLevelGroups = { "basic" "lawful" }
+  initialTech = { "advanced knowledge" }
+  buildingGroups = {
+      "structure" "structure_tech" "doors_tech" "floors_tech" "storage_tech" "zones_tech" "beds_tech" "dining_tech" 
+      "crafting_tech" "laboratory" "poetry" "furnace" "orders" 
+      "training_tech" "installations_tech" "phylactery_tech" "traps_tech"
+  }
+  workshopGroups = { "industry" }
+  description = "Build a dungeon as a lone ranger."
+  credit = { "IRON" 500 }
+  minionTraits = { LEADER WORKER FIGHTER }
+  maxPopulation = 10
+  prisoners = false
+}

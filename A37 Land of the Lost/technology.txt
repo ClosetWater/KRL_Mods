@@ -1,0 +1,11 @@
+"advanced knowledge"                { "Begin on the path of reclaiming advanced knowledge."}
+"components"                        { "Learn how to make additional parts for drones and androids."             {"advanced knowledge"}}
+"power"                             { "Build a generator to power devices."                                     {"advanced knowledge"}}   
+"computers"                         { "Build a computer and hard drive to research"                             {"power"}}
+"3D printing"                       { "Learn how to print objects on a 3D printer."                             {"power"}}
+"cloning"                           { "Create clone of yourself to save you from death."                        {"power"}}
+"munitions"                         { "Learn how to make, maintain, and handle guns."                           {"advanced knowledge"}}
+"advanced munitions"                { "Learn how to make, maintain, and handle advanced guns."                  {"munitions"}}
+"drone construction"                { "You dont need strings to make them move."                                {"advanced knowledge"}}
+"advanced drone construction"       { "Legions of doom awaits."                                                 {"drone construction"}}
+"android construction"              { "They will never disobey."                                                {"advanced drone construction"}}

@@ -1,0 +1,205 @@
+"KEEPER_RANGER"
+  {
+    viewId = { "ranger_m" }
+    viewIdUpgrades = { { "ranger2" } { "ranger3" } { "ranger4" } { "ranger5" }}
+    name = {
+      name = "ranger"
+      firstNameGen = "FIRST_MALE"
+      fullTitle = true
+    }
+    body = {
+      type = Humanoid LARGE
+    }
+    # attr_type.h
+    attr = {
+      DAMAGE 12
+      DEFENSE 12
+      SHOOTING 12
+      TECH 20
+      WORKSHOP 20
+      FORGE 20
+    }
+    # lasting_effect.h
+    permanentEffects = {
+      ARCHER_VISION 1
+    }
+    # experience_type.h
+    maxLevelIncrease = {
+        MELEE 7
+    }
+    aiType = RANGED
+    promotionGroup = "ranger"
+    promotionCost = 1.0
+    inventory = {
+      { "Armor" }
+      { "Blade" }
+    }
+  }
+"KEEPER_RANGER_F" inherit "KEEPER_MAGE"
+  {
+    viewId = { "ranger_f" }
+    gender = FEMALE
+    name = append {
+      firstNameGen = "FIRST_FEMALE"
+    }
+    viewIdUpgrades = { { "ranger2" } { "ranger3" } { "ranger4" } { "ranger5" }}
+  }
+
+
+"DRONE"
+  {
+    viewId = { "drone" }
+    attr = {
+      DEFENSE 5
+      DIGGING 50
+    }
+    body = {
+      type = NonHumanoid MEDIUM
+      material = IRON
+      xCanPickUpItems = true
+      bodyParts = {
+        TORSO 1
+      }
+    }
+    aiType = RANGED
+    chatReactionFriendly = "beep..."
+    permanentEffects = {
+      FLYING 1
+      SPEED 1
+      NO_CARRY_LIMIT 1
+    }
+    name = {
+      name = "drone"
+    }
+  }
+"CRAFT_DRONE"
+  {
+    viewId = { "craft_drone" }
+    attr = {
+      DEFENSE 5
+      WORKSHOP 20
+      FORGE 20
+      FURNACE 20
+    }
+    body = {
+      type = NonHumanoid MEDIUM
+      material = IRON
+      xCanPickUpItems = true
+      bodyParts = {
+        HEAD 1
+        ARM 2
+      }
+    }
+    aiType = RANGED
+    permanentEffects = {
+      FLYING 1
+      SPEED 1
+      NO_CARRY_LIMIT 1
+    }
+    name = {
+      name = "crafting drone"
+    }
+  }
+"COMBAT_DRONE"
+  {
+    viewId = { "combat_drone" }
+    attr = {
+      DEFENSE 5
+      SHOOTING 20
+    }
+    body = {
+      type = NonHumanoid MEDIUM
+      material = IRON
+      bodyParts = {
+        HEAD 1
+      }
+    }
+    aiType = RANGED
+    spells = { "shoot bullet" "shoot shell" }
+    permanentEffects = {
+      FLYING 1
+      SPEED 1
+      NO_CARRY_LIMIT 1
+    }
+    name = {
+      name = "combat drone"
+    }
+  }
+"REPAIR_DRONE"
+  {
+    viewId = { "repair_drone" }
+    attr = {
+      DEFENSE 5
+    }
+    body = {
+      type = NonHumanoid MEDIUM
+      material = IRON
+      bodyParts = {
+        HEAD 1
+      }
+    }
+    aiType = RANGED
+    spells = { "healing" "cure poison" "cure blindness" "group healing" }
+    permanentEffects = {
+      FLYING 1
+      NO_CARRY_LIMIT 1
+    }
+    name = {
+      name = "repair drone"
+    }
+  }
+
+
+"ANDROID"
+  {
+    viewId = { "android" }
+    attr = {
+      DAMAGE 16
+      DEFENSE 14
+      DIGGING 25
+      TECH 45
+      WORKSHOP 45
+      FORGE 45
+      FURNACE 25
+    }
+    body = {
+      type = Humanoid LARGE
+    }
+    maxLevelIncrease = {
+      MELEE 7
+    }
+    chatReactionFriendly = "curses all dungeons"
+    chatReactionHostile = "\"Die!\""
+    permanentEffects = {
+      RIDER 1
+    }
+    name = {
+      name = "android"
+      firstNameGen = "FIRST_MALE"
+    }
+  }
+"COMBAT_ANDROID"
+  {
+    viewId = { "combat_android" }
+    attr = {
+      SHOOTING 45
+      DAMAGE 20
+      DEFENSE 25 
+    }
+    body = {
+      type = Humanoid LARGE
+    }
+    maxLevelIncrease = {
+      MELEE 7
+    }
+    chatReactionFriendly = "curses all dungeons"
+    chatReactionHostile = "\"Die!\""
+    permanentEffects = {
+      RIDER 1
+    }
+    name = {
+      name = "combat android"
+      firstNameGen = "FIRST_MALE"
+    }
+  }
+
