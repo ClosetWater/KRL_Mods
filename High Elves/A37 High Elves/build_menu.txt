@@ -1,0 +1,66 @@
+"structure_elven"
+  {  
+    { Furniture {{ "ELVEN_WALL" }                "STONE" 5 }      "Elven wall"    "Structure"
+      "Outdoor building. Tiles covered by the roof are considered territory and can be built on." }
+    { Furniture {{ "ELVEN_ARROWSLIT_WALL" }                "STONE" 20 }     "Elven wall with arrowslits"  "Structure"
+      "Outdoor elven wall with arrowslits." }
+    { Furniture {{ "ELVEN_PILLAR" }              "STONE" 2 }      "Elven pillar"      "Structure"
+      "Acts as roof support, but doesn't block movement." }
+  }
+
+"floors_elven"
+  {
+    { Furniture {{ "ELVEN_ROAD" }               "STONE" 2 } "Elven road"  "Floors" 
+      "" }
+    { Furniture {{ "ELVEN_STONE_FLOOR" }        "STONE" 2 } "Elven stone" "Floors"
+          "" "FLOORS" {} true BUILD_FLOOR}
+    { Furniture {{ "ELVEN_CARPET" }             "GOLD" 2 }  "Elven carpet"  "Floors" }
+  }
+
+"decor_elven"
+  {
+    { Furniture {{ "ELVEN_MINION_VASE" }        "MITHRIL"   25  }                  "Elven vase"     "Installations" ""}
+  }
+
+"crafting_elven"
+  {
+    { Furniture {{ "ELVEN_WORKBENCH" }   "WOOD" 15 }                      "Elven workbench"          "Crafting"
+        "Produces leather equipment, traps, first-aid kits and other." "WORKSHOPS" {} true  BUILD_WORKSHOP}
+    { Furniture {{ "INSCRIBING_TABLE" }   "WOOD" 25 }                      "Inscribing table"          "Crafting"
+        "Produces magic tomes." none { TechId "inscribing" }}    
+    { Furniture {{ "ELVEN_ANVIL" } "IRON" 20 }                      "Elven anvil"        "Crafting"
+        "Quality of crafted items increases with the crafter's forge skill by a factor of up to 2. Must be placed next to elven forge."
+        none { TechId "iron working" }}
+    { Furniture {{ "ELVEN_FORGE" }      "IRON" 20 }                      "Elven forge"             "Crafting"
+        "Produces metal to be formed into weapons and armor on elven anvil."    none { TechId "iron working" }}
+  }
+
+"laboratory_elven"
+  {
+    { Furniture {{ "ALCHEMY_STAND" } "STONE" 10 }                     "Alchemy stand"        "Crafting"
+        "Produces magical potions."            none { TechId "alchemy" }}
+  }
+
+"jeweller_elven"
+  {
+    { Furniture {{ "ENCHANT_TABLE" }   "WOOD" 12 }                      "Enchanting table"          "Crafting"
+        "Produces magical rings and amulets." none { TechId "jewellery" }}
+  }
+
+"zones_elven"
+  {
+    { Zone QUARTERS                                           "Noble Quarters"        "Zones"
+        "Designate separate quarters for chosen minions." "QUARTERS" {} true}
+
+    { Zone LEISURE                                             "Leisure"           "Zones"
+        "Designate leisure zone where minions will hang out when they have nothing to do."}
+
+    { Zone GUARD1                                               "Guard area 1"        "Zones"
+        "Designate an area that minions will actively guard."}
+
+    { Zone GUARD2                                               "Guard area 2"        "Zones"
+        "Designate an area that minions will actively guard."}
+
+    { Zone GUARD3                                               "Guard area 3"        "Zones"
+        "Designate an area that minions will actively guard."}
+   }

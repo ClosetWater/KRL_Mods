@@ -1,0 +1,203 @@
+"LIGHTING_DISCHARGE" {
+  name = "lighting discharge"
+  adjective = "charged"
+  description = "started to discharge"
+  addedMessage = ARE "super"
+  removedMessage = ARE "is no longer discharging"
+  tickEffect = Area 1 Filter Not Enemy {Bleed 0.05 "shocked"}
+  combatConsumable = true
+  canWishFor = false
+  color = ColorId RED
+  }
+
+"LIGHTNING_RESISTANT" RESISTANCE("lightning", LIGHTNING_DAMAGE)
+"LIGHTNING_VULNERABILITY" VULNERABILITY("lightning", LIGHTNING_DAMAGE)
+"LIGHTNING_IMMUNITY" IMMUNITY("lightning", LIGHTNING_DAMAGE)
+
+
+"LIGHTNING_DAMAGE" {
+  name = "lighting damage"
+  adjective = "deals lighting damage"
+  description = "All dealt melee damage is transformed into lighting damage."
+  addedMessage = "deal" "deals" "lighting damage"
+  removedMessage = "no longer deal" "no longer deals" "lighting damage"
+  fx = BUFF_PURPLE
+  color = ColorId PURPLE
+  price = 50
+  modifyDamageAttr = DAMAGE LIGHTNING_DAMAGE
+  }
+
+"LIGHTNING_SPELL" {
+  name = "lighting damage"
+  adjective = "deals lighting damage"
+  description = "All dealt melee damage is transformed into lighting damage."
+  addedMessage = "deal" "deals" "lighting damage"
+  removedMessage = "no longer deal" "no longer deals" "lighting damage"
+  fx = BUFF_PURPLE
+  color = ColorId PURPLE
+  price = 50
+  modifyDamageAttr = SPELL_DAMAGE LIGHTNING_DAMAGE
+  }
+
+"FIRE_SPELL" {
+  name = "fire damage"
+  adjective = "deals fire damage"
+  description = "All dealt melee damage is transformed into fire damage."
+  addedMessage = "deal" "deals" "fire damage"
+  removedMessage = "no longer deal" "no longer deals" "fire damage"
+  fx = BUFF_RED
+  color = ColorId RED
+  price = 50
+  modifyDamageAttr = SPELL_DAMAGE FIRE_DAMAGE
+  }
+
+"COLD_SPELL" {
+  name = "cold damage"
+  adjective = "deals cold damage"
+  description = "All dealt melee damage is transformed into cold damage."
+  addedMessage = "deal" "deals" "cold damage"
+  removedMessage = "no longer deal" "no longer deals" "cold damage"
+  fx = BUFF_RED
+  color = ColorId RED
+  price = 50
+  modifyDamageAttr = SPELL_DAMAGE COLD_DAMAGE
+  }
+
+"COLD_DAMAGE" {
+  name = "cold damage"
+  adjective = "deals cold damage"
+  description = "All dealt melee damage is transformed into cold damage."
+  addedMessage = "deal" "deals" "cold damage"
+  removedMessage = "no longer deal" "no longer deals" "cold damage"
+  fx = BUFF_RED
+  color = ColorId RED
+  price = 50
+  modifyDamageAttr = DAMAGE COLD_DAMAGE
+  }
+
+"SHADOW_RESISTANT" RESISTANCE("shadow", SHADOW_DAMAGE)
+"SHADOW_VULNERABILITY" VULNERABILITY("shadow", SHADOW_DAMAGE)
+"SHADOW_IMMUNITY" IMMUNITY("shadow", SHADOW_DAMAGE)
+
+
+"SHADOW_SPELL" {
+  name = "shadow damage"
+  adjective = "deals shadow damage"
+  description = "All dealt melee damage is transformed into shadow damage."
+  addedMessage = "deal" "deals" "shadow damage"
+  removedMessage = "no longer deal" "no longer deals" "shadow damage"
+  fx = BUFF_RED
+  color = ColorId RED
+  price = 50
+  modifyDamageAttr = SPELL_DAMAGE SHADOW_DAMAGE
+  }
+
+"SHADOW_DAMAGE" {
+  name = "shadow damage"
+  adjective = "deals shadow damage"
+  description = "All dealt melee damage is transformed into shadow damage."
+  addedMessage = "deal" "deals" "shadow damage"
+  removedMessage = "no longer deal" "no longer deals" "shadow damage"
+  fx = BUFF_RED
+  color = ColorId RED
+  price = 50
+  modifyDamageAttr = DAMAGE LIGHT_DAMAGE
+  }
+
+"LIGHT_RESISTANT" RESISTANCE("light", LIGHT_DAMAGE)
+"LIGHT_VULNERABILITY" VULNERABILITY("light", LIGHT_DAMAGE)
+"LIGHT_IMMUNITY" IMMUNITY("light", LIGHT_DAMAGE)
+
+
+"LIGHT_SPELL" {
+  name = "light damage"
+  adjective = "deals light damage"
+  description = "All dealt melee damage is transformed into light damage."
+  addedMessage = "deal" "deals" "light damage"
+  removedMessage = "no longer deal" "no longer deals" "light damage"
+  fx = BUFF_RED
+  color = ColorId RED
+  price = 50
+  modifyDamageAttr = SPELL_DAMAGE LIGHT_DAMAGE
+  }
+
+"LIGHT_DAMAGE" {
+  name = "light damage"
+  adjective = "deals light damage"
+  description = "All dealt melee damage is transformed into light damage."
+  addedMessage = "deal" "deals" "light damage"
+  removedMessage = "no longer deal" "no longer deals" "light damage"
+  fx = BUFF_RED
+  color = ColorId RED
+  price = 50
+  modifyDamageAttr = DAMAGE LIGHT_DAMAGE
+  }
+
+"DAMAGE_SPELL" {
+  name = "physical damage"
+  adjective = "deals physical damage"
+  description = "All dealt melee damage is transformed into physical damage."
+  addedMessage = "deal" "deals" "physical damage"
+  removedMessage = "no longer deal" "no longer deals" "physical damage"
+  fx = BUFF_RED
+  color = ColorId RED
+  price = 50
+  modifyDamageAttr = SPELL_DAMAGE DAMAGE
+  }
+
+"EARTHPOWER" {
+  name = "earthpower"
+  adjective = "earthpower"
+  description = "earthpower"
+  addedMessage = ARE "filled with earthpower"
+  removedMessage = ARE "no longer filled with earthpower"
+  startEffect = IncreaseAttr SPELL_DAMAGE 10
+  endEffect = IncreaseAttr SPELL_DAMAGE -10
+  combatConsumable = true
+  canWishFor = false
+  color = ColorId RED
+  }
+
+"STONESKIN"
+  {
+  name = "Stoneskin"
+  adjective = "skin have turned to stone"
+  description = "Creature's skin turns into stone "
+  addedMessage = ARE "skin have turned to stone"
+  removedMessage = ARE "no longer have skin of stone"
+  color = ColorId SKY_BLUE
+  fx = BUFF_WHITE
+  startEffect = IncreaseAttr DEFENSE 10
+  endEffect = IncreaseAttr DEFENSE -10
+  combatConsumable = true
+  }
+
+"DROWNING" 
+  {
+  name = "drowning"
+  description = "Causes loss of health points over time."
+  addedMessage = "start" "starts" "drowning"
+  removedMessage = YOUR "drowning stops"
+  adjective = "drowning"
+  tickEffect = Filter Not And { LastingEffect FROZEN LastingEffect SWIMMING_SKILL }{
+    CreatureMessage { "are drowning" "is drowning" HIGH }
+    Bleed 0.03 "drowning"
+  }
+  consideredBad = true
+  canAbsorb = false
+  price = 2
+  fx = DEBUFF_BLUE
+  color = ColorId RED
+  }
+
+"ELVEN_FORGING" {
+  name = "elven forging"
+  adjective = "forging"
+  description = "advanced forging techniques"
+  addedMessage = ARE "forging"
+  removedMessage = ARE "no longer forging"
+  startEffect = IncreaseAttr FORGE 30
+  endEffect = IncreaseAttr FORGE -30
+  canWishFor = false
+  color = ColorId LIGHT_BLUE
+} 

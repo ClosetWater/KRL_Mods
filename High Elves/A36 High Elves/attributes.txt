@@ -1,0 +1,51 @@
+"LIGHTNING_DAMAGE" {
+  name = "lightning damage"
+  viewId = { "lightning_damage_icon" }
+  adjective = "shocking"
+  absorptionCap = 25
+  bodyPartInjury = "is shocked"
+  isAttackAttr = true
+  meleeFX = {WATER_SPLASH ColorId BLUE}
+  help = "Base damage value of lightning attacks."
+  }
+
+"SHADOW_DAMAGE" {
+  name = "shadow damage"
+  viewId = { "shadow_terror" }
+  adjective = "dark"
+  absorptionCap = 25
+  bodyPartInjury = "is twisted"
+  isAttackAttr = true
+  meleeFX = {WATER_SPLASH ColorId BLACK}
+  help = "Base damage value of shadow attacks."
+  }
+
+"LIGHT_DAMAGE" {
+  name = "light damage"
+  viewId = { "light_elemental" }
+  adjective = "bright"
+  absorptionCap = 25
+  bodyPartInjury = "is sorched"
+  isAttackAttr = true
+  meleeFX = {WATER_SPLASH ColorId BLUE}
+  help = "Base damage value of light attacks."
+  }
+
+"LIGHTNING_CHARGE" {
+  name = "lightning charge"
+  viewId = { "lightning_damage_icon" }
+  adjective = "charged"
+  absorptionCap = 25
+  bodyPartInjury = "is charged"
+  isAttackAttr = true
+  meleeFX = {WATER_SPLASH ColorId BLUE}
+  help = "Base damage value of lightning charge."
+  }
+
+"INSCRIBING" {
+  name = "INSCRIBING"
+  viewId = { "inscribing_table" }
+  adjective = "knowledge"
+  absorptionCap = 25
+  help = "Defines the creature's skill at creating magic tomes."
+  }  
