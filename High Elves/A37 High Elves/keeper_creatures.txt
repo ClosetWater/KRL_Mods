@@ -2,6 +2,7 @@
 {
     creatureId = { "KEEPER_ELVEN_KING" }
     tribeAlignment = LAWFUL
+    villainGroups = { LAWFUL_KEEPER LAWFUL_COTTAGES }
     immigrantGroups = { "common" "craft" "melee" "ranged" "magic" "creature" }
     technology = {
         "alchemy" "advanced alchemy" "alchemical conversion"
